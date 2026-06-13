@@ -33,38 +33,47 @@ tr.prod{display:none}tr.prod.show{display:table-row}
 .loginnote{margin-left:6px;width:210px;max-width:34vw;font-size:11px;padding:2px 6px}
 .iobtn{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:12px;color:var(--txt);cursor:pointer}
 footer{padding:18px 24px;color:var(--mut);font-size:12px;border-top:1px solid var(--line)}
-/* ---- vendor logins panel (mobile-first) ---- */
+/* ---- filter strip + vendor logins panel (mobile-first) ---- */
+.chiprow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin:0 0 10px}
+.iobtn.primary{border-color:var(--accent);color:var(--accent)}
 #loginsPanel{display:none;margin:6px 0 18px}
 #loginsPanel.on{display:block}
 .lhint{color:var(--mut);font-size:12px;margin:2px 0 12px}
 .lgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
-.lcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
-.lcard h3{margin:0;font-size:14px;font-weight:650;display:flex;align-items:center;gap:8px;flex-wrap:wrap}
-.lstate{font-size:11px;padding:1px 8px;border-radius:10px;border:1px solid var(--no);color:var(--no);cursor:pointer;user-select:none;white-space:nowrap}
-.lstate.on{border-color:var(--ok);color:var(--ok)}
-.lrow{display:flex;align-items:center;gap:8px;margin-top:10px}
+.lcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px}
+.lhead{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.lname{font-size:14px;font-weight:650}
+.lname .tag{color:var(--mut);font-weight:400;font-size:12px;margin-left:4px}
+.lpill{display:block;width:100%;margin-top:8px;padding:11px;border-radius:10px;border:1px solid var(--no);background:transparent;color:var(--no);font-size:14px;font-weight:600;cursor:pointer;text-align:center;user-select:none}
+.lpill.on{border-color:var(--ok);color:var(--ok)}
+.lbody{display:none;margin-top:8px}
+.lcard.open .lbody{display:block}
+.lrow{display:flex;align-items:center;gap:8px}
 .lnote{flex:1;min-width:0;background:#0f1115;color:var(--txt);border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:14px}
 .lnote.mask{-webkit-text-security:disc;-moz-text-security:disc;text-security:disc}
 .licon{flex:none;background:#0f1115;border:1px solid var(--line);border-radius:8px;padding:10px 12px;font-size:15px;line-height:1;cursor:pointer;color:var(--txt)}
 .licon:active{background:var(--accent);color:#0f1115}
-.copied{color:var(--ok);font-size:11px;margin-left:4px;white-space:nowrap}
+.copied{display:block;color:var(--ok);font-size:11px;margin-top:6px}
 /* ---- responsive ---- */
 @media (max-width:640px){
   header{padding:14px 16px}.wrap{padding:14px 16px}h1{font-size:16px}
   .kpis{gap:8px}.kpi{flex:1 1 calc(50% - 4px);min-width:0;padding:8px 10px}.kpi b{font-size:17px}
   .controls{gap:8px}.controls>select,.controls>input{flex:1 1 100%;min-width:0}
-  .chipf{font-size:11px;padding:6px 10px}
+  .chiprow{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -16px 10px;padding:0 16px 4px}
+  .chiprow>*{flex:0 0 auto}
+  .chipf{font-size:12px;padding:8px 12px}
   #tableWrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:0 -16px;padding:0 16px}
   #tableWrap table{min-width:680px}
+  .loginchip,.loginnote{display:none!important}
   .lgrid{grid-template-columns:1fr}
-  .lcard{padding:14px}
   .lnote{font-size:16px;padding:12px 14px}
   .licon{padding:12px 15px;font-size:18px}
+  .lpill{padding:13px;font-size:15px}
 }
 </style></head><body>
 <header>
 <h1>Trig — Catalogue Asset Tracker</h1>
-<div class="sub">2026-06-13 23:27 · 907 live products · 61 brands · status computed live from the canonical</div>
+<div class="sub">2026-06-13 23:34 · 907 live products · 61 brands · status computed live from the canonical</div>
 </header>
 <div class="wrap">
 <div class="kpis" id="kpis"></div>
@@ -72,14 +81,15 @@ footer{padding:18px 24px;color:var(--mut);font-size:12px;border-top:1px solid va
 <select id="vendor"><option value="">All vendors</option></select>
 <select id="cat"><option value="">All categories</option></select>
 <input id="q" placeholder="Search model…" style="flex:1;min-width:160px">
+</div>
+<div class="chiprow">
+<button class="iobtn primary" id="toggleLogins" title="Open the mobile-friendly vendor logins panel">🔑 Vendor logins</button>
 <span class="chipf" data-gap="retail">▢ missing retail</span>
 <span class="chipf" data-gap="trade">▢ missing trade</span>
 <span class="chipf" data-gap="image">▢ missing image</span>
 <span class="chipf" data-gap="tear">▢ missing tear sheet</span>
 <span class="chipf" data-gap="d3">▢ missing 3D</span>
-<button class="iobtn" id="toggleLogins" title="Open the mobile-friendly vendor logins panel">🔑 Vendor logins</button>
-<span style="flex:1"></span>
-<button class="iobtn" id="expLogins" title="Download your vendor login checklist as backup">⬇ export logins</button>
+<button class="iobtn" id="expLogins" title="Download your vendor login checklist as backup">⬇ export</button>
 <button class="iobtn" id="impLogins" title="Restore from a backup file">⬆ import</button>
 <input type="file" id="impFile" accept="application/json" style="display:none">
 </div>
@@ -147,15 +157,17 @@ function flash(el){if(!el)return;const s=document.createElement('span');s.classN
 function fallbackCopy(note){const m=note.classList.contains('mask');note.classList.remove('mask');note.focus();note.select();try{document.execCommand('copy');}catch(e){}if(m)note.classList.add('mask');}
 function renderLogins(){
  const panel=document.getElementById('loginsPanel');
- let h='<div class="lhint">Your vendor portal logins — stored only on this device. Tap 👁 to reveal, 📋 to copy. Keep raw passwords in a password manager; store a username or reference here.</div><div class="lgrid">';
- Object.keys(PORTALS).sort().forEach(b=>{const L=getLogin(b);
-  h+=`<div class="lcard" data-b="${aesc(b)}"><h3>${aesc(b)} <a class="port" href="${PORTALS[b]}" target="_blank" rel="noopener">🔑 portal</a> <span class="lstate${L.have?' on':''}" data-act="state">${L.have?'🔓 have':'🔒 need'}</span></h3><div class="lrow"><input class="lnote mask" data-act="note" placeholder="username / pw-mgr ref" value="${aesc(L.note)}"><button class="licon" data-act="reveal" title="Show / hide">👁</button><button class="licon" data-act="copy" title="Copy">📋</button></div></div>`;});
+ const BC={};DATA.forEach(r=>{BC[r.brand]=(BC[r.brand]||0)+1;});
+ let h='<div class="lhint">Vendor portal logins — saved only on this device. Tap a vendor to add or reveal its login, then 📋 to copy. Keep raw passwords in a password manager; store a username or reference here.</div><div class="lgrid">';
+ Object.keys(PORTALS).sort().forEach(b=>{const L=getLogin(b);const saved=!!(L.note&&L.note.trim());const cnt=BC[b]?` <span class="tag">${BC[b]}</span>`:'';
+  h+=`<div class="lcard" data-b="${aesc(b)}"><div class="lhead"><span class="lname">${aesc(b)}${cnt}</span><a class="port" href="${PORTALS[b]}" target="_blank" rel="noopener">🔑 portal</a></div><button class="lpill${saved?' on':''}" data-act="pill">${saved?'✓ login saved — tap to view':'+ add login'}</button><div class="lbody"><div class="lrow"><input class="lnote mask" data-act="note" placeholder="username / pw-mgr ref" value="${aesc(L.note)}"><button class="licon" data-act="reveal" title="Show / hide">👁</button><button class="licon" data-act="copy" title="Copy">📋</button></div></div></div>`;});
  h+='</div>';panel.innerHTML=h;
- panel.querySelectorAll('.lcard').forEach(card=>{const b=card.dataset.b;const note=card.querySelector('[data-act=note]');
-  note.onchange=()=>{const L=getLogin(b);L.note=note.value;setLogin(b,L);};
+ panel.querySelectorAll('.lcard').forEach(card=>{const b=card.dataset.b;const note=card.querySelector('[data-act=note]');const pill=card.querySelector('[data-act=pill]');
+  function refreshPill(){const s=!!(note.value&&note.value.trim());pill.classList.toggle('on',s);pill.textContent=s?'✓ login saved — tap to view':'+ add login';}
+  pill.onclick=()=>{const opening=!card.classList.contains('open');card.classList.toggle('open',opening);if(opening){note.classList.remove('mask');if(!(note.value&&note.value.trim()))note.focus();}};
+  note.onchange=()=>{const L=getLogin(b);L.note=note.value;L.have=!!(note.value&&note.value.trim());setLogin(b,L);refreshPill();};
   card.querySelector('[data-act=reveal]').onclick=()=>note.classList.toggle('mask');
-  card.querySelector('[data-act=copy]').onclick=()=>{const v=note.value||'';const ok=()=>flash(card.querySelector('.lrow'));if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(ok).catch(()=>{fallbackCopy(note);ok();});}else{fallbackCopy(note);ok();}};
-  card.querySelector('[data-act=state]').onclick=()=>{const L=getLogin(b);L.have=!L.have;setLogin(b,L);const st=card.querySelector('[data-act=state]');st.classList.toggle('on',L.have);st.textContent=L.have?'🔓 have':'🔒 need';};
+  card.querySelector('[data-act=copy]').onclick=()=>{const v=note.value||'';const ok=()=>flash(card.querySelector('.lbody'));if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(ok).catch(()=>{fallbackCopy(note);ok();});}else{fallbackCopy(note);ok();}};
  });}
 document.getElementById('toggleLogins').onclick=()=>{const p=document.getElementById('loginsPanel');p.classList.toggle('on');const on=p.classList.contains('on');document.getElementById('toggleLogins').classList.toggle('on',on);if(on){renderLogins();p.scrollIntoView({behavior:'smooth',block:'start'});}};
 render();
