@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="Keystone"/>
+<meta name="theme-color" content="#14110d"/>
+<title>Keystone</title>
+<style>
+  :root{--bg:#14110d;--panel:#1f1a14;--line:#322a20;--ink:#f3ede2;--muted:#9a8f7e;--amber:#e0a84a;--amber2:#caa14b;--good:#5bbf7a;--bad:#e0654a}
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  html,body{margin:0;height:100%}
+  body{background:radial-gradient(120% 80% at 50% 0%,#1b160f 0%,#14110d 60%);color:var(--ink);
+    font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    display:flex;flex-direction:column;height:100dvh;overflow:hidden;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+  header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--line)}
+  .brand{display:flex;align-items:center;gap:9px;font-weight:700;letter-spacing:-.01em}
+  .dot{width:9px;height:9px;border-radius:50%;background:var(--amber);box-shadow:0 0 12px var(--amber)}
+  .iconbtn{background:none;border:none;color:var(--muted);font-size:22px;padding:6px;cursor:pointer}
+  #log{flex:1;overflow-y:auto;padding:18px 16px 8px;display:flex;flex-direction:column;gap:12px}
+  .msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:15.5px;white-space:pre-wrap;word-wrap:break-word}
+  .me{align-self:flex-end;background:#2a2014;border:1px solid #3a2c18;border-bottom-right-radius:5px}
+  .ks{align-self:flex-start;background:var(--panel);border:1px solid var(--line);border-bottom-left-radius:5px}
+  .ks b.n{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber2);margin-bottom:3px;font-weight:700}
+  .hint{color:var(--muted);text-align:center;font-size:13px;margin:auto 20px;max-width:340px}
+  footer{padding:12px 16px 18px;display:flex;flex-direction:column;align-items:center;gap:8px;border-top:1px solid var(--line)}
+  #status{font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);min-height:16px}
+  #mic{width:84px;height:84px;border-radius:50%;border:none;background:linear-gradient(180deg,var(--amber),#b9842f);color:#1a1409;
+    font-size:32px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .12s, box-shadow .2s;
+    box-shadow:0 8px 28px rgba(224,168,74,.32)}
+  #mic:active{transform:scale(.94)}
+  #mic.rec{background:linear-gradient(180deg,#e0654a,#b53f29);box-shadow:0 0 0 0 rgba(224,101,74,.55);animation:pulse 1.3s infinite}
+  #mic.busy{opacity:.5;pointer-events:none}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(224,101,74,.5)}70%{box-shadow:0 0 0 22px rgba(224,101,74,0)}100%{box-shadow:0 0 0 0 rgba(224,101,74,0)}}
+  /* settings */
+  #settings{position:fixed;inset:0;background:var(--bg);z-index:20;display:none;flex-direction:column;padding:env(safe-area-inset-top) 0 0}
+  #settings.open{display:flex}
+  #settings .body{overflow-y:auto;padding:18px 18px 40px}
+  label{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:16px 0 6px;font-weight:700}
+  input,select,textarea{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:11px 12px;font:inherit}
+  textarea{min-height:120px;resize:vertical;line-height:1.45}
+  .row{display:flex;gap:10px}.row>*{flex:1}
+  .save{margin-top:22px;width:100%;background:var(--amber);color:#1a1409;border:none;border-radius:12px;padding:14px;font-weight:800;font-size:16px;cursor:pointer}
+  .note{font-size:12px;color:var(--muted);line-height:1.5;margin-top:10px}
+  a{color:var(--amber2)}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand"><span class="dot"></span> Keystone</div>
+  <button class="iconbtn" id="open">⚙︎</button>
+</header>
+
+<div id="log"><div class="hint" id="hint">Tap the mic and talk. I'll think it through and answer in your ear.<br><br>First time? Hit ⚙︎ and paste your two API keys.</div></div>
+
+<footer>
+  <div id="status"></div>
+  <button id="mic">🎙️</button>
+</footer>
+
+<!-- SETTINGS -->
+<div id="settings">
+  <header><div class="brand">Settings</div><button class="iconbtn" id="close">✕</button></header>
+  <div class="body">
+    <label>Anthropic API key</label>
+    <input id="ak" type="password" placeholder="sk-ant-..." autocomplete="off"/>
+    <label>ElevenLabs API key</label>
+    <input id="ek" type="password" placeholder="..." autocomplete="off"/>
+    <div class="row">
+      <div><label>Voice</label>
+        <select id="voice">
+          <option value="pNInz6obpgDQGcFmaJgB">Adam — deep, steady</option>
+          <option value="ErXwobaYiN019PkySvjV">Antoni — warm</option>
+          <option value="TxGEqnHWrfWFTfGW9XjX">Josh — easygoing</option>
+          <option value="VR6AewLTigWG4xSOukaG">Arnold — gravelly</option>
+          <option value="21m00Tcm4TlvDq8ikWAM">Rachel — calm (f)</option>
+          <option value="__custom">Custom voice ID…</option>
+        </select>
+      </div>
+      <div><label>Brain</label>
+        <select id="model">
+          <option value="claude-sonnet-4-6">Sonnet — sharp</option>
+          <option value="claude-haiku-4-5-20251001">Haiku — fastest</option>
+          <option value="claude-opus-4-8">Opus — deepest</option>
+        </select>
+      </div>
+    </div>
+    <input id="customvoice" placeholder="paste ElevenLabs voice ID" style="display:none;margin-top:8px"/>
+    <label>What Keystone should know (memory / context)</label>
+    <textarea id="ctx"></textarea>
+    <div class="row" style="margin-top:14px">
+      <button class="save" id="save">Save</button>
+      <button class="save" id="reset" style="background:var(--panel);color:var(--muted);border:1px solid var(--line)">Clear chat</button>
+    </div>
+    <div class="note">Your keys live <b>only on this phone</b> (localStorage) and go straight to Anthropic/ElevenLabs — nothing passes through anyone else. This is a personal prototype; treat the keys like passwords. Add to Home Screen for a full-screen app.</div>
+  </div>
+</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const LS=window.localStorage;
+const DEFAULT_CTX=`I'm Zach — Raleigh, NC. I run Trig Modern (a modern-furniture dealer; you're "Keystone," my data/ops right hand there) and I help my family's pet-care business, Pawpi's (senior care through pet care). You also know my design taste and that I move fast.`;
+
+// ---- persona ----
+const SYS=`You are Keystone — Zach's sharp, grounded, slightly irreverent right hand. You're talking OUT LOUD through his earbud, so:
+- Keep it SHORT. Usually 1-3 sentences. No lists, no markdown, no headers, no emoji. Talk like a real person.
+- Be direct, cut fluff, take a stance. Challenge weak thinking instead of agreeing. A little dry wit is good; never a cheerleader.
+- First-principles and action over theory. If you need one thing to answer well, ask one crisp question.
+- You can't touch files or deploy from here — this is the thinking/brainstorm channel. For real execution, tell him to bring it to a Cowork session.
+- Own mistakes fast, stay useful, keep self-respect.
+Context about Zach:\n`;
+
+// ---- state ----
+let msgs=[]; try{msgs=JSON.parse(LS.getItem('ks_msgs')||'[]')}catch(e){}
+let rec=null, chunks=[], busy=false;
+
+function cfg(){return{ak:LS.getItem('ks_ak')||'',ek:LS.getItem('ks_ek')||'',
+  voice:LS.getItem('ks_voice')||'pNInz6obpgDQGcFmaJgB',model:LS.getItem('ks_model')||'claude-sonnet-4-6',
+  ctx:LS.getItem('ks_ctx')||DEFAULT_CTX}}
+
+function renderLog(){
+  const log=$('log');
+  if(!msgs.length){return}
+  $('hint') && $('hint').remove();
+  log.innerHTML='';
+  for(const m of msgs){
+    const d=document.createElement('div');
+    d.className='msg '+(m.role==='user'?'me':'ks');
+    d.innerHTML=(m.role==='assistant'?'<b class="n">Keystone</b>':'')+escapeHtml(m.content);
+    log.appendChild(d);
+  }
+  log.scrollTop=log.scrollHeight;
+}
+function escapeHtml(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+function setStatus(t){$('status').textContent=t||''}
+function save(){LS.setItem('ks_msgs',JSON.stringify(msgs.slice(-30)))}
+
+// ---- settings ----
+function loadSettings(){const c=cfg();$('ak').value=c.ak;$('ek').value=c.ek;$('model').value=c.model;$('ctx').value=c.ctx;
+  const presets=['pNInz6obpgDQGcFmaJgB','ErXwobaYiN019PkySvjV','TxGEqnHWrfWFTfGW9XjX','VR6AewLTigWG4xSOukaG','21m00Tcm4TlvDq8ikWAM'];
+  if(presets.includes(c.voice)){$('voice').value=c.voice}else{$('voice').value='__custom';$('customvoice').style.display='block';$('customvoice').value=c.voice}}
+$('open').onclick=()=>{loadSettings();$('settings').classList.add('open')};
+$('close').onclick=()=>$('settings').classList.remove('open');
+$('voice').onchange=e=>$('customvoice').style.display=(e.target.value==='__custom')?'block':'none';
+$('save').onclick=()=>{
+  LS.setItem('ks_ak',$('ak').value.trim());LS.setItem('ks_ek',$('ek').value.trim());
+  LS.setItem('ks_model',$('model').value);LS.setItem('ks_ctx',$('ctx').value.trim()||DEFAULT_CTX);
+  const v=$('voice').value==='__custom'?$('customvoice').value.trim():$('voice').value;LS.setItem('ks_voice',v);
+  $('settings').classList.remove('open');setStatus('saved');setTimeout(()=>setStatus(''),1200);
+};
+$('reset').onclick=()=>{msgs=[];save();$('log').innerHTML='<div class="hint">Cleared. Tap the mic.</div>';$('settings').classList.remove('open')};
+
+// ---- mic / pipeline ----
+$('mic').onclick=async()=>{
+  if(busy)return;
+  if(rec&&rec.state==='recording'){rec.stop();return}
+  const c=cfg();
+  if(!c.ak||!c.ek){setStatus('add your API keys in ⚙︎');$('open').click();return}
+  try{
+    const stream=await navigator.mediaDevices.getUserMedia({audio:true});
+    chunks=[];
+    const mime=MediaRecorder.isTypeSupported('audio/webm')?'audio/webm':(MediaRecorder.isTypeSupported('audio/mp4')?'audio/mp4':'');
+    rec=new MediaRecorder(stream,mime?{mimeType:mime}:undefined);
+    rec.ondataavailable=e=>{if(e.data.size)chunks.push(e.data)};
+    rec.onstop=async()=>{stream.getTracks().forEach(t=>t.stop());await handle(new Blob(chunks,{type:mime||'audio/webm'}))};
+    rec.start();$('mic').classList.add('rec');setStatus('listening — tap to send');
+  }catch(e){setStatus('mic blocked — allow microphone access')}
+};
+
+async function handle(blob){
+  $('mic').classList.remove('rec');$('mic').classList.add('busy');busy=true;
+  const c=cfg();
+  try{
+    setStatus('transcribing…');
+    const text=await stt(blob,c.ek);
+    if(!text||!text.trim()){setStatus('didn\\'t catch that');done();return}
+    push('user',text);
+    setStatus('thinking…');
+    const reply=await brain(c,text);
+    push('assistant',reply);
+    setStatus('speaking…');
+    await speak(reply,c);
+    setStatus('');
+  }catch(e){setStatus('error: '+(e.message||e))}
+  done();
+}
+function done(){busy=false;$('mic').classList.remove('busy')}
+function push(role,content){msgs.push({role,content});save();renderLog()}
+
+async function stt(blob,ek){
+  const fd=new FormData();
+  const ext=(blob.type.includes('mp4')||blob.type.includes('m4a'))?'m4a':(blob.type.includes('webm')?'webm':'mp3');
+  fd.append('file',blob,'audio.'+ext);
+  fd.append('model_id','scribe_v1');
+  const r=await fetch('https://api.elevenlabs.io/v1/speech-to-text',{method:'POST',headers:{'xi-api-key':ek},body:fd});
+  if(!r.ok)throw new Error('STT '+r.status);
+  const j=await r.json();return j.text||'';
+}
+
+async function brain(c,userText){
+  const history=msgs.slice(-20).map(m=>({role:m.role,content:m.content}));
+  const body={model:c.model,max_tokens:400,system:SYS+c.ctx,messages:history};
+  const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',
+    headers:{'content-type':'application/json','x-api-key':c.ak,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+    body:JSON.stringify(body)});
+  if(!r.ok){const t=await r.text();throw new Error('Claude '+r.status+' '+t.slice(0,80))}
+  const j=await r.json();return (j.content&&j.content[0]&&j.content[0].text)||'(no reply)';
+}
+
+async function speak(text,c){
+  const r=await fetch('https://api.elevenlabs.io/v1/text-to-speech/'+c.voice,{method:'POST',
+    headers:{'xi-api-key':c.ek,'content-type':'application/json'},
+    body:JSON.stringify({text,model_id:'eleven_turbo_v2_5',voice_settings:{stability:.45,similarity_boost:.8}})});
+  if(!r.ok)throw new Error('TTS '+r.status);
+  const buf=await r.blob();
+  const url=URL.createObjectURL(buf);
+  const a=new Audio(url);
+  await a.play().catch(()=>{});
+  return new Promise(res=>{a.onended=()=>{URL.revokeObjectURL(url);res()}});
+}
+
+renderLog();
+</script>
+</body>
+</html>
