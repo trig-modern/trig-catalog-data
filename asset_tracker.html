@@ -73,7 +73,7 @@ footer{padding:18px 24px;color:var(--mut);font-size:12px;border-top:1px solid va
 </style></head><body>
 <header>
 <h1>Trig — Catalogue Asset Tracker</h1>
-<div class="sub">2026-06-15 15:29 · 877 live products · 61 brands · status computed live from the canonical</div>
+<div class="sub">2026-06-15 15:59 · 877 live products · 61 brands · status computed live from the canonical</div>
 </header>
 <div class="wrap">
 <div class="kpis" id="kpis"></div>
@@ -102,6 +102,13 @@ const DATA=[{"brand":"&Tradition","model":"Flowerpot Pendant VP2","cat":"Pendant
 const ASSETS=[["retail","Retail $"],["trade","Trade $"],["image","Image"],["tear","Tear sheet"],["d3","3D model"]];
 const MULT={"tradition":"","accord":"","adesso":"","adriana hoyos":"","ameico":"","american leather":"","artek":"","artemide":"","bdi":"","barkman":"","bassett mirror":"","bensen":"","bob batura":"","brenelli design":"","canadel":"","charleston forge":"","conform":"","david trubridge":"","ethnicraft":"","flos":"","four hands":"","gat creek":"","global views":"","gus modern":"","hiend accents":"","hubbardton forge":"","huppe":"","interlude home":"","koncept":"","loll designs":"1","loloi":"","made by hand":"","modern forms":"","moooi":"","nuevo":"","pablo":"","robert abbey":"","rodam":"","ryan dart":"","sunpan":"","universal":"","uttermost":"","visual comfort":"","wac lighting":"","younger":"","zafferano":""};
 function norm(s){s=(s||'').toLowerCase().replace(/[&+]/g,' ').replace(/[^a-z0-9 ]/g,' ');const drop=['company','furniture','america','inc','co','llc'];return s.split(/\s+/).filter(t=>t&&!drop.includes(t)).join(' ');}
+/* ---- Supabase: multipliers sync (multipliers ONLY; logins stay local) ---- */
+const SB_URL='https://xyfogedlowneaevmjkci.supabase.co';
+const SB_KEY='sb_publishable_ae3zGuAafiURw0AsjwXkvQ_amrQDJUu';
+let SBMULT={};
+async function loadMult(){try{const r=await fetch(SB_URL+'/rest/v1/mc_multipliers?select=vendor,multiplier',{headers:{apikey:SB_KEY,Authorization:'Bearer '+SB_KEY}});if(r.ok){const rows=await r.json();SBMULT={};rows.forEach(x=>{SBMULT[x.vendor]=x.multiplier||'';});}}catch(e){}}
+async function saveMult(vendor,mult){SBMULT[vendor]=mult;try{await fetch(SB_URL+'/rest/v1/mc_multipliers',{method:'POST',headers:{apikey:SB_KEY,Authorization:'Bearer '+SB_KEY,'content-type':'application/json',Prefer:'resolution=merge-duplicates,return=minimal'},body:JSON.stringify({vendor:vendor,multiplier:mult,updated_at:new Date().toISOString()})});}catch(e){}}
+function multVal(b){return (SBMULT[b]!==undefined?SBMULT[b]:(MULT[norm(b)]||''));}
 function lKey(b){return 'trig_login_'+b;}
 function getLogin(b){try{var o=Object.assign({have:false,note:'',user:'',pass:''},JSON.parse(localStorage.getItem(lKey(b))||'{}'));if(o.note&&!o.user&&!o.pass){o.user=o.note;}return o;}catch(e){return{have:false,note:'',user:'',pass:''};}}
 function setLogin(b,o){try{localStorage.setItem(lKey(b),JSON.stringify(o));}catch(e){}}
@@ -133,7 +140,7 @@ function render(){const rows=filt();kpis(rows);
   const purl=PORTALS[b];const pbadge=purl?` <a class="port" href="${purl}" target="_blank" rel="noopener" onclick="event.stopPropagation()">🔑 portal</a>`:'';
   let loginUI='';
   if(purl){const L=getLogin(b);loginUI=`<span class="loginchip${L.have?' on':''}" data-login="1" title="have this login?">${L.have?'🔓 have login':'🔒 need login'}</span><input class="loginnote" data-u="1" placeholder="username" value="${aesc(L.user)}"><input class="loginnote mask" data-p="1" placeholder="password" value="${aesc(L.pass)}">`;}
-  const mm=MULT[norm(b)];const mbadge=`<span class="tag" title="wholesale multiplier"${mm?' style="color:#5bbf7a;border-color:#2c5a3a"':''}>× ${mm||'—'}</span>`;
+  const mv=multVal(b);const mbadge=`<span class="tag multbadge" title="wholesale multiplier — type to set (saves for everyone)" style="padding:1px 4px">×&nbsp;<input class="multinput" data-mb="${aesc(b)}" value="${aesc(mv)}" placeholder="—" style="width:48px;background:transparent;border:0;border-bottom:1px solid #4a3f22;color:${mv?'#5bbf7a':'#caa14b'};font:inherit;text-align:center;outline:none"></span>`;
   h+=`<tr class="vrow" data-b="${b}"><td><b>${b}</b> <span class="tag">▸ ${g.length}</span> ${mbadge}${pbadge}${loginUI}</td><td></td>`;
   ASSETS.forEach(a=>{const n=g.filter(r=>r[a[0]]).length,p=pct(n,g.length);
    h+=`<td class="c"><span class="pct ${p==100?'y':p==0?'n':''}">${p}%</span> <span class="mini"><i style="width:${p}%"></i></span></td>`;});
@@ -150,6 +157,8 @@ function render(){const rows=filt();kpis(rows);
   const chip=v.querySelector('.loginchip');
   if(chip)chip.onclick=e=>{e.stopPropagation();const L=getLogin(b);L.have=!L.have;setLogin(b,L);chip.classList.toggle('on',L.have);chip.textContent=L.have?'🔓 have login':'🔒 need login';};
   v.querySelectorAll('.loginnote').forEach(inp=>{inp.onclick=e=>e.stopPropagation();inp.onkeydown=e=>e.stopPropagation();inp.onchange=()=>{const L=getLogin(b);if(inp.dataset.u!==undefined)L.user=inp.value;else L.pass=inp.value;L.have=!!((L.user&&L.user.trim())||(L.pass&&L.pass.trim()));setLogin(b,L);};});
+  const mi=v.querySelector('.multinput');
+  if(mi){mi.onclick=e=>e.stopPropagation();mi.onkeydown=e=>e.stopPropagation();mi.onchange=()=>{const val=mi.value.trim();mi.style.color=val?'#5bbf7a':'#caa14b';saveMult(b,val);};}
  });
 }
 document.getElementById('expLogins').onclick=()=>{const o={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.indexOf('trig_login_')===0)o[k.slice(11)]=JSON.parse(localStorage.getItem(k));}const blob=new Blob([JSON.stringify(o,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='trig_vendor_logins.json';a.click();};
@@ -157,13 +166,17 @@ document.getElementById('impLogins').onclick=()=>document.getElementById('impFil
 document.getElementById('impFile').onchange=e=>{const f=e.target.files[0];if(!f)return;const rd=new FileReader();rd.onload=()=>{try{const o=JSON.parse(rd.result);Object.keys(o).forEach(b=>setLogin(b,o[b]));render();if(document.getElementById('loginsPanel').classList.contains('on'))renderLogins();alert('Imported '+Object.keys(o).length+' vendor logins.');}catch(err){alert('Import failed: '+err.message);}};rd.readAsText(f);};
 function flash(el){if(!el)return;const s=document.createElement('span');s.className='copied';s.textContent='copied ✓';el.appendChild(s);setTimeout(()=>{s.remove();},1200);}
 function fallbackCopy(note){const m=note.classList.contains('mask');note.classList.remove('mask');note.focus();note.select();try{document.execCommand('copy');}catch(e){}if(m)note.classList.add('mask');}
+function allLoginVendors(){const s=new Set(Object.keys(PORTALS));for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.indexOf('trig_login_')===0)s.add(k.slice(11));}return [...s].sort((a,b)=>a.toLowerCase().localeCompare(b.toLowerCase()));}
 function renderLogins(){
  const panel=document.getElementById('loginsPanel');
  const BC={};DATA.forEach(r=>{BC[r.brand]=(BC[r.brand]||0)+1;});
- let h='<div class="lhint">Vendor portal logins — saved only on this device. Tap a vendor to add or reveal its login, then 📋 to copy. Keep raw passwords in a password manager; store a username or reference here.</div><div class="lgrid">';
- Object.keys(PORTALS).sort().forEach(b=>{const L=getLogin(b);const saved=!!((L.user&&L.user.trim())||(L.pass&&L.pass.trim()));const cnt=BC[b]?` <span class="tag">${BC[b]}</span>`:'';
-  h+=`<div class="lcard" data-b="${aesc(b)}"><div class="lhead"><span class="lname">${aesc(b)}${cnt}</span><a class="port" href="${PORTALS[b]}" target="_blank" rel="noopener">🔑 portal</a></div><button class="lpill${saved?' on':''}" data-act="pill">${saved?'✓ login saved — tap to view':'+ add login'}</button><div class="lbody"><div class="lrow"><input class="lnote" data-act="user" placeholder="username" value="${aesc(L.user)}"><button class="licon" data-act="cuser" title="Copy username">📋</button></div><div class="lrow"><input class="lnote mask" data-act="pass" placeholder="password" value="${aesc(L.pass)}"><button class="licon" data-act="reveal" title="Show / hide">👁</button><button class="licon" data-act="cpass" title="Copy password">📋</button></div></div></div>`;});
+ let h='<div class="lhint">Vendor portal logins — saved only on this device. Tap a vendor to add or reveal its login, then 📋 to copy.</div>';
+ h+='<div class="laddwrap" style="border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:12px"><div style="font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--mut);margin-bottom:8px">+ Add a new login</div><div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center"><input id="addVendor" placeholder="vendor / site name" style="flex:2;min-width:140px;background:var(--card);border:1px solid var(--line);color:inherit;border-radius:8px;padding:7px 10px;font:inherit"><input id="addUser" placeholder="username" style="flex:1;min-width:110px;background:var(--card);border:1px solid var(--line);color:inherit;border-radius:8px;padding:7px 10px;font:inherit"><input id="addPass" type="password" placeholder="password" style="flex:1;min-width:110px;background:var(--card);border:1px solid var(--line);color:inherit;border-radius:8px;padding:7px 10px;font:inherit"><button id="addBtn" class="iobtn" style="background:#2c5a3a;border-color:#3a7a4f;color:#cfeeda;font-weight:700">Add</button></div></div>';
+ h+='<div class="lgrid">';
+ allLoginVendors().forEach(b=>{const L=getLogin(b);const saved=!!((L.user&&L.user.trim())||(L.pass&&L.pass.trim()));const cnt=BC[b]?` <span class="tag">${BC[b]}</span>`:'';const port=PORTALS[b]?`<a class="port" href="${PORTALS[b]}" target="_blank" rel="noopener">🔑 portal</a>`:'';
+  h+=`<div class="lcard" data-b="${aesc(b)}"><div class="lhead"><span class="lname">${aesc(b)}${cnt}</span>${port}</div><button class="lpill${saved?' on':''}" data-act="pill">${saved?'✓ login saved — tap to view':'+ add login'}</button><div class="lbody"><div class="lrow"><input class="lnote" data-act="user" placeholder="username" value="${aesc(L.user)}"><button class="licon" data-act="cuser" title="Copy username">📋</button></div><div class="lrow"><input class="lnote mask" data-act="pass" placeholder="password" value="${aesc(L.pass)}"><button class="licon" data-act="reveal" title="Show / hide">👁</button><button class="licon" data-act="cpass" title="Copy password">📋</button></div></div></div>`;});
  h+='</div>';panel.innerHTML=h;
+ const ab=document.getElementById('addBtn');if(ab)ab.onclick=()=>{const vi=document.getElementById('addVendor');const v=vi.value.trim();if(!v){vi.focus();return;}const L=getLogin(v);L.user=document.getElementById('addUser').value;L.pass=document.getElementById('addPass').value;L.have=!!((L.user&&L.user.trim())||(L.pass&&L.pass.trim()));setLogin(v,L);renderLogins();render();};
  panel.querySelectorAll('.lcard').forEach(card=>{const b=card.dataset.b;const userI=card.querySelector('[data-act=user]');const passI=card.querySelector('[data-act=pass]');const pill=card.querySelector('[data-act=pill]');
   function save(){const L=getLogin(b);L.user=userI.value;L.pass=passI.value;L.have=!!((userI.value&&userI.value.trim())||(passI.value&&passI.value.trim()));setLogin(b,L);pill.classList.toggle('on',L.have);pill.textContent=L.have?'✓ login saved — tap to view':'+ add login';}
   pill.onclick=()=>{const opening=!card.classList.contains('open');card.classList.toggle('open',opening);if(opening&&!(userI.value&&userI.value.trim()))userI.focus();};
@@ -174,5 +187,5 @@ function renderLogins(){
   card.querySelector('[data-act=cpass]').onclick=()=>cp(passI);
  });}
 document.getElementById('toggleLogins').onclick=()=>{const p=document.getElementById('loginsPanel');p.classList.toggle('on');const on=p.classList.contains('on');document.getElementById('toggleLogins').classList.toggle('on',on);if(on){renderLogins();p.scrollIntoView({behavior:'smooth',block:'start'});}};
-render();
+loadMult().then(render);
 </script></body></html>
