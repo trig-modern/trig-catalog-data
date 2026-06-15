@@ -73,7 +73,7 @@ footer{padding:18px 24px;color:var(--mut);font-size:12px;border-top:1px solid va
 </style></head><body>
 <header>
 <h1>Trig — Catalogue Asset Tracker</h1>
-<div class="sub">2026-06-15 17:09 · 884 live products · 61 brands · status computed live from the canonical</div>
+<div class="sub">2026-06-15 17:17 · 884 live products · 61 brands · status computed live from the canonical</div>
 </header>
 <div class="wrap">
 <div class="kpis" id="kpis"></div>
@@ -133,6 +133,8 @@ async function unlockLogins(pass){
   for(const b of allLoginVendors()){ const o=getLogin(b); if((o.user&&o.user.trim())||(o.pass&&o.pass.trim())) cloudSaveLogin(b,o); }
   return{ok:true};
 }
+const LOGIN_SECRET='trig-rug-internal-2026-shared';
+async function ensureLoginKey(){if(CRYPTO_KEY)return true;if(!(window.crypto&&crypto.subtle))return false;try{CRYPTO_KEY=await deriveKey(LOGIN_SECRET);LOGINS_UNLOCKED=true;return true;}catch(e){return false;}}
 function lKey(b){return 'trig_login_'+b;}
 function getLogin(b){try{var o=Object.assign({have:false,note:'',user:'',pass:''},JSON.parse(localStorage.getItem(lKey(b))||'{}'));if(o.note&&!o.user&&!o.pass){o.user=o.note;}return o;}catch(e){return{have:false,note:'',user:'',pass:''};}}
 function setLogin(b,o){try{localStorage.setItem(lKey(b),JSON.stringify(o));}catch(e){} if(CRYPTO_KEY) cloudSaveLogin(b,o);}
@@ -193,16 +195,8 @@ function fallbackCopy(note){const m=note.classList.contains('mask');note.classLi
 function allLoginVendors(){const s=new Set(Object.keys(PORTALS));for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.indexOf('trig_login_')===0)s.add(k.slice(11));}return [...s].sort((a,b)=>a.toLowerCase().localeCompare(b.toLowerCase()));}
 function renderLogins(){
  const panel=document.getElementById('loginsPanel');
- if(!LOGINS_UNLOCKED){
-   panel.innerHTML='<div class="lhint">🔒 Vendor logins are <b>end-to-end encrypted</b> and synced across devices. Enter your shared unlock code to view &amp; edit. Set it once — everyone uses the same code. <b>Lost code = data can\'t be recovered</b> (there is no reset).</div>'
-     +'<div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;max-width:420px"><input id="unlockCode" type="password" placeholder="unlock code" style="flex:1;min-width:160px;background:var(--card);border:1px solid var(--line);color:inherit;border-radius:8px;padding:9px 11px;font:inherit"><button id="unlockBtn" class="iobtn primary">Unlock</button></div><div id="unlockMsg" style="font-size:12px;color:#caa14b;margin-top:8px;min-height:16px"></div>';
-   const go=async()=>{const inp=document.getElementById('unlockCode');const msg=document.getElementById('unlockMsg');const btn=document.getElementById('unlockBtn');btn.disabled=true;msg.style.color='#caa14b';msg.textContent='Unlocking…';const res=await unlockLogins(inp.value);if(res.ok){renderLogins();render();}else{btn.disabled=false;msg.style.color='#e06a5a';msg.textContent=res.msg;}};
-   document.getElementById('unlockBtn').onclick=go;
-   document.getElementById('unlockCode').onkeydown=e=>{if(e.key==='Enter')go();};
-   return;
- }
  const BC={};DATA.forEach(r=>{BC[r.brand]=(BC[r.brand]||0)+1;});
- let h='<div class="lhint">🔓 Vendor logins — <b>encrypted &amp; synced</b> across devices. Tap a vendor to add or reveal its login, then 📋 to copy.</div>';
+ let h='<div class="lhint">Vendor logins — saved online &amp; synced across devices. Tap a vendor to add or reveal its login, then 📋 to copy.</div>';
  h+='<div class="laddwrap" style="border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:12px"><div style="font-size:11px;font-weight:700;letter-spacing:.5px;text-transform:uppercase;color:var(--mut);margin-bottom:8px">+ Add a new login</div><div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center"><input id="addVendor" placeholder="vendor / site name" style="flex:2;min-width:140px;background:var(--card);border:1px solid var(--line);color:inherit;border-radius:8px;padding:7px 10px;font:inherit"><input id="addUser" placeholder="username" style="flex:1;min-width:110px;background:var(--card);border:1px solid var(--line);color:inherit;border-radius:8px;padding:7px 10px;font:inherit"><input id="addPass" type="password" placeholder="password" style="flex:1;min-width:110px;background:var(--card);border:1px solid var(--line);color:inherit;border-radius:8px;padding:7px 10px;font:inherit"><button id="addBtn" class="iobtn" style="background:#2c5a3a;border-color:#3a7a4f;color:#cfeeda;font-weight:700">Add</button></div></div>';
  h+='<div class="lgrid">';
  allLoginVendors().forEach(b=>{const L=getLogin(b);const saved=!!((L.user&&L.user.trim())||(L.pass&&L.pass.trim()));const cnt=BC[b]?` <span class="tag">${BC[b]}</span>`:'';const port=PORTALS[b]?`<a class="port" href="${PORTALS[b]}" target="_blank" rel="noopener">🔑 portal</a>`:'';
@@ -218,6 +212,6 @@ function renderLogins(){
   card.querySelector('[data-act=cuser]').onclick=()=>cp(userI);
   card.querySelector('[data-act=cpass]').onclick=()=>cp(passI);
  });}
-document.getElementById('toggleLogins').onclick=()=>{const p=document.getElementById('loginsPanel');p.classList.toggle('on');const on=p.classList.contains('on');document.getElementById('toggleLogins').classList.toggle('on',on);if(on){renderLogins();p.scrollIntoView({behavior:'smooth',block:'start'});}};
-loadMult().then(render);
+document.getElementById('toggleLogins').onclick=async()=>{const p=document.getElementById('loginsPanel');p.classList.toggle('on');const on=p.classList.contains('on');document.getElementById('toggleLogins').classList.toggle('on',on);if(on){await ensureLoginKey();await cloudLoadLogins();renderLogins();p.scrollIntoView({behavior:'smooth',block:'start'});}};
+ensureLoginKey().then(()=>cloudLoadLogins()).then(()=>loadMult()).then(render);
 </script></body></html>
