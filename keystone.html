@@ -4,70 +4,118 @@
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,viewport-fit=cover"/>
 <meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
 <meta name="apple-mobile-web-app-title" content="Keystone"/>
-<meta name="theme-color" content="#14110d"/>
+<meta name="theme-color" content="#100d0a"/>
 <title>Keystone</title>
 <style>
-  :root{--bg:#14110d;--panel:#1f1a14;--line:#322a20;--ink:#f3ede2;--muted:#9a8f7e;--amber:#e0a84a;--amber2:#caa14b;--good:#5bbf7a;--bad:#e0654a}
-  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+  :root{
+    --bg:#100d0a;--panel:#1c1812;--panel2:#241e16;--line:#332a1f;--ink:#f4eee3;--muted:#9c917f;
+    --amber:#e7ad4e;--amber2:#caa14b;--clay:#e0654a;--good:#5bbf7a;
+    --pawpi:#ff7648;
+  }
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
   html,body{margin:0;height:100%}
-  body{background:radial-gradient(120% 80% at 50% 0%,#1b160f 0%,#14110d 60%);color:var(--ink);
+  body{background:var(--bg);color:var(--ink);
     font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-    display:flex;flex-direction:column;height:100dvh;overflow:hidden;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
-  header{display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid var(--line)}
-  .brand{display:flex;align-items:center;gap:9px;font-weight:700;letter-spacing:-.01em}
-  .dot{width:9px;height:9px;border-radius:50%;background:var(--amber);box-shadow:0 0 12px var(--amber)}
-  .iconbtn{background:none;border:none;color:var(--muted);font-size:22px;padding:6px;cursor:pointer}
-  #log{flex:1;overflow-y:auto;padding:18px 16px 8px;display:flex;flex-direction:column;gap:12px}
-  .msg{max-width:86%;padding:10px 13px;border-radius:14px;font-size:15.5px;white-space:pre-wrap;word-wrap:break-word}
-  .me{align-self:flex-end;background:#2a2014;border:1px solid #3a2c18;border-bottom-right-radius:5px}
-  .ks{align-self:flex-start;background:var(--panel);border:1px solid var(--line);border-bottom-left-radius:5px}
-  .ks b.n{display:block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--amber2);margin-bottom:3px;font-weight:700}
-  .hint{color:var(--muted);text-align:center;font-size:13px;margin:auto 20px;max-width:340px}
-  footer{padding:12px 16px 18px;display:flex;flex-direction:column;align-items:center;gap:8px;border-top:1px solid var(--line)}
-  #status{font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);min-height:16px}
-  #mic{width:84px;height:84px;border-radius:50%;border:none;background:linear-gradient(180deg,var(--amber),#b9842f);color:#1a1409;
-    font-size:32px;display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .12s, box-shadow .2s;
-    box-shadow:0 8px 28px rgba(224,168,74,.32)}
-  #mic:active{transform:scale(.94)}
-  #mic.rec{background:linear-gradient(180deg,#e0654a,#b53f29);box-shadow:0 0 0 0 rgba(224,101,74,.55);animation:pulse 1.3s infinite}
-  #mic.busy{opacity:.5;pointer-events:none}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(224,101,74,.5)}70%{box-shadow:0 0 0 22px rgba(224,101,74,0)}100%{box-shadow:0 0 0 0 rgba(224,101,74,0)}}
-  /* settings */
-  #settings{position:fixed;inset:0;background:var(--bg);z-index:20;display:none;flex-direction:column;padding:env(safe-area-inset-top) 0 0}
-  #settings.open{display:flex}
-  #settings .body{overflow-y:auto;padding:18px 18px 40px}
-  label{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:16px 0 6px;font-weight:700}
-  input,select,textarea{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--ink);border-radius:10px;padding:11px 12px;font:inherit}
+    display:flex;flex-direction:column;height:100dvh;overflow:hidden;
+    padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+  header{display:flex;align-items:center;justify-content:space-between;padding:12px 16px}
+  .brand{display:flex;align-items:center;gap:10px;font-weight:750;letter-spacing:-.01em;font-size:17px}
+  .seg{display:flex;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:3px}
+  .seg button{border:none;background:none;color:var(--muted);font-weight:700;font-size:12.5px;padding:6px 13px;border-radius:999px;cursor:pointer;transition:.15s}
+  .seg button.on{background:var(--amber);color:#1a1409}
+  .seg button.on.pawpi{background:var(--pawpi);color:#2a1009}
+  .iconbtn{background:none;border:none;color:var(--muted);font-size:21px;padding:6px 8px;cursor:pointer;position:relative}
+  .badge{position:absolute;top:0;right:0;background:var(--clay);color:#fff;font-size:9px;font-weight:800;border-radius:999px;min-width:15px;height:15px;display:flex;align-items:center;justify-content:center;padding:0 3px}
+
+  /* stage */
+  .stage{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;position:relative;overflow:hidden}
+  canvas#orb{width:300px;height:300px;max-width:80vw;max-height:42vh}
+  #caption{position:absolute;bottom:8%;left:0;right:0;padding:0 26px;text-align:center;color:var(--ink);font-size:17px;line-height:1.45;
+    max-height:30%;overflow-y:auto;opacity:.96}
+  #caption .who{display:block;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber2);margin-bottom:6px;font-weight:800}
+  #statusline{position:absolute;top:6px;left:0;right:0;text-align:center;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);min-height:14px}
+
+  /* quick chips */
+  .chips{display:flex;gap:8px;overflow-x:auto;padding:10px 16px 4px;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:none;background:var(--panel);border:1px solid var(--line);color:var(--ink);border-radius:999px;padding:8px 14px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+  .chip:active{background:var(--panel2)}
+
+  /* dock */
+  .dock{padding:8px 14px 16px;display:flex;align-items:center;gap:10px}
+  .txt{flex:1;display:flex;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:22px;padding:4px 4px 4px 16px}
+  .txt input{flex:1;background:none;border:none;color:var(--ink);font:inherit;outline:none;-webkit-user-select:text;user-select:text}
+  .txt .send{background:var(--amber);border:none;color:#1a1409;width:34px;height:34px;border-radius:50%;font-size:17px;cursor:pointer;display:flex;align-items:center;justify-content:center}
+  #mic{width:64px;height:64px;border-radius:50%;border:none;flex:none;
+    background:linear-gradient(180deg,var(--amber),#b9842f);color:#1a1409;font-size:25px;cursor:pointer;
+    box-shadow:0 6px 22px rgba(231,173,78,.30);transition:transform .12s}
+  #mic.pawpi{background:linear-gradient(180deg,var(--pawpi),#c0461f);color:#2a1009;box-shadow:0 6px 22px rgba(255,118,72,.3)}
+  #mic:active{transform:scale(.93)}
+  #mic.rec{background:linear-gradient(180deg,var(--clay),#b53f29);color:#fff;animation:pulse 1.3s infinite}
+  #mic.busy{opacity:.45;pointer-events:none}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(224,101,74,.5)}70%{box-shadow:0 0 0 18px rgba(224,101,74,0)}100%{box-shadow:0 0 0 0 rgba(224,101,74,0)}}
+  .hands{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);font-weight:700;cursor:pointer;flex-direction:column}
+  .toggle{width:38px;height:22px;border-radius:999px;background:var(--line);position:relative;transition:.2s}
+  .toggle .k{position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:var(--muted);transition:.2s}
+  .toggle.on{background:var(--amber)}.toggle.on .k{left:18px;background:#1a1409}
+
+  /* overlays */
+  .sheet{position:fixed;inset:0;background:var(--bg);z-index:30;display:none;flex-direction:column;padding:env(safe-area-inset-top) 0 0}
+  .sheet.open{display:flex}
+  .sheet .body{overflow-y:auto;padding:16px 18px 50px;-webkit-user-select:text;user-select:text}
+  label{display:block;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:16px 0 6px;font-weight:800}
+  input.f,select,textarea{width:100%;background:var(--panel);border:1px solid var(--line);color:var(--ink);border-radius:11px;padding:11px 12px;font:inherit;-webkit-user-select:text;user-select:text}
   textarea{min-height:120px;resize:vertical;line-height:1.45}
   .row{display:flex;gap:10px}.row>*{flex:1}
-  .save{margin-top:22px;width:100%;background:var(--amber);color:#1a1409;border:none;border-radius:12px;padding:14px;font-weight:800;font-size:16px;cursor:pointer}
-  .note{font-size:12px;color:var(--muted);line-height:1.5;margin-top:10px}
+  .btn{width:100%;background:var(--amber);color:#1a1409;border:none;border-radius:12px;padding:14px;font-weight:800;font-size:16px;cursor:pointer;margin-top:18px}
+  .btn.ghost{background:var(--panel);color:var(--muted);border:1px solid var(--line)}
+  .note{font-size:12px;color:var(--muted);line-height:1.55;margin-top:12px}
   a{color:var(--amber2)}
+  .noteitem{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:11px 13px;margin-bottom:9px;-webkit-user-select:text;user-select:text}
+  .noteitem .meta{font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;display:flex;justify-content:space-between}
+  .noteitem .x{color:var(--clay);cursor:pointer;font-weight:800}
+  .empty{color:var(--muted);text-align:center;margin-top:40px;font-size:14px}
 </style>
 </head>
 <body>
+
 <header>
-  <div class="brand"><span class="dot"></span> Keystone</div>
-  <button class="iconbtn" id="open">⚙︎</button>
+  <div class="brand"><span id="brandtxt">Keystone</span></div>
+  <div class="seg" id="modeseg">
+    <button data-mode="keystone" class="on">Trig</button>
+    <button data-mode="pawpis">Pawpi's</button>
+  </div>
+  <div style="display:flex">
+    <button class="iconbtn" id="opennotes">📝<span class="badge" id="nbadge" style="display:none">0</span></button>
+    <button class="iconbtn" id="opencfg">⚙︎</button>
+  </div>
 </header>
 
-<div id="log"><div class="hint" id="hint">Tap the mic and talk. I'll think it through and answer in your ear.<br><br>First time? Hit ⚙︎ and paste your two API keys.</div></div>
+<div class="stage">
+  <div id="statusline"></div>
+  <canvas id="orb" width="600" height="600"></canvas>
+  <div id="caption"><span class="who">Keystone</span>Tap the mic and talk, or type below. Hit ⚙︎ first to drop in your keys.</div>
+</div>
 
-<footer>
-  <div id="status"></div>
+<div class="chips" id="chips"></div>
+
+<div class="dock">
+  <div class="txt"><input id="textin" placeholder="type instead…" enterkeyhint="send"/><button class="send" id="sendtext">↑</button></div>
   <button id="mic">🎙️</button>
-</footer>
+  <div class="hands" id="handswrap"><span>auto</span><div class="toggle" id="handstoggle"><div class="k"></div></div></div>
+</div>
 
 <!-- SETTINGS -->
-<div id="settings">
-  <header><div class="brand">Settings</div><button class="iconbtn" id="close">✕</button></header>
+<div class="sheet" id="cfg">
+  <header><div class="brand">Settings</div><button class="iconbtn" id="closecfg">✕</button></header>
   <div class="body">
     <label>Anthropic API key</label>
-    <input id="ak" type="password" placeholder="sk-ant-..." autocomplete="off"/>
+    <input class="f" id="ak" type="password" placeholder="sk-ant-..." autocomplete="off"/>
     <label>ElevenLabs API key</label>
-    <input id="ek" type="password" placeholder="..." autocomplete="off"/>
+    <input class="f" id="ek" type="password" placeholder="..." autocomplete="off"/>
     <div class="row">
       <div><label>Voice</label>
         <select id="voice">
@@ -87,141 +135,276 @@
         </select>
       </div>
     </div>
-    <input id="customvoice" placeholder="paste ElevenLabs voice ID" style="display:none;margin-top:8px"/>
-    <label>What Keystone should know (memory / context)</label>
+    <input class="f" id="customvoice" placeholder="paste ElevenLabs voice ID" style="display:none;margin-top:8px"/>
+    <label id="ctxlabel">Memory — what Keystone knows (Trig)</label>
     <textarea id="ctx"></textarea>
-    <div class="row" style="margin-top:14px">
-      <button class="save" id="save">Save</button>
-      <button class="save" id="reset" style="background:var(--panel);color:var(--muted);border:1px solid var(--line)">Clear chat</button>
-    </div>
-    <div class="note">Your keys live <b>only on this phone</b> (localStorage) and go straight to Anthropic/ElevenLabs — nothing passes through anyone else. This is a personal prototype; treat the keys like passwords. Add to Home Screen for a full-screen app.</div>
+    <button class="btn" id="savecfg">Save</button>
+    <button class="btn ghost" id="clearchat">Clear this mode's chat</button>
+    <div class="note">Keys live <b>only on this phone</b> and go straight to Anthropic + ElevenLabs — nothing routes through anyone else. Add to Home Screen for full-screen. v1.</div>
+  </div>
+</div>
+
+<!-- NOTES -->
+<div class="sheet" id="notes">
+  <header><div class="brand">Captured</div><button class="iconbtn" id="closenotes">✕</button></header>
+  <div class="body">
+    <div class="note" style="margin-top:0">Say "remember this" or "note that" and I'll capture it here. Tap any reply's text to copy.</div>
+    <div id="notelist"></div>
+    <button class="btn" id="copynotes">Copy all</button>
+    <button class="btn ghost" id="clearnotes">Clear notes</button>
   </div>
 </div>
 
 <script>
 const $=id=>document.getElementById(id);
-const LS=window.localStorage;
-const DEFAULT_CTX=`I'm Zach — Raleigh, NC. I run Trig Modern (a modern-furniture dealer; you're "Keystone," my data/ops right hand there) and I help my family's pet-care business, Pawpi's (senior care through pet care). You also know my design taste and that I move fast.`;
+const LS=localStorage;
 
-// ---- persona ----
-const SYS=`You are Keystone — Zach's sharp, grounded, slightly irreverent right hand. You're talking OUT LOUD through his earbud, so:
-- Keep it SHORT. Usually 1-3 sentences. No lists, no markdown, no headers, no emoji. Talk like a real person.
-- Be direct, cut fluff, take a stance. Challenge weak thinking instead of agreeing. A little dry wit is good; never a cheerleader.
-- First-principles and action over theory. If you need one thing to answer well, ask one crisp question.
-- You can't touch files or deploy from here — this is the thinking/brainstorm channel. For real execution, tell him to bring it to a Cowork session.
-- Own mistakes fast, stay useful, keep self-respect.
-Context about Zach:\n`;
+/* ---------------- modes ---------------- */
+const PERSONA_CORE=`You are Keystone — the user's (Zach's) sharp, grounded, slightly irreverent right hand. You speak OUT LOUD through his earbud, so:
+- Keep it SHORT and conversational. Usually 1-3 sentences unless he asks you to go deep. No markdown, no bullet lists, no headers, no emoji, no stage directions. Just talk.
+- Direct. Cut fluff. Take a stance. Challenge weak thinking instead of agreeing. Dry wit is welcome; never a cheerleader.
+- First-principles, action over theory. If you truly need one detail, ask one crisp question — otherwise give your best answer.
+- You can't edit files or deploy from here; this is the thinking/brainstorm/capture channel. For real execution tell him to bring it to a Cowork session.
+- When he says "remember this / note that / add to my list," restate the item in one tight line prefixed exactly with "NOTE: " so it gets saved, then keep talking normally.`;
 
-// ---- state ----
-let msgs=[]; try{msgs=JSON.parse(LS.getItem('ks_msgs')||'[]')}catch(e){}
-let rec=null, chunks=[], busy=false;
-
-function cfg(){return{ak:LS.getItem('ks_ak')||'',ek:LS.getItem('ks_ek')||'',
-  voice:LS.getItem('ks_voice')||'pNInz6obpgDQGcFmaJgB',model:LS.getItem('ks_model')||'claude-sonnet-4-6',
-  ctx:LS.getItem('ks_ctx')||DEFAULT_CTX}}
-
-function renderLog(){
-  const log=$('log');
-  if(!msgs.length){return}
-  $('hint') && $('hint').remove();
-  log.innerHTML='';
-  for(const m of msgs){
-    const d=document.createElement('div');
-    d.className='msg '+(m.role==='user'?'me':'ks');
-    d.innerHTML=(m.role==='assistant'?'<b class="n">Keystone</b>':'')+escapeHtml(m.content);
-    log.appendChild(d);
+const MODES={
+  keystone:{
+    name:"Keystone", accent:"amber",
+    system:PERSONA_CORE+`\n\nRIGHT NOW you're in TRIG mode. Context:\nZach runs Trig Modern, a modern-furniture dealer in Raleigh, NC. You're his data/ops/strategy lead on a 3-agent team (you = Checker/Keystone; plus a Designer agent on the app, a Marketer agent). You own the canonical master data, the catalog.json feed, Shopify image/tear-sheet hosting, deploys, and QC. The catalog is ~877 products at 98% image coverage. Trade pricing rule: trade = 2.5x dealer cost (American Leather confirmed = 25% off; other vendors waiting on Ryan's numbers — the #1 blocker). Open threads: vendor-login vault (zero-knowledge spec ready), a few data-quality holds. Talk like the teammate who already knows all this.`,
+    ctx:`(add anything else you want me to remember for Trig)`,
+    chips:["What's blocking me?","Draft the text to Ryan","Gut-check an idea","What should I do next?"]
+  },
+  pawpis:{
+    name:"Pawpi's", accent:"pawpi",
+    system:PERSONA_CORE+`\n\nRIGHT NOW you're in PAWPI'S mode. Context:\nPawpi's Pet Care (Raleigh/Cary/Apex) is Zach's family business — run by his mom Michele (the conductor, wants to exit corporate), Wayne "Pawpi" (the engine), Mama D, and a team of caregivers. The north star: it's not dog-walking, it's the pet-care ARM of senior care (embed in senior living / home health / hospice — the Pet Peace of Mind model). Everything's $28 except Pet Taxi ($35); first visit is a complimentary meet & greet; licensed/bonded/insured + PSI. Warm front, professional spine. IMPORTANT: Zach owns all visual design — you do strategy, copy, outreach, ops; never art-direct. Be warm but still sharp.`,
+    ctx:`(add anything else you want me to remember for Pawpi's)`,
+    chips:["Outreach idea","Draft a partner line","Brainstorm a post","Next move for Michele?"]
   }
-  log.scrollTop=log.scrollHeight;
-}
-function escapeHtml(s){return s.replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
-function setStatus(t){$('status').textContent=t||''}
-function save(){LS.setItem('ks_msgs',JSON.stringify(msgs.slice(-30)))}
-
-// ---- settings ----
-function loadSettings(){const c=cfg();$('ak').value=c.ak;$('ek').value=c.ek;$('model').value=c.model;$('ctx').value=c.ctx;
-  const presets=['pNInz6obpgDQGcFmaJgB','ErXwobaYiN019PkySvjV','TxGEqnHWrfWFTfGW9XjX','VR6AewLTigWG4xSOukaG','21m00Tcm4TlvDq8ikWAM'];
-  if(presets.includes(c.voice)){$('voice').value=c.voice}else{$('voice').value='__custom';$('customvoice').style.display='block';$('customvoice').value=c.voice}}
-$('open').onclick=()=>{loadSettings();$('settings').classList.add('open')};
-$('close').onclick=()=>$('settings').classList.remove('open');
-$('voice').onchange=e=>$('customvoice').style.display=(e.target.value==='__custom')?'block':'none';
-$('save').onclick=()=>{
-  LS.setItem('ks_ak',$('ak').value.trim());LS.setItem('ks_ek',$('ek').value.trim());
-  LS.setItem('ks_model',$('model').value);LS.setItem('ks_ctx',$('ctx').value.trim()||DEFAULT_CTX);
-  const v=$('voice').value==='__custom'?$('customvoice').value.trim():$('voice').value;LS.setItem('ks_voice',v);
-  $('settings').classList.remove('open');setStatus('saved');setTimeout(()=>setStatus(''),1200);
 };
-$('reset').onclick=()=>{msgs=[];save();$('log').innerHTML='<div class="hint">Cleared. Tap the mic.</div>';$('settings').classList.remove('open')};
+let mode=LS.getItem('ks_mode')||'keystone';
 
-// ---- mic / pipeline ----
-$('mic').onclick=async()=>{
-  if(busy)return;
-  if(rec&&rec.state==='recording'){rec.stop();return}
-  const c=cfg();
-  if(!c.ak||!c.ek){setStatus('add your API keys in ⚙︎');$('open').click();return}
+/* ---------------- state ---------------- */
+let msgs=load('ks_msgs_'+mode,[]);
+let notes=load('ks_notes',[]);
+let rec=null,chunks=[],busy=false,handsfree=LS.getItem('ks_hands')==='1';
+let ac=null,analyser=null,micSrc=null,rafId=null,level=0,visState='idle',vstart=performance.now();
+
+function load(k,d){try{return JSON.parse(LS.getItem(k))??d}catch(e){return d}}
+function cfg(){return{ak:LS.getItem('ks_ak')||'',ek:LS.getItem('ks_ek')||'',
+  voice:LS.getItem('ks_voice')||'pNInz6obpgDQGcFmaJgB',model:LS.getItem('ks_model')||'claude-sonnet-4-6'}}
+function modeCtx(){return LS.getItem('ks_ctx_'+mode)||MODES[mode].ctx}
+
+/* ---------------- orb visualizer ---------------- */
+const cv=$('orb'),cx=cv.getContext('2d');
+function accentRGB(){return mode==='pawpis'?[255,118,72]:[231,173,78]}
+function setState(s){visState=s;if(s!=='idle')vstart=performance.now()}
+function draw(){
+  const w=cv.width,h=cv.height,cxp=w/2,cyp=h/2,t=performance.now()/1000;
+  cx.clearRect(0,0,w,h);
+  const [r,g,b]=accentRGB();
+  let target=0;
+  if(visState==='listening'||visState==='speaking')target=level;
+  else if(visState==='thinking')target=0.18+0.12*Math.sin(t*6);
+  else target=0.10+0.05*Math.sin(t*1.6); // idle breathing
+  level += (target-level)*0.18;
+  const base=Math.min(w,h)*0.20;
+  const rad=base*(1+level*0.9);
+  // outer glow
+  const og=cx.createRadialGradient(cxp,cyp,rad*0.2,cxp,cyp,rad*2.4);
+  og.addColorStop(0,`rgba(${r},${g},${b},${0.16+level*0.30})`);
+  og.addColorStop(1,'rgba(0,0,0,0)');
+  cx.fillStyle=og;cx.beginPath();cx.arc(cxp,cyp,rad*2.4,0,7);cx.fill();
+  // waveform ring
+  cx.lineWidth=3;cx.strokeStyle=`rgba(${r},${g},${b},${0.5+level*0.4})`;
+  cx.beginPath();
+  for(let i=0;i<=120;i++){
+    const a=(i/120)*Math.PI*2;
+    const mod=Math.sin(a*5+t*2)*0.5+Math.sin(a*9-t*3)*0.5;
+    const rr=rad*1.28+mod*base*0.10*(0.4+level*1.6);
+    const x=cxp+Math.cos(a)*rr,y=cyp+Math.sin(a)*rr;
+    i?cx.lineTo(x,y):cx.moveTo(x,y);
+  }
+  cx.closePath();cx.stroke();
+  // core orb
+  const cg=cx.createRadialGradient(cxp-rad*0.3,cyp-rad*0.3,rad*0.1,cxp,cyp,rad);
+  cg.addColorStop(0,`rgba(${Math.min(r+30,255)},${Math.min(g+25,255)},${b},0.98)`);
+  cg.addColorStop(0.7,`rgba(${r},${g},${b},0.92)`);
+  cg.addColorStop(1,`rgba(${r*0.6|0},${g*0.5|0},${b*0.4|0},0.85)`);
+  cx.fillStyle=cg;cx.beginPath();cx.arc(cxp,cyp,rad,0,7);cx.fill();
+  // inner highlight
+  cx.fillStyle=`rgba(255,245,225,${0.10+level*0.18})`;
+  cx.beginPath();cx.arc(cxp-rad*0.28,cyp-rad*0.3,rad*0.5,0,7);cx.fill();
+  rafId=requestAnimationFrame(draw);
+}
+draw();
+
+/* ---------------- audio plumbing ---------------- */
+async function ensureAC(){if(!ac){ac=new (window.AudioContext||window.webkitAudioContext)();}if(ac.state==='suspended')await ac.resume();
+  if(!analyser){analyser=ac.createAnalyser();analyser.fftSize=512;}}
+function meter(){ // RMS 0..1 from analyser time domain
+  const a=new Uint8Array(analyser.fftSize);analyser.getByteTimeDomainData(a);
+  let s=0;for(let i=0;i<a.length;i++){const v=(a[i]-128)/128;s+=v*v;}
+  return Math.min(1,Math.sqrt(s/a.length)*3.2);
+}
+
+/* ---------------- recording w/ silence detect ---------------- */
+$('mic').onclick=async()=>{ if(busy)return; if(rec&&rec.state==='recording'){stopRec();return;} startRec(); };
+async function startRec(){
+  const c=cfg(); if(!c.ak||!c.ek){caption('Keystone','Drop your API keys in settings first.');$('opencfg').click();return;}
   try{
     const stream=await navigator.mediaDevices.getUserMedia({audio:true});
+    await ensureAC(); micSrc=ac.createMediaStreamSource(stream); micSrc.connect(analyser);
     chunks=[];
     const mime=MediaRecorder.isTypeSupported('audio/webm')?'audio/webm':(MediaRecorder.isTypeSupported('audio/mp4')?'audio/mp4':'');
     rec=new MediaRecorder(stream,mime?{mimeType:mime}:undefined);
     rec.ondataavailable=e=>{if(e.data.size)chunks.push(e.data)};
-    rec.onstop=async()=>{stream.getTracks().forEach(t=>t.stop());await handle(new Blob(chunks,{type:mime||'audio/webm'}))};
-    rec.start();$('mic').classList.add('rec');setStatus('listening — tap to send');
-  }catch(e){setStatus('mic blocked — allow microphone access')}
-};
+    rec.onstop=async()=>{ try{micSrc.disconnect()}catch(e){} stream.getTracks().forEach(t=>t.stop()); await handle(new Blob(chunks,{type:mime||'audio/webm'})); };
+    rec.start(); $('mic').classList.add('rec'); setState('listening'); status('listening'); vad();
+  }catch(e){ status(''); caption('Keystone','Mic blocked — allow microphone access in Safari.'); }
+}
+function stopRec(){ if(rec&&rec.state==='recording')rec.stop(); $('mic').classList.remove('rec'); }
+let vadStarted=false,vadQuietSince=0,vadBegin=0;
+function vad(){
+  if(!rec||rec.state!=='recording'){return;}
+  level=meter(); const now=performance.now();
+  if(!vadBegin)vadBegin=now;
+  if(level>0.12){vadStarted=true;vadQuietSince=0;}
+  else if(vadStarted){ if(!vadQuietSince)vadQuietSince=now; if(now-vadQuietSince>1300){ vadReset(); stopRec(); return; } }
+  if(now-vadBegin>22000){ vadReset(); stopRec(); return; } // safety cap
+  requestAnimationFrame(vad);
+}
+function vadReset(){vadStarted=false;vadQuietSince=0;vadBegin=0;}
 
+/* ---------------- pipeline ---------------- */
 async function handle(blob){
-  $('mic').classList.remove('rec');$('mic').classList.add('busy');busy=true;
+  $('mic').classList.add('busy');busy=true;setState('thinking');status('transcribing');
   const c=cfg();
   try{
-    setStatus('transcribing…');
     const text=await stt(blob,c.ek);
-    if(!text||!text.trim()){setStatus('didn\\'t catch that');done();return}
-    push('user',text);
-    setStatus('thinking…');
-    const reply=await brain(c,text);
-    push('assistant',reply);
-    setStatus('speaking…');
-    await speak(reply,c);
-    setStatus('');
-  }catch(e){setStatus('error: '+(e.message||e))}
-  done();
+    if(!text||!text.trim()){status('');caption('Keystone',"Didn't catch that — try again.");return finish();}
+    await runTurn(text);
+  }catch(e){status('');caption('Keystone','Error: '+(e.message||e));}
+  finish();
 }
-function done(){busy=false;$('mic').classList.remove('busy')}
-function push(role,content){msgs.push({role,content});save();renderLog()}
+async function send(text){ // from chips / typed
+  if(busy||!text.trim())return; const c=cfg();
+  if(!c.ak||!c.ek){caption('Keystone','Drop your API keys in settings first.');$('opencfg').click();return;}
+  $('mic').classList.add('busy');busy=true;setState('thinking');
+  try{await runTurn(text.trim());}catch(e){status('');caption('Keystone','Error: '+(e.message||e));}
+  finish();
+}
+async function runTurn(userText){
+  caption('You',userText); msgs.push({role:'user',content:userText}); persist();
+  status('thinking');
+  const reply=await brain(cfg(),userText);
+  // capture NOTE: lines
+  const kept=[]; reply.split('\n').forEach(l=>{const m=l.match(/^\s*NOTE:\s*(.+)/i); if(m){addNote(m[1].trim());}else kept.push(l);});
+  const spoken=kept.join('\n').trim()||reply.replace(/^\s*NOTE:\s*/i,'');
+  msgs.push({role:'assistant',content:spoken}); persist();
+  caption('Keystone',spoken);
+  status('speaking');await speak(spoken,cfg());
+  status('');
+  if(handsfree){ setTimeout(()=>{ if(!busy)startRec(); },350); }
+}
+function finish(){busy=false;$('mic').classList.remove('busy');if(visState!=='listening')setState('idle');}
 
+/* ---------------- APIs ---------------- */
 async function stt(blob,ek){
   const fd=new FormData();
   const ext=(blob.type.includes('mp4')||blob.type.includes('m4a'))?'m4a':(blob.type.includes('webm')?'webm':'mp3');
-  fd.append('file',blob,'audio.'+ext);
-  fd.append('model_id','scribe_v1');
+  fd.append('file',blob,'a.'+ext); fd.append('model_id','scribe_v1');
   const r=await fetch('https://api.elevenlabs.io/v1/speech-to-text',{method:'POST',headers:{'xi-api-key':ek},body:fd});
-  if(!r.ok)throw new Error('STT '+r.status);
-  const j=await r.json();return j.text||'';
+  if(!r.ok)throw new Error('STT '+r.status); const j=await r.json(); return j.text||'';
 }
-
 async function brain(c,userText){
-  const history=msgs.slice(-20).map(m=>({role:m.role,content:m.content}));
-  const body={model:c.model,max_tokens:400,system:SYS+c.ctx,messages:history};
+  const history=msgs.slice(-22).map(m=>({role:m.role,content:m.content}));
+  const sys=MODES[mode].system+'\n\nExtra memory from Zach:\n'+modeCtx();
   const r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',
     headers:{'content-type':'application/json','x-api-key':c.ak,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
-    body:JSON.stringify(body)});
-  if(!r.ok){const t=await r.text();throw new Error('Claude '+r.status+' '+t.slice(0,80))}
-  const j=await r.json();return (j.content&&j.content[0]&&j.content[0].text)||'(no reply)';
+    body:JSON.stringify({model:c.model,max_tokens:500,system:sys,messages:history})});
+  if(!r.ok){const t=await r.text();throw new Error('Claude '+r.status+' '+t.slice(0,90));}
+  const j=await r.json(); return (j.content&&j.content[0]&&j.content[0].text)||'(no reply)';
 }
-
+let curSrc=null;
 async function speak(text,c){
-  const r=await fetch('https://api.elevenlabs.io/v1/text-to-speech/'+c.voice,{method:'POST',
-    headers:{'xi-api-key':c.ek,'content-type':'application/json'},
-    body:JSON.stringify({text,model_id:'eleven_turbo_v2_5',voice_settings:{stability:.45,similarity_boost:.8}})});
-  if(!r.ok)throw new Error('TTS '+r.status);
-  const buf=await r.blob();
-  const url=URL.createObjectURL(buf);
-  const a=new Audio(url);
-  await a.play().catch(()=>{});
-  return new Promise(res=>{a.onended=()=>{URL.revokeObjectURL(url);res()}});
+  try{
+    const r=await fetch('https://api.elevenlabs.io/v1/text-to-speech/'+c.voice,{method:'POST',
+      headers:{'xi-api-key':c.ek,'content-type':'application/json'},
+      body:JSON.stringify({text,model_id:'eleven_turbo_v2_5',voice_settings:{stability:.45,similarity_boost:.8,style:.15}})});
+    if(!r.ok)throw new Error('TTS '+r.status);
+    const buf=await r.arrayBuffer(); await ensureAC();
+    const audio=await ac.decodeAudioData(buf);
+    return new Promise(res=>{
+      curSrc=ac.createBufferSource();curSrc.buffer=audio;
+      curSrc.connect(analyser);analyser.connect(ac.destination);
+      setState('speaking');
+      const tick=()=>{if(visState==='speaking'){level=meter();}};
+      const iv=setInterval(tick,40);
+      curSrc.onended=()=>{clearInterval(iv);try{analyser.disconnect(ac.destination)}catch(e){}curSrc=null;setState('idle');res();};
+      curSrc.start();
+    });
+  }catch(e){/* if TTS fails, just show text */ setState('idle');}
 }
+// tap orb to stop speaking / barge in
+cv.onclick=()=>{ if(curSrc){try{curSrc.stop()}catch(e){}} };
 
-renderLog();
+/* ---------------- captions / status ---------------- */
+function caption(who,text){$('caption').innerHTML='<span class="who">'+who+'</span>'+esc(text);}
+function status(t){$('statusline').textContent=t||'';}
+function esc(s){return (s||'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+
+/* ---------------- notes ---------------- */
+function addNote(text){notes.unshift({t:text,mode:MODES[mode].name,at:Date.now()});LS.setItem('ks_notes',JSON.stringify(notes.slice(0,200)));renderBadge();}
+function renderBadge(){const n=notes.length;$('nbadge').style.display=n?'flex':'none';$('nbadge').textContent=n;}
+function renderNotes(){const l=$('notelist');if(!notes.length){l.innerHTML='<div class="empty">Nothing captured yet.</div>';return;}
+  l.innerHTML=notes.map((n,i)=>`<div class="noteitem"><div class="meta"><span>${n.mode} · ${new Date(n.at).toLocaleString([], {month:'short',day:'numeric',hour:'numeric',minute:'2-digit'})}</span><span class="x" data-i="${i}">delete</span></div>${esc(n.t)}</div>`).join('');
+  l.querySelectorAll('.x').forEach(x=>x.onclick=()=>{notes.splice(+x.dataset.i,1);LS.setItem('ks_notes',JSON.stringify(notes));renderNotes();renderBadge();});
+}
+$('opennotes').onclick=()=>{renderNotes();$('notes').classList.add('open')};
+$('closenotes').onclick=()=>$('notes').classList.remove('open');
+$('copynotes').onclick=()=>{const txt=notes.map(n=>'• '+n.t+'  ('+n.mode+')').join('\n');navigator.clipboard.writeText(txt);$('copynotes').textContent='Copied!';setTimeout(()=>$('copynotes').textContent='Copy all',1200);};
+$('clearnotes').onclick=()=>{if(confirm('Clear all captured notes?')){notes=[];LS.setItem('ks_notes','[]');renderNotes();renderBadge();}};
+
+/* ---------------- mode switch ---------------- */
+function applyMode(){
+  document.querySelectorAll('#modeseg button').forEach(b=>b.classList.toggle('on',b.dataset.mode===mode));
+  const pawpi=mode==='pawpis';
+  document.querySelector('#modeseg button.on').classList.toggle('pawpi',pawpi);
+  $('mic').classList.toggle('pawpi',pawpi);
+  $('brandtxt').textContent=pawpi?"Pawpi's":"Keystone";
+  $('ctxlabel').textContent='Memory — what '+(pawpi?"I":"Keystone")+' knows ('+(pawpi?"Pawpi's":"Trig")+')';
+  // chips
+  $('chips').innerHTML=MODES[mode].chips.map(c=>`<div class="chip">${c}</div>`).join('');
+  $('chips').querySelectorAll('.chip').forEach(ch=>ch.onclick=()=>send(ch.textContent));
+  msgs=load('ks_msgs_'+mode,[]);
+  caption(MODES[mode].name, msgs.length?msgs[msgs.length-1].content:(pawpi?"Pawpi's partner here — what are we working on?":"Keystone here. What's up?"));
+}
+document.querySelectorAll('#modeseg button').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;LS.setItem('ks_mode',mode);applyMode();});
+function persist(){LS.setItem('ks_msgs_'+mode,JSON.stringify(msgs.slice(-40)));}
+
+/* ---------------- settings ---------------- */
+function loadCfg(){const c=cfg();$('ak').value=c.ak;$('ek').value=c.ek;$('model').value=c.model;$('ctx').value=modeCtx();
+  const presets=['pNInz6obpgDQGcFmaJgB','ErXwobaYiN019PkySvjV','TxGEqnHWrfWFTfGW9XjX','VR6AewLTigWG4xSOukaG','21m00Tcm4TlvDq8ikWAM'];
+  if(presets.includes(c.voice)){$('voice').value=c.voice}else{$('voice').value='__custom';$('customvoice').style.display='block';$('customvoice').value=c.voice}}
+$('opencfg').onclick=()=>{loadCfg();$('cfg').classList.add('open')};
+$('closecfg').onclick=()=>$('cfg').classList.remove('open');
+$('voice').onchange=e=>$('customvoice').style.display=(e.target.value==='__custom')?'block':'none';
+$('savecfg').onclick=()=>{
+  LS.setItem('ks_ak',$('ak').value.trim());LS.setItem('ks_ek',$('ek').value.trim());
+  LS.setItem('ks_model',$('model').value);LS.setItem('ks_ctx_'+mode,$('ctx').value.trim());
+  const v=$('voice').value==='__custom'?$('customvoice').value.trim():$('voice').value;LS.setItem('ks_voice',v);
+  $('cfg').classList.remove('open');status('saved');setTimeout(()=>status(''),1000);
+};
+$('clearchat').onclick=()=>{msgs=[];persist();$('cfg').classList.remove('open');applyMode();};
+
+/* ---------------- text input + hands-free ---------------- */
+$('sendtext').onclick=()=>{const v=$('textin').value;$('textin').value='';send(v);};
+$('textin').addEventListener('keydown',e=>{if(e.key==='Enter'){const v=$('textin').value;$('textin').value='';send(v);}});
+function applyHands(){$('handstoggle').classList.toggle('on',handsfree);}
+$('handstoggle').onclick=()=>{handsfree=!handsfree;LS.setItem('ks_hands',handsfree?'1':'0');applyHands();if(handsfree&&!busy)startRec();};
+
+/* ---------------- boot ---------------- */
+applyMode();applyHands();renderBadge();
 </script>
 </body>
 </html>
