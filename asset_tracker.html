@@ -73,7 +73,7 @@ footer{padding:18px 24px;color:var(--mut);font-size:12px;border-top:1px solid va
 </style></head><body>
 <header>
 <h1>Trig — Catalogue Asset Tracker</h1>
-<div class="sub">2026-06-15 15:21 · 877 live products · 61 brands · status computed live from the canonical</div>
+<div class="sub">2026-06-15 15:27 · 877 live products · 61 brands · status computed live from the canonical</div>
 </header>
 <div class="wrap">
 <div class="kpis" id="kpis"></div>
@@ -103,7 +103,7 @@ const ASSETS=[["retail","Retail $"],["trade","Trade $"],["image","Image"],["tear
 const MULT={"tradition":"","accord":"","adesso":"","adriana hoyos":"","ameico":"","american leather":"","artek":"","artemide":"","bdi":"","barkman":"","bassett mirror":"","bensen":"","bob batura":"","brenelli design":"","canadel":"","charleston forge":"","conform":"","david trubridge":"","ethnicraft":"","flos":"","four hands":"","gat creek":"","global views":"","gus modern":"","hiend accents":"","hubbardton forge":"","huppe":"","interlude home":"","koncept":"","loll designs":"1","loloi":"","made by hand":"","modern forms":"","moooi":"","nuevo":"","pablo":"","robert abbey":"","rodam":"","ryan dart":"","sunpan":"","universal":"","uttermost":"","visual comfort":"","wac lighting":"","younger":"","zafferano":""};
 function norm(s){s=(s||'').toLowerCase().replace(/[&+]/g,' ').replace(/[^a-z0-9 ]/g,' ');const drop=['company','furniture','america','inc','co','llc'];return s.split(/\s+/).filter(t=>t&&!drop.includes(t)).join(' ');}
 function lKey(b){return 'trig_login_'+b;}
-function getLogin(b){try{return Object.assign({have:false,note:''},JSON.parse(localStorage.getItem(lKey(b))||'{}'));}catch(e){return{have:false,note:''};}}
+function getLogin(b){try{return Object.assign({have:false,note:'',user:'',pass:''},JSON.parse(localStorage.getItem(lKey(b))||'{}'));}catch(e){return{have:false,note:'',user:'',pass:''};}}
 function setLogin(b,o){try{localStorage.setItem(lKey(b),JSON.stringify(o));}catch(e){}}
 function aesc(s){return (s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');}
 const vSel=document.getElementById('vendor'),cSel=document.getElementById('cat'),q=document.getElementById('q');
@@ -132,7 +132,7 @@ function render(){const rows=filt();kpis(rows);
  Object.keys(by).sort().forEach(b=>{const g=by[b];
   const purl=PORTALS[b];const pbadge=purl?` <a class="port" href="${purl}" target="_blank" rel="noopener" onclick="event.stopPropagation()">🔑 portal</a>`:'';
   let loginUI='';
-  if(purl){const L=getLogin(b);loginUI=`<span class="loginchip${L.have?' on':''}" data-login="1" title="Click to mark whether you have this login">${L.have?'🔓 have login':'🔒 need login'}</span><input class="loginnote" data-note="1" placeholder="username / pw-mgr ref — avoid raw passwords" value="${aesc(L.note)}">`;}
+  if(purl){const L=getLogin(b);loginUI=`<span class="loginchip${L.have?' on':''}" data-login="1" title="have this login?">${L.have?'🔓 have login':'🔒 need login'}</span><input class="loginnote" data-u="1" placeholder="username" value="${aesc(L.user)}"><input class="loginnote mask" data-p="1" placeholder="password" value="${aesc(L.pass)}">`;}
   const mm=MULT[norm(b)];const mbadge=`<span class="tag" title="wholesale multiplier"${mm?' style="color:#5bbf7a;border-color:#2c5a3a"':''}>× ${mm||'—'}</span>`;
   h+=`<tr class="vrow" data-b="${b}"><td><b>${b}</b> <span class="tag">▸ ${g.length}</span> ${mbadge}${pbadge}${loginUI}</td><td></td>`;
   ASSETS.forEach(a=>{const n=g.filter(r=>r[a[0]]).length,p=pct(n,g.length);
@@ -149,8 +149,7 @@ function render(){const rows=filt();kpis(rows);
   const b=v.dataset.b;
   const chip=v.querySelector('.loginchip');
   if(chip)chip.onclick=e=>{e.stopPropagation();const L=getLogin(b);L.have=!L.have;setLogin(b,L);chip.classList.toggle('on',L.have);chip.textContent=L.have?'🔓 have login':'🔒 need login';};
-  const note=v.querySelector('.loginnote');
-  if(note){note.onclick=e=>e.stopPropagation();note.onkeydown=e=>e.stopPropagation();note.onchange=()=>{const L=getLogin(b);L.note=note.value;setLogin(b,L);};}
+  v.querySelectorAll('.loginnote').forEach(inp=>{inp.onclick=e=>e.stopPropagation();inp.onkeydown=e=>e.stopPropagation();inp.onchange=()=>{const L=getLogin(b);if(inp.dataset.u!==undefined)L.user=inp.value;else L.pass=inp.value;L.have=!!((L.user&&L.user.trim())||(L.pass&&L.pass.trim()));setLogin(b,L);};});
  });
 }
 document.getElementById('expLogins').onclick=()=>{const o={};for(let i=0;i<localStorage.length;i++){const k=localStorage.key(i);if(k&&k.indexOf('trig_login_')===0)o[k.slice(11)]=JSON.parse(localStorage.getItem(k));}const blob=new Blob([JSON.stringify(o,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='trig_vendor_logins.json';a.click();};
@@ -162,15 +161,17 @@ function renderLogins(){
  const panel=document.getElementById('loginsPanel');
  const BC={};DATA.forEach(r=>{BC[r.brand]=(BC[r.brand]||0)+1;});
  let h='<div class="lhint">Vendor portal logins — saved only on this device. Tap a vendor to add or reveal its login, then 📋 to copy. Keep raw passwords in a password manager; store a username or reference here.</div><div class="lgrid">';
- Object.keys(PORTALS).sort().forEach(b=>{const L=getLogin(b);const saved=!!(L.note&&L.note.trim());const cnt=BC[b]?` <span class="tag">${BC[b]}</span>`:'';
-  h+=`<div class="lcard" data-b="${aesc(b)}"><div class="lhead"><span class="lname">${aesc(b)}${cnt}</span><a class="port" href="${PORTALS[b]}" target="_blank" rel="noopener">🔑 portal</a></div><button class="lpill${saved?' on':''}" data-act="pill">${saved?'✓ login saved — tap to view':'+ add login'}</button><div class="lbody"><div class="lrow"><input class="lnote mask" data-act="note" placeholder="username / pw-mgr ref" value="${aesc(L.note)}"><button class="licon" data-act="reveal" title="Show / hide">👁</button><button class="licon" data-act="copy" title="Copy">📋</button></div></div></div>`;});
+ Object.keys(PORTALS).sort().forEach(b=>{const L=getLogin(b);const saved=!!((L.user&&L.user.trim())||(L.pass&&L.pass.trim()));const cnt=BC[b]?` <span class="tag">${BC[b]}</span>`:'';
+  h+=`<div class="lcard" data-b="${aesc(b)}"><div class="lhead"><span class="lname">${aesc(b)}${cnt}</span><a class="port" href="${PORTALS[b]}" target="_blank" rel="noopener">🔑 portal</a></div><button class="lpill${saved?' on':''}" data-act="pill">${saved?'✓ login saved — tap to view':'+ add login'}</button><div class="lbody"><div class="lrow"><input class="lnote" data-act="user" placeholder="username" value="${aesc(L.user)}"><button class="licon" data-act="cuser" title="Copy username">📋</button></div><div class="lrow"><input class="lnote mask" data-act="pass" placeholder="password" value="${aesc(L.pass)}"><button class="licon" data-act="reveal" title="Show / hide">👁</button><button class="licon" data-act="cpass" title="Copy password">📋</button></div></div></div>`;});
  h+='</div>';panel.innerHTML=h;
- panel.querySelectorAll('.lcard').forEach(card=>{const b=card.dataset.b;const note=card.querySelector('[data-act=note]');const pill=card.querySelector('[data-act=pill]');
-  function refreshPill(){const s=!!(note.value&&note.value.trim());pill.classList.toggle('on',s);pill.textContent=s?'✓ login saved — tap to view':'+ add login';}
-  pill.onclick=()=>{const opening=!card.classList.contains('open');card.classList.toggle('open',opening);if(opening){note.classList.remove('mask');if(!(note.value&&note.value.trim()))note.focus();}};
-  note.onchange=()=>{const L=getLogin(b);L.note=note.value;L.have=!!(note.value&&note.value.trim());setLogin(b,L);refreshPill();};
-  card.querySelector('[data-act=reveal]').onclick=()=>note.classList.toggle('mask');
-  card.querySelector('[data-act=copy]').onclick=()=>{const v=note.value||'';const ok=()=>flash(card.querySelector('.lbody'));if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(ok).catch(()=>{fallbackCopy(note);ok();});}else{fallbackCopy(note);ok();}};
+ panel.querySelectorAll('.lcard').forEach(card=>{const b=card.dataset.b;const userI=card.querySelector('[data-act=user]');const passI=card.querySelector('[data-act=pass]');const pill=card.querySelector('[data-act=pill]');
+  function save(){const L=getLogin(b);L.user=userI.value;L.pass=passI.value;L.have=!!((userI.value&&userI.value.trim())||(passI.value&&passI.value.trim()));setLogin(b,L);pill.classList.toggle('on',L.have);pill.textContent=L.have?'✓ login saved — tap to view':'+ add login';}
+  pill.onclick=()=>{const opening=!card.classList.contains('open');card.classList.toggle('open',opening);if(opening&&!(userI.value&&userI.value.trim()))userI.focus();};
+  userI.onchange=save;passI.onchange=save;
+  card.querySelector('[data-act=reveal]').onclick=()=>passI.classList.toggle('mask');
+  function cp(inp){const v=inp.value||'';const ok=()=>flash(card.querySelector('.lbody'));if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(v).then(ok).catch(()=>{fallbackCopy(inp);ok();});}else{fallbackCopy(inp);ok();}}
+  card.querySelector('[data-act=cuser]').onclick=()=>cp(userI);
+  card.querySelector('[data-act=cpass]').onclick=()=>cp(passI);
  });}
 document.getElementById('toggleLogins').onclick=()=>{const p=document.getElementById('loginsPanel');p.classList.toggle('on');const on=p.classList.contains('on');document.getElementById('toggleLogins').classList.toggle('on',on);if(on){renderLogins();p.scrollIntoView({behavior:'smooth',block:'start'});}};
 render();
