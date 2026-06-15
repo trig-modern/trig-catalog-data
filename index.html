@@ -73,7 +73,7 @@ footer{padding:18px 24px;color:var(--mut);font-size:12px;border-top:1px solid va
 </style></head><body>
 <header>
 <h1>Trig — Catalogue Asset Tracker</h1>
-<div class="sub">2026-06-15 15:27 · 877 live products · 61 brands · status computed live from the canonical</div>
+<div class="sub">2026-06-15 15:29 · 877 live products · 61 brands · status computed live from the canonical</div>
 </header>
 <div class="wrap">
 <div class="kpis" id="kpis"></div>
@@ -103,7 +103,7 @@ const ASSETS=[["retail","Retail $"],["trade","Trade $"],["image","Image"],["tear
 const MULT={"tradition":"","accord":"","adesso":"","adriana hoyos":"","ameico":"","american leather":"","artek":"","artemide":"","bdi":"","barkman":"","bassett mirror":"","bensen":"","bob batura":"","brenelli design":"","canadel":"","charleston forge":"","conform":"","david trubridge":"","ethnicraft":"","flos":"","four hands":"","gat creek":"","global views":"","gus modern":"","hiend accents":"","hubbardton forge":"","huppe":"","interlude home":"","koncept":"","loll designs":"1","loloi":"","made by hand":"","modern forms":"","moooi":"","nuevo":"","pablo":"","robert abbey":"","rodam":"","ryan dart":"","sunpan":"","universal":"","uttermost":"","visual comfort":"","wac lighting":"","younger":"","zafferano":""};
 function norm(s){s=(s||'').toLowerCase().replace(/[&+]/g,' ').replace(/[^a-z0-9 ]/g,' ');const drop=['company','furniture','america','inc','co','llc'];return s.split(/\s+/).filter(t=>t&&!drop.includes(t)).join(' ');}
 function lKey(b){return 'trig_login_'+b;}
-function getLogin(b){try{return Object.assign({have:false,note:'',user:'',pass:''},JSON.parse(localStorage.getItem(lKey(b))||'{}'));}catch(e){return{have:false,note:'',user:'',pass:''};}}
+function getLogin(b){try{var o=Object.assign({have:false,note:'',user:'',pass:''},JSON.parse(localStorage.getItem(lKey(b))||'{}'));if(o.note&&!o.user&&!o.pass){o.user=o.note;}return o;}catch(e){return{have:false,note:'',user:'',pass:''};}}
 function setLogin(b,o){try{localStorage.setItem(lKey(b),JSON.stringify(o));}catch(e){}}
 function aesc(s){return (s||'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');}
 const vSel=document.getElementById('vendor'),cSel=document.getElementById('cat'),q=document.getElementById('q');
