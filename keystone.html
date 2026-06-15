@@ -187,7 +187,7 @@ let mode=LS.getItem('ks_mode')||'keystone';
 let msgs=load('ks_msgs_'+mode,[]);
 let notes=load('ks_notes',[]);
 let rec=null,chunks=[],busy=false,handsfree=LS.getItem('ks_hands')==='1';
-let ac=null,analyser=null,micSrc=null,rafId=null,level=0,visState='idle',vstart=performance.now();
+let ac=null,analyser=null,silentGain=null,micStream=null,micNode=null,rafId=null,level=0,visState='idle',vstart=performance.now();
 
 function load(k,d){try{return JSON.parse(LS.getItem(k))??d}catch(e){return d}}
 function cfg(){return{ak:LS.getItem('ks_ak')||'',ek:LS.getItem('ks_ek')||'',
@@ -240,7 +240,16 @@ draw();
 
 /* ---------------- audio plumbing ---------------- */
 async function ensureAC(){if(!ac){ac=new (window.AudioContext||window.webkitAudioContext)();}if(ac.state==='suspended')await ac.resume();
-  if(!analyser){analyser=ac.createAnalyser();analyser.fftSize=512;}}
+  if(!analyser){analyser=ac.createAnalyser();analyser.fftSize=512;
+    silentGain=ac.createGain();silentGain.gain.value=0;analyser.connect(silentGain);silentGain.connect(ac.destination);}}
+// acquire mic ONCE and keep it for the whole session (no repeat permission prompts)
+async function ensureMic(){
+  await ensureAC();
+  if(!micStream||!micStream.active){ micStream=await navigator.mediaDevices.getUserMedia({audio:true}); micNode=null; }
+  if(!micNode){ micNode=ac.createMediaStreamSource(micStream); }
+  return micStream;
+}
+window.addEventListener('pagehide',()=>{ if(micStream)micStream.getTracks().forEach(t=>t.stop()); });
 function meter(){ // RMS 0..1 from analyser time domain
   const a=new Uint8Array(analyser.fftSize);analyser.getByteTimeDomainData(a);
   let s=0;for(let i=0;i<a.length;i++){const v=(a[i]-128)/128;s+=v*v;}
@@ -252,14 +261,14 @@ $('mic').onclick=async()=>{ if(busy)return; if(rec&&rec.state==='recording'){sto
 async function startRec(){
   const c=cfg(); if(!c.ak||!c.ek){caption('Keystone','Drop your API keys in settings first.');$('opencfg').click();return;}
   try{
-    const stream=await navigator.mediaDevices.getUserMedia({audio:true});
-    await ensureAC(); micSrc=ac.createMediaStreamSource(stream); micSrc.connect(analyser);
+    await ensureMic();
+    try{micNode.connect(analyser);}catch(e){}
     chunks=[];
     const mime=MediaRecorder.isTypeSupported('audio/webm')?'audio/webm':(MediaRecorder.isTypeSupported('audio/mp4')?'audio/mp4':'');
-    rec=new MediaRecorder(stream,mime?{mimeType:mime}:undefined);
+    rec=new MediaRecorder(micStream,mime?{mimeType:mime}:undefined);
     rec.ondataavailable=e=>{if(e.data.size)chunks.push(e.data)};
-    rec.onstop=async()=>{ try{micSrc.disconnect()}catch(e){} stream.getTracks().forEach(t=>t.stop()); await handle(new Blob(chunks,{type:mime||'audio/webm'})); };
-    rec.start(); $('mic').classList.add('rec'); setState('listening'); status('listening'); vad();
+    rec.onstop=async()=>{ try{micNode.disconnect(analyser)}catch(e){} await handle(new Blob(chunks,{type:mime||'audio/webm'})); };
+    rec.start(); $('mic').classList.add('rec'); setState('listening'); status('listening'); vadReset(); vad();
   }catch(e){ status(''); caption('Keystone','Mic blocked — allow microphone access in Safari.'); }
 }
 function stopRec(){ if(rec&&rec.state==='recording')rec.stop(); $('mic').classList.remove('rec'); }
@@ -336,11 +345,12 @@ async function speak(text,c){
     const audio=await ac.decodeAudioData(buf);
     return new Promise(res=>{
       curSrc=ac.createBufferSource();curSrc.buffer=audio;
-      curSrc.connect(analyser);analyser.connect(ac.destination);
+      curSrc.connect(analyser);          // feed the orb meter
+      curSrc.connect(ac.destination);    // audible out
       setState('speaking');
       const tick=()=>{if(visState==='speaking'){level=meter();}};
       const iv=setInterval(tick,40);
-      curSrc.onended=()=>{clearInterval(iv);try{analyser.disconnect(ac.destination)}catch(e){}curSrc=null;setState('idle');res();};
+      curSrc.onended=()=>{clearInterval(iv);try{curSrc.disconnect()}catch(e){}curSrc=null;setState('idle');res();};
       curSrc.start();
     });
   }catch(e){/* if TTS fails, just show text */ setState('idle');}
