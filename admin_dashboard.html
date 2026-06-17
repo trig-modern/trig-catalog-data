@@ -8,19 +8,28 @@ body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 -apple-system
 .wrap{max-width:1080px;margin:0 auto;padding:28px 22px 80px}
 h1{font-size:22px;font-weight:680;letter-spacing:-.02em;margin:0}
 .sub{color:var(--muted);font-size:13px;margin-top:3px}
+h2{font-size:15px;font-weight:660;margin:30px 0 12px;display:flex;align-items:center;gap:8px}
 .hero{display:flex;gap:26px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px 26px;box-shadow:var(--shadow);margin:18px 0}
-.ring{flex:none}
-.ring text{font:700 19px -apple-system,sans-serif;fill:var(--ink)}
+.ring{flex:none}.ring text{font:700 19px -apple-system,sans-serif;fill:var(--ink)}
 .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;flex:1}
 .stat .n{font-size:26px;font-weight:700;letter-spacing:-.01em}
 .stat .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
-h2{font-size:15px;font-weight:660;margin:28px 0 12px;display:flex;align-items:center;gap:8px}
-.tools{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
-.tool{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow);transition:.15s}
-.tool:hover{border-color:var(--accent);transform:translateY(-2px)}
-.tool .ic{font-size:22px}
-.tool .tt{font-weight:640;margin-top:8px}
-.tool .td{font-size:12.5px;color:var(--muted);margin-top:3px}
+.apps{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:14px}
+.app{display:block;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow);transition:.15s}
+.app:hover{border-color:var(--accent);transform:translateY(-2px)}
+.app .ic{font-size:22px}
+.app .tt{font-weight:660;margin-top:8px;display:flex;align-items:center;gap:7px}
+.app .td{font-size:12.5px;color:var(--muted);margin-top:4px}
+.app .u{font-size:11px;color:var(--accent);margin-top:7px;word-break:break-all;font-family:ui-monospace,Menlo,monospace}
+.tag{font-size:10px;font-weight:700;padding:1px 7px;border-radius:999px;background:var(--accentsoft);color:var(--accent);text-transform:uppercase;letter-spacing:.04em}
+.tag.live{background:var(--goodsoft);color:var(--good)}
+.tag.int{background:var(--warnsoft);color:var(--warn)}
+.bars{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:var(--shadow)}
+.row{display:flex;align-items:center;gap:12px;margin:9px 0}
+.row .lbl{width:130px;font-size:13px;color:var(--muted)}
+.row .bar{flex:1;height:8px;background:var(--line);border-radius:999px;overflow:hidden}
+.row .bar>i{display:block;height:100%;background:var(--good);border-radius:999px}
+.row .v{width:84px;text-align:right;font-size:13px;font-weight:640}
 .cards{display:flex;flex-direction:column;gap:10px}
 .wait{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--warn);border-radius:12px;padding:13px 16px;display:flex;gap:12px;align-items:flex-start;box-shadow:var(--shadow)}
 .wait.done{opacity:.5;border-left-color:var(--good)}
@@ -28,77 +37,110 @@ h2{font-size:15px;font-weight:660;margin:28px 0 12px;display:flex;align-items:ce
 .wait .tt{font-weight:620}
 .wait .who{display:inline-block;font-size:11px;font-weight:650;padding:2px 8px;border-radius:999px;background:var(--warnsoft);color:var(--warn);margin-left:8px;vertical-align:middle}
 .wait .dd{font-size:13px;color:var(--muted);margin-top:3px}
-table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow);font-size:13.5px}
-th,td{text-align:left;padding:9px 14px;border-bottom:1px solid var(--line)}
-th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);background:#faf8f6}
-tr:last-child td{border-bottom:none}
-.bar{height:7px;background:var(--line);border-radius:999px;overflow:hidden;width:120px;display:inline-block;vertical-align:middle}
-.bar>i{display:block;height:100%;background:var(--good)}
 .pill{font-size:11px;font-weight:650;padding:2px 8px;border-radius:999px;background:var(--accentsoft);color:var(--accent)}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-@media(max-width:780px){.two{grid-template-columns:1fr}.stats{grid-template-columns:repeat(2,1fr)}}
-.foot{color:var(--muted);font-size:12px;margin-top:30px;text-align:center}
+.foot{color:var(--muted);font-size:12px;margin-top:34px;text-align:center}
+.note{font-size:12.5px;color:var(--muted);margin:-4px 0 10px}
 </style></head><body><div class="wrap">
 <h1>🧭 Trig — Command Center</h1>
-<div class="sub">Live snapshot · generated Jun 15, 2026 · 3:14 PM · regenerate: <code>python3 build_admin_dashboard.py</code></div>
+<div class="sub">Everything we've built, in one place · snapshot Jun 17, 2026</div>
 
 <div class="hero">
  <svg class="ring" width="108" height="108" viewBox="0 0 108 108">
   <circle cx="54" cy="54" r="42" fill="none" stroke="#e6e2dc" stroke-width="11"/>
   <circle cx="54" cy="54" r="42" fill="none" stroke="#3f7d4f" stroke-width="11" stroke-linecap="round"
-    stroke-dasharray="258 264" transform="rotate(-90 54 54)"/>
-  <text x="54" y="60" text-anchor="middle">98%</text>
+    stroke-dasharray="252 264" transform="rotate(-90 54 54)"/>
+  <text x="54" y="60" text-anchor="middle">96%</text>
  </svg>
  <div class="stats">
-  <div class="stat"><div class="n">877</div><div class="l">Live products</div></div>
-  <div class="stat"><div class="n">863</div><div class="l">With image</div></div>
-  <div class="stat"><div class="n">14</div><div class="l">Image gaps</div></div>
-  <div class="stat"><div class="n">501</div><div class="l">Galleries</div></div>
+  <div class="stat"><div class="n">765</div><div class="l">Live products</div></div>
+  <div class="stat"><div class="n">758</div><div class="l">With image</div></div>
+  <div class="stat"><div class="n">28</div><div class="l">Variant cards</div></div>
+  <div class="stat"><div class="n">807/807</div><div class="l">Warranty</div></div>
  </div>
 </div>
 
-<h2>🛠️ Tools</h2>
-<div class="tools">
- <a class="tool" href="gap_filler.html"><div class="ic">🖼️</div><div class="tt">Image Placer</div><div class="td">Drop photos onto the 14 products still missing images. Notes + corrections built in.</div></a>
- <a class="tool" href="DISCONTINUED.md"><div class="ic">🗑️</div><div class="tt">Discontinued log</div><div class="td">23 discontinued + everything pulled from the feed, with reasons.</div></a>
- <a class="tool" href="https://app.notion.com/p/37a242fd6f3d81848a71e0272a372527" target="_blank"><div class="ic">📋</div><div class="tt">Mission Control (Notion)</div><div class="td">Open Decisions board, coverage history, gameplan.</div></a>
- <a class="tool" href="https://trig-modern.github.io/trig-catalog-data/catalog.json" target="_blank"><div class="ic">📡</div><div class="tt">Live feed</div><div class="td">The catalog.json the app reads. 877 products, no trade leak.</div></a>
+<h2>🚀 Apps &amp; Tools</h2>
+<div class="apps">
+ <a class="app" href="https://dreamy-kelpie-9dcdd2.netlify.app" target="_blank">
+  <div class="ic">🛋️</div><div class="tt">Trig Studio — Showroom <span class="tag live">live</span></div>
+  <div class="td">Customer-facing app: browse the full Catalogue + Room Builder (build a room to scale).</div>
+  <div class="u">dreamy-kelpie-9dcdd2.netlify.app</div></a>
+
+ <a class="app" href="https://dreamy-kelpie-9dcdd2.netlify.app" target="_blank">
+  <div class="ic">🎨</div><div class="tt">Designer Portal <span class="tag live">live</span></div>
+  <div class="td">Same app → "Sign in to your portal": designer login, clients, saved rooms, mood boards, trade pricing.</div>
+  <div class="u">dreamy-kelpie-9dcdd2.netlify.app → Sign in</div></a>
+
+ <a class="app" href="https://trig-modern.github.io/trig-catalog-data/" target="_blank">
+  <div class="ic">🔐</div><div class="tt">Asset Tracker + Vendor Logins <span class="tag int">internal</span></div>
+  <div class="td">Your tracker: catalogue checklist, editable wholesale multipliers, and encrypted vendor logins (cloud-synced).</div>
+  <div class="u">trig-modern.github.io/trig-catalog-data/</div></a>
+
+ <a class="app" href="https://trig-modern.github.io/trig-catalog-data/keystone.html" target="_blank">
+  <div class="ic">🎙️</div><div class="tt">Keystone (voice) <span class="tag live">live</span></div>
+  <div class="td">Hands-free voice assistant — orb visualizer, capture, works on iPhone.</div>
+  <div class="u">…/keystone.html</div></a>
+
+ <a class="app" href="https://trig-modern.github.io/trig-catalog-data/admin_dashboard.html" target="_blank">
+  <div class="ic">🧭</div><div class="tt">This Command Center <span class="tag int">internal</span></div>
+  <div class="td">The page you're on — bookmark it. Regenerated as things change.</div>
+  <div class="u">…/admin_dashboard.html</div></a>
+
+ <a class="app" href="https://raw.githubusercontent.com/trig-modern/trig-catalog-data/main/catalog.json" target="_blank">
+  <div class="ic">📡</div><div class="tt">Catalog feed (JSON) <span class="tag live">live</span></div>
+  <div class="td">The single source the app reads. 765 products, no trade pricing leak.</div>
+  <div class="u">raw.githubusercontent.com/…/catalog.json</div></a>
+
+ <a class="app" href="https://app.notion.com/p/37a242fd6f3d81848a71e0272a372527" target="_blank">
+  <div class="ic">📋</div><div class="tt">Mission Control (Notion) <span class="tag int">internal</span></div>
+  <div class="td">Open Decisions board, coverage history, gameplan.</div>
+  <div class="u">app.notion.com/…</div></a>
+
+ <a class="app" href="https://supabase.com/dashboard/project/xyfogedlowneaevmjkci" target="_blank">
+  <div class="ic">🗄️</div><div class="tt">Supabase (backend) <span class="tag int">internal</span></div>
+  <div class="td">Designers, clients, rooms, mood boards, encrypted logins + multipliers. Owner-only RLS.</div>
+  <div class="u">project xyfogedlowneaevmjkci</div></a>
+
+ <a class="app" href="https://github.com/trig-modern/trig-catalog-data" target="_blank">
+  <div class="ic">📦</div><div class="tt">Repo · catalog-data <span class="tag">github</span></div>
+  <div class="td">The feed + asset tracker + this dashboard. Checker owns. GitHub Pages on.</div>
+  <div class="u">github.com/trig-modern/trig-catalog-data</div></a>
+
+ <a class="app" href="https://github.com/trig-modern/trig-studio" target="_blank">
+  <div class="ic">📦</div><div class="tt">Repo · trig-studio <span class="tag">github</span></div>
+  <div class="td">The Trig Studio app. Designer owns → Netlify auto-builds on push.</div>
+  <div class="u">github.com/trig-modern/trig-studio</div></a>
 </div>
 
-<h2>🟠 Waiting on you <span class="pill">7</span></h2>
+<h2>📊 Catalogue health</h2>
+<div class="bars">
+ <div class="row"><div class="lbl">Descriptions</div><div class="bar"><i style="width:99.8%"></i></div><div class="v">805 / 807</div></div>
+ <div class="row"><div class="lbl">Materials</div><div class="bar"><i style="width:99.5%"></i></div><div class="v">803 / 807</div></div>
+ <div class="row"><div class="lbl">Warranty</div><div class="bar"><i style="width:100%"></i></div><div class="v">807 / 807</div></div>
+ <div class="row"><div class="lbl">Dimensions</div><div class="bar"><i style="width:98.4%"></i></div><div class="v">794 / 807</div></div>
+ <div class="row"><div class="lbl">Images</div><div class="bar"><i style="width:99.1%"></i></div><div class="v">758 / 765</div></div>
+ <div class="row"><div class="lbl">Price (MSRP)</div><div class="bar"><i style="width:90.2%;background:#c08a2d"></i></div><div class="v">728 / 807</div></div>
+ <div class="note" style="margin-top:12px">Every listing now carries title, image, dimensions, material, warranty &amp; a real manufacturer description. Variant system spans recline-type, leg, size, height, configuration &amp; stationary/motion. Zero duplicate names, images, or app_ids.</div>
+</div>
+
+<h2>🟠 Open / waiting <span class="pill" id="wcount">4</span></h2>
 <div class="cards" id="wait"></div>
 
-<h2>💰 Wholesale multipliers <span class="pill">1/46 set</span></h2><div class="note" style="margin:-4px 0 12px">INTERNAL — retail × multiplier = wholesale/trade. Never on the public feed. Fill <code>vendor_price_multipliers.csv</code> as Ryan sends numbers, then re-run this build.</div><table><thead><tr><th>Vendor</th><th>Multiplier</th></tr></thead><tbody><tr><td>&amp;Tradition</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Accord</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Adesso</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Adriana Hoyos</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Ameico</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>American Leather</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Artek</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Artemide</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>BDI</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Barkman Furniture</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Bassett Mirror Company</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Bensen</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Bob Batura</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Brenelli Design</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Canadel</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Charleston Forge</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Conform</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>David Trubridge</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Ethnicraft</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Flos</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Four Hands</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Gat Creek</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Global Views</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Gus Modern</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>HiEnd Accents</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Hubbardton Forge</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Huppe</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Interlude Home</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Koncept</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Loll Designs</td><td><b style="color:var(--good)">1</b></td></tr><tr><td>Loloi</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Made by Hand</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Modern Forms</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Moooi</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Nuevo</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Pablo</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Robert Abbey</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Rodam</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Ryan Dart</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Sunpan</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Universal</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Uttermost</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Visual Comfort</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>WAC Lighting</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Younger + Co.</td><td><span style="color:var(--muted)">pending</span></td></tr><tr><td>Zafferano America</td><td><span style="color:var(--muted)">pending</span></td></tr></tbody></table>
-
-<div class="two">
- <div>
-  <h2>📦 Coverage gaps by brand</h2>
-  <table><thead><tr><th>Brand</th><th>Gaps</th><th>Coverage</th></tr></thead><tbody>
-  <tr><td>Ryan Dart</td><td>4</td><td><span class="bar"><i style="width:0%"></i></span> 0%</td></tr><tr><td>American Leather</td><td>2</td><td><span class="bar"><i style="width:99%"></i></span> 99%</td></tr><tr><td>Bob Batura</td><td>2</td><td><span class="bar"><i style="width:0%"></i></span> 0%</td></tr><tr><td>Global Views</td><td>2</td><td><span class="bar"><i style="width:92%"></i></span> 92%</td></tr><tr><td>Brenelli Design</td><td>1</td><td><span class="bar"><i style="width:0%"></i></span> 0%</td></tr><tr><td>BDI</td><td>1</td><td><span class="bar"><i style="width:99%"></i></span> 99%</td></tr><tr><td>Charleston Forge</td><td>1</td><td><span class="bar"><i style="width:91%"></i></span> 91%</td></tr><tr><td>Canadel</td><td>1</td><td><span class="bar"><i style="width:96%"></i></span> 96%</td></tr>
-  </tbody></table>
- </div>
- <div>
-  <h2>🔎 Remaining gaps (14)</h2>
-  <table><thead><tr><th>Brand</th><th>Product</th></tr></thead><tbody>
-  <tr><td>American Leather</td><td>Athlea Chaise</td></tr><tr><td>American Leather</td><td>Copenhagen Sectional</td></tr><tr><td>BDI</td><td>Cove dining chair</td></tr><tr><td>Bob Batura</td><td>Handmade Lamp By Local Artist</td></tr><tr><td>Bob Batura</td><td>Waterfall Table</td></tr><tr><td>Brenelli Design</td><td>Scott Brenelli Coffee Table</td></tr><tr><td>Canadel</td><td>Stool 8175</td></tr><tr><td>Charleston Forge</td><td>Emmitt Backless Counterstool Custom</td></tr><tr><td>Global Views</td><td>Low Amber Over Cobalt Vase-Small</td></tr><tr><td>Global Views</td><td>Tall Amber Over Cobalt Vase - Small</td></tr><tr><td>Ryan Dart</td><td>Handmade Bench</td></tr><tr><td>Ryan Dart</td><td>Ryan Dart Bench</td></tr><tr><td>Ryan Dart</td><td>Ryan Dart Coffee Table</td></tr><tr><td>Ryan Dart</td><td>Ryan Dart Console Table</td></tr>
-  </tbody></table>
- </div>
-</div>
-
-<div class="foot">Trig Modern · Checker command center · all data from TrigMaster_Canonical.json</div>
+<div class="foot">Trig Modern · Keystone command center · data from TrigMaster_Canonical.json → catalog.json</div>
 </div>
 <script>
-const WAIT=[{"t": "Per-vendor trade discounts", "who": "needs Ryan", "d": "Only American Leather is set (2.5\u00d7 cost = 25% off). Every other vendor's trade markup must come from Ryan \u2014 get his numbers and I'll load them into brand_discounts.", "tag": "pricing"}, {"t": "Vendor-login backend \u2014 go / no-go", "who": "needs your OK", "d": "Ready to build (client-side encryption, magic-link, owner-RLS). Needs your approval on the model + a one-time sign-in on desktop & phone to migrate and test.", "tag": "build"}, {"t": "Athlea Chaise photo", "who": "needs a real photo", "d": "It keeps getting the Ada/Adley RECLINER image \u2014 a chaise can't use that. Drop an actual Athlea chaise photo on its card in the Image Placer.", "tag": "image"}, {"t": "'COMBINED' duplicate records (Giselle Slope)", "who": "decide", "d": "You deleted Tali COMBINED; Giselle Slope Arm COMBINED is still there. Tell me what 'COMBINED' means \u2014 merge it or keep it?", "tag": "data"}, {"t": "Accord 'Claudica side table' name", "who": "decide", "d": "You flagged 'might be the Conica.' Confirm whether Claudica = Conica F1000 so I can finalize its identity.", "tag": "data"}, {"t": "Global Views small vases (\u00d72)", "who": "confirm", "d": "You noted the 'Small' Amber-over-Cobalt vases may not exist as SKUs. Confirm and I'll delete them, or send the right SKU/photo.", "tag": "data"}, {"t": "Showroom photos: Ryan Dart \u00d74, Bob Batura \u00d72", "who": "needs your camera", "d": "These are local-maker / handmade pieces with no online image. Snap a showroom photo and drop it in the Image Placer.", "tag": "image"}];
-let done={};try{done=JSON.parse(localStorage.getItem('trig-wait')||'{}')}catch(e){}
-function render(){
- const el=document.getElementById('wait');el.innerHTML='';
- WAIT.forEach((w,i)=>{
-  const d=document.createElement('div');d.className='wait'+(done[i]?' done':'');
-  d.innerHTML=`<input type="checkbox" ${done[i]?'checked':''}><div><div class="tt">${w.t}<span class="who">${w.who}</span></div><div class="dd">${w.d}</div></div>`;
-  d.querySelector('input').onchange=e=>{done[i]=e.target.checked;localStorage.setItem('trig-wait',JSON.stringify(done));render()};
-  el.appendChild(d);
- });
-}
+const WAIT=[
+ {"t":"Pricing gap sweep","who":"my next job","d":"728/807 have an MSRP — ~79 don't. Some are legitimately by-quote (Canadel made-to-order, AL configurables); need to sort real gaps from intentional. Highest-value item left — it affects quoting.","tag":"pricing"},
+ {"t":"Designer: show material + warranty","who":"needs Designer","d":"New material & warranty fields are live in the feed but the app's product-detail page isn't displaying them yet. Quick app-side add.","tag":"app"},
+ {"t":"AL 'Denali' identity","who":"decide","d":"Listed as a sofa but it's actually a Comfort Air recliner. Want me to recategorize + fix dims, or pull it?","tag":"data"},
+ {"t":"Spec tail (~13 items)","who":"needs your specs","d":"A handful with no manufacturer source: Bob Batura handmade lamp, a discontinued Bellini table, Canadel configurables, a few Younger JS-only items. Drop specs/photos and I'll finish them.","tag":"data"}
+];
+let done={};try{done=JSON.parse(localStorage.getItem('trig-wait-v2')||'{}')}catch(e){}
+function render(){const el=document.getElementById('wait');el.innerHTML='';
+ WAIT.forEach((w,i)=>{const d=document.createElement('div');d.className='wait'+(done[i]?' done':'');
+  d.innerHTML='<input type="checkbox" '+(done[i]?'checked':'')+'><div><div class="tt">'+w.t+'<span class="who">'+w.who+'</span></div><div class="dd">'+w.d+'</div></div>';
+  d.querySelector('input').onchange=e=>{done[i]=e.target.checked;localStorage.setItem('trig-wait-v2',JSON.stringify(done));render()};
+  el.appendChild(d);});}
 render();
 </script>
 </body></html>
