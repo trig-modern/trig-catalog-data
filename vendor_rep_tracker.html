@@ -1,0 +1,190 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Trig — Vendor Rep Tracker</title>
+<style>
+:root{color-scheme:light;--bg:#f6f4f1;--card:#fff;--ink:#1d1c1a;--muted:#7a7570;--line:#e6e2dc;--accent:#b4663a;--accentsoft:#f0e2d8}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;padding:24px}
+.wrap{max-width:1320px;margin:0 auto}
+h1{font-size:22px;font-weight:680;letter-spacing:-.02em;margin:0}
+.sub{color:var(--muted);font-size:13px;margin:3px 0 18px}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:16px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.stat .n{font-size:22px;font-weight:700}.stat .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.bar{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin:14px 0 18px}.bar>i{display:block;height:100%;background:var(--accent)}
+.tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+input,select,textarea{font:inherit;border:1px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);padding:7px 9px}
+#q{flex:1;min-width:200px}
+button{font:inherit;cursor:pointer;border:1px solid var(--line);background:#fff;border-radius:8px;padding:8px 14px;font-weight:600}
+button.p{background:var(--accent);color:#fff;border-color:var(--accent)}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:13px}
+th{text-align:left;font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding:9px 8px;background:#faf8f3;position:sticky;top:0;cursor:pointer;white-space:nowrap}
+td{padding:6px 8px;border-top:1px solid var(--line);vertical-align:top}
+tr:hover td{background:#fbfaf7}
+td input,td select,td textarea{width:100%;border:1px solid transparent;background:transparent;padding:5px 6px;border-radius:6px}
+td input:hover,td select:hover,td textarea:hover{border-color:var(--line)}
+td input:focus,td select:focus,td textarea:focus{border-color:var(--accent);background:#fff;outline:none}
+.brand{font-weight:680}.brand .pri{color:var(--accent);margin-right:3px}
+.cat{font-size:11px;color:var(--muted)}
+.dial{white-space:nowrap;font-variant-numeric:tabular-nums;color:#5c574f}
+textarea{resize:vertical;min-height:30px;line-height:1.35}
+.st{border-radius:99px;font-weight:600;font-size:12px}
+.s0{color:#8a857d}.s1{color:#b07d18}.s2{color:#2563a8}.s3{color:#2563a8}.s4{color:#0f8a7e}.s5{color:#2f8f4f}.s6{color:#1f6f3c}
+.foot{color:var(--muted);font-size:12px;margin:16px 2px;text-align:center}
+@media(max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+</style></head><body><div class="wrap">
+<h1>🤝 Vendor Rep Tracker</h1>
+<div class="sub">Auto-saves to this browser as you type. ★ = priority brand. Use Export to back up or share.</div>
+<div class="stats">
+ <div class="stat"><div class="n" id="sTotal">0</div><div class="l">Vendors</div></div>
+ <div class="stat"><div class="n" id="sContacted">0</div><div class="l">Contacted</div></div>
+ <div class="stat"><div class="n" id="sReps">0</div><div class="l">Rep on file</div></div>
+ <div class="stat"><div class="n" id="sFiles">0</div><div class="l">File received</div></div>
+ <div class="stat"><div class="n" id="sLoaded">0</div><div class="l">Loaded</div></div>
+</div>
+<div class="bar"><i id="prog" style="width:0"></i></div>
+<div class="tools">
+ <input id="q" placeholder="Search brand…">
+ <select id="fcat"><option value="">All categories</option></select>
+ <select id="fstat"><option value="">All statuses</option></select>
+ <span style="flex:1"></span>
+ <button id="exp" class="p">Export CSV</button>
+ <button id="expj">Export JSON</button>
+ <button id="imp">Import JSON</button>
+ <input id="impf" type="file" accept="application/json" style="display:none">
+</div>
+<table>
+<thead><tr>
+ <th data-k="brand">Brand</th><th data-k="status">Status</th><th>Rep name</th><th>Rep phone / email</th>
+ <th>Account #</th><th>Dealer line</th><th data-k="last">Last contact</th><th data-k="next">Next follow-up</th><th>Notes</th>
+</tr></thead>
+<tbody id="body"></tbody>
+</table>
+<div class="foot">Trig Modern · Vendor rep tracker · data stays in your browser (localStorage). Export regularly to keep a backup.</div>
+</div>
+<script>
+const STATUSES=["Not started","Left message","Reached","Rep assigned","Portal access","File received","Loaded"];
+const SEED=[
+["Accord Lighting","Lighting","In portal — Library tab",1],
+["WAC Lighting","Lighting","1-800-526-2588",1],
+["Modern Forms","Lighting","1-866-810-6615",0],
+["Hubbardton Forge","Lighting","(888) 826-4766",1],
+["Artemide (USA)","Lighting","877-278-9111",1],
+["Robert Abbey","Lighting","828-322-3480",1],
+["Moooi (US)","Lighting","+1 646-396-0455",1],
+["Pablo Designs","Lighting","+1 415-865-5000",0],
+["Koncept","Lighting","323-261-8999",0],
+["Zafferano America","Lighting","1-888-744-5277",0],
+["Adesso","Lighting","212-736-4440",0],
+["&Tradition (US dist.)","Lighting","(800) 688-0974",0],
+["David Trubridge (wakaNINE)","Lighting","512-284-9672",0],
+["American Leather","Seating","800-456-9599",0],
+["Bensen","Seating","+1 604-684-4919",0],
+["Younger & Co.","Seating","336-476-0444",0],
+["Ethnicraft (US)","Seating","+1 312-800-3598",0],
+["Gus Modern","Seating","416-534-0773",0],
+["Conform","Seating","Sweden — conform.se",0],
+["Four Hands","Case goods","512-371-7575",1],
+["Interlude Home","Case goods","203-445-7617",1],
+["Universal Furniture","Case goods","877-804-5535",1],
+["BDI Furniture","Case goods","703-803-6900",0],
+["Canadel","Case goods","819-228-8471",0],
+["Gat Creek","Case goods","(304) 258-2818",0],
+["Barkman Furniture","Case goods","330-893-2520",0],
+["Huppe","Case goods","819-758-1529",0],
+["Loll Designs","Outdoor","877-740-3387",0],
+["Loloi Rugs","Rugs","972-585-5703",0],
+["Global Views / Studio A","Decor","888-956-0030",1],
+["Uttermost","Decor","800-678-5486",1],
+["Bassett Mirror Company","Decor","(276) 629-3341",1],
+["Sunpan","Decor","1-800-787-1019",1],
+["Nuevo / Nuevo Living","Decor","(800) 894-2226",0],
+["Charleston Forge","Decor","828-264-0100",0]
+];
+const KEY="trigRepTracker_v1";
+let state={};
+try{state=JSON.parse(localStorage.getItem(KEY))||{}}catch(e){state={}}
+function rec(b){ if(!state[b]) state[b]={status:"Not started",rep:"",contact:"",acct:"",last:"",next:"",notes:""}; return state[b]; }
+function save(){ localStorage.setItem(KEY,JSON.stringify(state)); stats(); }
+let sortK="brand", sortDir=1;
+function esc(s){return (s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/"/g,'&quot;');}
+
+function rows(){
+ const q=(document.getElementById('q').value||'').toLowerCase();
+ const fc=document.getElementById('fcat').value, fs=document.getElementById('fstat').value;
+ let list=SEED.filter(s=>{
+   const r=rec(s[0]);
+   if(q && !s[0].toLowerCase().includes(q)) return false;
+   if(fc && s[1]!==fc) return false;
+   if(fs && r.status!==fs) return false;
+   return true;
+ });
+ list.sort((a,b)=>{
+   let av,bv;
+   if(sortK==='brand'){av=a[0];bv=b[0];}
+   else {av=rec(a[0])[sortK]||'';bv=rec(b[0])[sortK]||'';}
+   return sortDir*(''+av).localeCompare(''+bv);
+ });
+ return list;
+}
+function render(){
+ const tb=document.getElementById('body'); tb.innerHTML='';
+ rows().forEach(s=>{
+  const b=s[0], r=rec(b);
+  const tr=document.createElement('tr');
+  const opts=STATUSES.map(st=>'<option'+(st===r.status?' selected':'')+'>'+st+'</option>').join('');
+  const si=STATUSES.indexOf(r.status);
+  tr.innerHTML=
+   '<td class="brand">'+(s[3]?'<span class=pri>★</span>':'')+esc(b)+'<div class="cat">'+s[1]+'</div></td>'
+   +'<td><select class="st s'+si+'" data-b="'+esc(b)+'" data-f="status">'+opts+'</select></td>'
+   +'<td><input data-b="'+esc(b)+'" data-f="rep" value="'+esc(r.rep)+'" placeholder="name"></td>'
+   +'<td><input data-b="'+esc(b)+'" data-f="contact" value="'+esc(r.contact)+'" placeholder="direct phone / email"></td>'
+   +'<td><input data-b="'+esc(b)+'" data-f="acct" value="'+esc(r.acct)+'" placeholder="acct #"></td>'
+   +'<td class="dial">'+esc(s[2])+'</td>'
+   +'<td><input type="date" data-b="'+esc(b)+'" data-f="last" value="'+esc(r.last)+'"></td>'
+   +'<td><input type="date" data-b="'+esc(b)+'" data-f="next" value="'+esc(r.next)+'"></td>'
+   +'<td><textarea data-b="'+esc(b)+'" data-f="notes" placeholder="…">'+esc(r.notes)+'</textarea></td>';
+  tb.appendChild(tr);
+ });
+ tb.querySelectorAll('[data-b]').forEach(el=>{
+  const ev=el.tagName==='SELECT'?'change':'input';
+  el.addEventListener(ev,e=>{
+    const b=el.getAttribute('data-b'), f=el.getAttribute('data-f');
+    rec(b)[f]=el.value; save();
+    if(f==='status'){el.className='st s'+STATUSES.indexOf(el.value);}
+  });
+ });
+}
+function stats(){
+ const total=SEED.length;
+ let contacted=0,reps=0,files=0,loaded=0;
+ SEED.forEach(s=>{const r=rec(s[0]);
+   if(r.status&&r.status!=='Not started')contacted++;
+   if((r.rep||'').trim())reps++;
+   if(r.status==='File received'||r.status==='Loaded')files++;
+   if(r.status==='Loaded')loaded++;
+ });
+ sTotal.textContent=total; sContacted.textContent=contacted; sReps.textContent=reps; sFiles.textContent=files; sLoaded.textContent=loaded;
+ prog.style.width=Math.round(files/total*100)+'%';
+}
+function exportCSV(){
+ const head=["Brand","Category","Priority","Status","Rep name","Rep phone/email","Account #","Dealer line","Last contact","Next follow-up","Notes"];
+ const lines=[head.join(",")];
+ SEED.forEach(s=>{const r=rec(s[0]);
+  const row=[s[0],s[1],s[3]?"Priority":"",r.status,r.rep,r.contact,r.acct,s[2],r.last,r.next,(r.notes||'').replace(/\n/g,' ')];
+  lines.push(row.map(v=>'"'+(''+v).replace(/"/g,'""')+'"').join(","));
+ });
+ dl(new Blob([lines.join("\n")],{type:"text/csv"}),"vendor_reps.csv");
+}
+function dl(blob,name){const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download=name;a.click();}
+// init filters
+[...new Set(SEED.map(s=>s[1]))].forEach(c=>{const o=document.createElement('option');o.value=o.textContent=c;fcat.appendChild(o);});
+STATUSES.forEach(st=>{const o=document.createElement('option');o.value=o.textContent=st;fstat.appendChild(o);});
+document.getElementById('q').addEventListener('input',render);
+fcat.addEventListener('change',render); fstat.addEventListener('change',render);
+document.querySelectorAll('th[data-k]').forEach(th=>th.addEventListener('click',()=>{const k=th.dataset.k;sortDir=(sortK===k)?-sortDir:1;sortK=k;render();}));
+exp.addEventListener('click',exportCSV);
+expj.addEventListener('click',()=>dl(new Blob([JSON.stringify(state,null,1)],{type:"application/json"}),"vendor_reps.json"));
+imp.addEventListener('click',()=>impf.click());
+impf.addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const rd=new FileReader();rd.onload=()=>{try{state=JSON.parse(rd.result);save();render();}catch(x){alert('Bad JSON');}};rd.readAsText(f);});
+render(); stats();
+</script></body></html>

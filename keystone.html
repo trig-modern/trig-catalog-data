@@ -6,9 +6,9 @@
 <meta name="apple-mobile-web-app-capable" content="yes"/>
 <meta name="mobile-web-app-capable" content="yes"/>
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
-<meta name="apple-mobile-web-app-title" content="Keystone"/>
+<meta name="apple-mobile-web-app-title" content="Checker"/>
 <meta name="theme-color" content="#100d0a"/>
-<title>Keystone</title>
+<title>Checker</title>
 <style>
   :root{
     --bg:#100d0a;--panel:#1c1812;--panel2:#241e16;--line:#332a1f;--ink:#f4eee3;--muted:#9c917f;
@@ -83,7 +83,7 @@
 <body>
 
 <header>
-  <div class="brand"><span id="brandtxt">Keystone</span></div>
+  <div class="brand"><span id="brandtxt">Checker</span></div>
   <div class="seg" id="modeseg">
     <button data-mode="keystone" class="on">Trig</button>
     <button data-mode="pawpis">Pawpi's</button>
@@ -97,7 +97,7 @@
 <div class="stage">
   <div id="statusline"></div>
   <canvas id="orb" width="600" height="600"></canvas>
-  <div id="caption"><span class="who">Keystone</span>Tap the mic and talk, or type below. Hit ⚙︎ first to drop in your keys.</div>
+  <div id="caption"><span class="who">Checker</span>Tap the mic and talk, or type below. Hit ⚙︎ first to drop in your keys.</div>
 </div>
 
 <div class="chips" id="chips"></div>
@@ -136,7 +136,7 @@
       </div>
     </div>
     <input class="f" id="customvoice" placeholder="paste ElevenLabs voice ID" style="display:none;margin-top:8px"/>
-    <label id="ctxlabel">Memory — what Keystone knows (Trig)</label>
+    <label id="ctxlabel">Memory — what Checker knows (Trig)</label>
     <textarea id="ctx"></textarea>
     <button class="btn" id="savecfg">Save</button>
     <button class="btn ghost" id="clearchat">Clear this mode's chat</button>
@@ -160,7 +160,7 @@ const $=id=>document.getElementById(id);
 const LS=localStorage;
 
 /* ---------------- modes ---------------- */
-const PERSONA_CORE=`You are Keystone — the user's (Zach's) sharp, grounded, slightly irreverent right hand. You speak OUT LOUD through his earbud, so:
+const PERSONA_CORE=`You are Checker — the user's (Zach's) sharp, grounded, slightly irreverent right hand. You speak OUT LOUD through his earbud, so:
 - Keep it SHORT and conversational. Usually 1-3 sentences unless he asks you to go deep. No markdown, no bullet lists, no headers, no emoji, no stage directions. Just talk.
 - Direct. Cut fluff. Take a stance. Challenge weak thinking instead of agreeing. Dry wit is welcome; never a cheerleader.
 - First-principles, action over theory. If you truly need one detail, ask one crisp question — otherwise give your best answer.
@@ -169,8 +169,8 @@ const PERSONA_CORE=`You are Keystone — the user's (Zach's) sharp, grounded, sl
 
 const MODES={
   keystone:{
-    name:"Keystone", accent:"amber",
-    system:PERSONA_CORE+`\n\nRIGHT NOW you're in TRIG mode. Context:\nZach runs Trig Modern, a modern-furniture dealer in Raleigh, NC. You're his data/ops/strategy lead on a 3-agent team (you = Checker/Keystone; plus a Designer agent on the app, a Marketer agent). You own the canonical master data, the catalog.json feed, Shopify image/tear-sheet hosting, deploys, and QC. The catalog is ~877 products at 98% image coverage. Trade pricing rule: trade = 2.5x dealer cost (American Leather confirmed = 25% off; other vendors waiting on Ryan's numbers — the #1 blocker). Open threads: vendor-login vault (zero-knowledge spec ready), a few data-quality holds. Talk like the teammate who already knows all this.`,
+    name:"Checker", accent:"amber",
+    system:PERSONA_CORE+`\n\nRIGHT NOW you're in TRIG mode. Context:\nZach runs Trig Modern, a modern-furniture dealer in Raleigh, NC. You're his data/ops/strategy lead on a 3-agent team (you = Checker/Checker; plus a Designer agent on the app, a Marketer agent). You own the canonical master data, the catalog.json feed, Shopify image/tear-sheet hosting, deploys, and QC. The catalog is ~877 products at 98% image coverage. Trade pricing rule: trade = 2.5x dealer cost (American Leather confirmed = 25% off; other vendors waiting on Ryan's numbers — the #1 blocker). Open threads: vendor-login vault (zero-knowledge spec ready), a few data-quality holds. Talk like the teammate who already knows all this.`,
     ctx:`(add anything else you want me to remember for Trig)`,
     chips:["What's blocking me?","Draft the text to Ryan","Gut-check an idea","What should I do next?"]
   },
@@ -259,7 +259,7 @@ function meter(){ // RMS 0..1 from analyser time domain
 /* ---------------- recording w/ silence detect ---------------- */
 $('mic').onclick=async()=>{ if(busy)return; if(rec&&rec.state==='recording'){stopRec();return;} startRec(); };
 async function startRec(){
-  const c=cfg(); if(!c.ak||!c.ek){caption('Keystone','Drop your API keys in settings first.');$('opencfg').click();return;}
+  const c=cfg(); if(!c.ak||!c.ek){caption('Checker','Drop your API keys in settings first.');$('opencfg').click();return;}
   try{
     await ensureMic();
     try{micNode.connect(analyser);}catch(e){}
@@ -269,7 +269,7 @@ async function startRec(){
     rec.ondataavailable=e=>{if(e.data.size)chunks.push(e.data)};
     rec.onstop=async()=>{ try{micNode.disconnect(analyser)}catch(e){} await handle(new Blob(chunks,{type:mime||'audio/webm'})); };
     rec.start(); $('mic').classList.add('rec'); setState('listening'); status('listening'); vadReset(); vad();
-  }catch(e){ status(''); caption('Keystone','Mic blocked — allow microphone access in Safari.'); }
+  }catch(e){ status(''); caption('Checker','Mic blocked — allow microphone access in Safari.'); }
 }
 function stopRec(){ if(rec&&rec.state==='recording')rec.stop(); $('mic').classList.remove('rec'); }
 let vadStarted=false,vadQuietSince=0,vadBegin=0;
@@ -290,16 +290,16 @@ async function handle(blob){
   const c=cfg();
   try{
     const text=await stt(blob,c.ek);
-    if(!text||!text.trim()){status('');caption('Keystone',"Didn't catch that — try again.");return finish();}
+    if(!text||!text.trim()){status('');caption('Checker',"Didn't catch that — try again.");return finish();}
     await runTurn(text);
-  }catch(e){status('');caption('Keystone','Error: '+(e.message||e));}
+  }catch(e){status('');caption('Checker','Error: '+(e.message||e));}
   finish();
 }
 async function send(text){ // from chips / typed
   if(busy||!text.trim())return; const c=cfg();
-  if(!c.ak||!c.ek){caption('Keystone','Drop your API keys in settings first.');$('opencfg').click();return;}
+  if(!c.ak||!c.ek){caption('Checker','Drop your API keys in settings first.');$('opencfg').click();return;}
   $('mic').classList.add('busy');busy=true;setState('thinking');
-  try{await runTurn(text.trim());}catch(e){status('');caption('Keystone','Error: '+(e.message||e));}
+  try{await runTurn(text.trim());}catch(e){status('');caption('Checker','Error: '+(e.message||e));}
   finish();
 }
 async function runTurn(userText){
@@ -310,7 +310,7 @@ async function runTurn(userText){
   const kept=[]; reply.split('\n').forEach(l=>{const m=l.match(/^\s*NOTE:\s*(.+)/i); if(m){addNote(m[1].trim());}else kept.push(l);});
   const spoken=kept.join('\n').trim()||reply.replace(/^\s*NOTE:\s*/i,'');
   msgs.push({role:'assistant',content:spoken}); persist();
-  caption('Keystone',spoken);
+  caption('Checker',spoken);
   status('speaking');await speak(spoken,cfg());
   status('');
   if(handsfree){ setTimeout(()=>{ if(!busy)startRec(); },350); }
@@ -381,13 +381,13 @@ function applyMode(){
   const pawpi=mode==='pawpis';
   document.querySelector('#modeseg button.on').classList.toggle('pawpi',pawpi);
   $('mic').classList.toggle('pawpi',pawpi);
-  $('brandtxt').textContent=pawpi?"Pawpi's":"Keystone";
-  $('ctxlabel').textContent='Memory — what '+(pawpi?"I":"Keystone")+' knows ('+(pawpi?"Pawpi's":"Trig")+')';
+  $('brandtxt').textContent=pawpi?"Pawpi's":"Checker";
+  $('ctxlabel').textContent='Memory — what '+(pawpi?"I":"Checker")+' knows ('+(pawpi?"Pawpi's":"Trig")+')';
   // chips
   $('chips').innerHTML=MODES[mode].chips.map(c=>`<div class="chip">${c}</div>`).join('');
   $('chips').querySelectorAll('.chip').forEach(ch=>ch.onclick=()=>send(ch.textContent));
   msgs=load('ks_msgs_'+mode,[]);
-  caption(MODES[mode].name, msgs.length?msgs[msgs.length-1].content:(pawpi?"Pawpi's partner here — what are we working on?":"Keystone here. What's up?"));
+  caption(MODES[mode].name, msgs.length?msgs[msgs.length-1].content:(pawpi?"Pawpi's partner here — what are we working on?":"Checker here. What's up?"));
 }
 document.querySelectorAll('#modeseg button').forEach(b=>b.onclick=()=>{mode=b.dataset.mode;LS.setItem('ks_mode',mode);applyMode();});
 function persist(){LS.setItem('ks_msgs_'+mode,JSON.stringify(msgs.slice(-40)));}
