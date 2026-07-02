@@ -1,0 +1,6 @@
+# Local build intermediate — the pre-slim fat catalog (with per-product covers[]).
+# Kept on disk as the re-run input for _coverbuild/slim_covers.py, but NEVER
+# committed: it's the 21MB blob we de-normalized away. Regenerate via the build
+# chain (build_catalog.py -> inject_covers.py -> build_swatches.py) if missing.
+_coverbuild/catalog_with_covers.json
+_coverbuild/__pycache__/

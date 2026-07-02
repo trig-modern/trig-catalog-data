@@ -1,0 +1,4718 @@
+{
+ "_meta": {
+  "purpose": "Shared American Leather cover + swatch catalog (single copy). catalog.json products reference this by grade bucket. RETAIL-SAFE: NO prices here.",
+  "keyed_by": "grade bucket (grade:fabric_i/ii/iii/v, grade:leather_c/d_f/g/h/j)",
+  "join": "See COVER_DATA_CONTRACT.md. Load once; join per product via allowed_grades + cover_slice + exclusions."
+ },
+ "named": {
+  "grade:fabric_ii": {
+   "amara": {
+    "id": "amara",
+    "cover": "Amara",
+    "brand": "Crypton®",
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-amara-desert-rose.jpg",
+    "swatch_colors": [
+     {
+      "color": "Desert Rose",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-amara-desert-rose.jpg",
+      "code": "AMA1837",
+      "part": "198385",
+      "grade": "II"
+     },
+     {
+      "color": "Domino",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-amara-domino.jpg",
+      "code": "AMA1835",
+      "part": "198383",
+      "grade": "II"
+     },
+     {
+      "color": "Moss",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-amara-moss.jpg",
+      "code": "AMA1838",
+      "part": "198386",
+      "grade": "II"
+     },
+     {
+      "color": "Pearl",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-amara-pearl.jpg",
+      "code": "AMA1836",
+      "part": "198384",
+      "grade": "II"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "apollo": {
+    "id": "apollo",
+    "cover": "Apollo",
+    "brand": "Crypton®",
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-apollo-flint.jpg",
+    "swatch_colors": [
+     {
+      "color": "Flint",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-apollo-flint.jpg",
+      "code": "APL0816",
+      "part": "157169",
+      "grade": "II"
+     },
+     {
+      "color": "Mahogany",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-apollo-mahogany.jpg",
+      "code": "APL0818",
+      "part": "157171",
+      "grade": "II"
+     },
+     {
+      "color": "Natural",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-apollo-natural.jpg",
+      "code": "APL0817",
+      "part": "157170",
+      "grade": "II"
+     },
+     {
+      "color": "Navy",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-apollo-navy.jpg",
+      "code": "APL0820",
+      "part": "157173",
+      "grade": "II"
+     },
+     {
+      "color": "Winter",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-apollo-winter.jpg",
+      "code": "APL08165",
+      "part": "165265",
+      "grade": "II"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "artemis": {
+    "id": "artemis",
+    "cover": "Artemis",
+    "brand": "Crypton®",
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-artemis-ecru.jpg",
+    "swatch_colors": [
+     {
+      "color": "Ecru",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-artemis-ecru.jpg",
+      "code": "ART08052",
+      "part": "165264",
+      "grade": "II"
+     },
+     {
+      "color": "Snow",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-artemis-snow.jpg",
+      "code": "ART08100",
+      "part": "165164",
+      "grade": "II"
+     },
+     {
+      "color": "Stone",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-artemis-stone.jpg",
+      "code": "ART08140",
+      "part": "165263",
+      "grade": "II"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "arther": {
+    "id": "arther",
+    "cover": "Arther",
+    "brand": null,
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-arther-brindle.jpg",
+    "swatch_colors": [
+     {
+      "color": "Brindle",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-arther-brindle.jpg",
+      "code": "ART1489",
+      "part": "196593",
+      "grade": "II"
+     },
+     {
+      "color": "Oyster",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-arther-oyster.jpg",
+      "code": "ART1488",
+      "part": "196592",
+      "grade": "II"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "aster": {
+    "id": "aster",
+    "cover": "Aster",
+    "brand": null,
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-aster-beige.jpg",
+    "swatch_colors": [
+     {
+      "color": "Beige",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-aster-beige.jpg",
+      "code": "A-2-12",
+      "part": "173119",
+      "grade": "III"
+     },
+     {
+      "color": "Charcoal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-aster-charcoal.jpg"
+     },
+     {
+      "color": "Cream",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-aster-cream.jpg",
+      "code": "A-2-10",
+      "part": "173118",
+      "grade": "III"
+     },
+     {
+      "color": "Espresso",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-aster-espresso.jpg"
+     },
+     {
+      "color": "Gray",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-aster-gray.jpg",
+      "code": "A-2-20",
+      "part": "173122",
+      "grade": "III"
+     },
+     {
+      "color": "Indigo",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-aster-indigo.jpg",
+      "code": "A-2-92",
+      "part": "173126",
+      "grade": "III"
+     },
+     {
+      "color": "Lemon",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-aster-lemon.jpg",
+      "code": "A-2-19",
+      "part": "173124",
+      "grade": "III"
+     },
+     {
+      "color": "Moss",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-aster-moss.jpg",
+      "code": "A-2-97",
+      "part": "173125",
+      "grade": "III"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "bryn": {
+    "id": "bryn",
+    "cover": "Bryn",
+    "brand": "Crypton®",
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bryn-frost.jpg",
+    "swatch_colors": [
+     {
+      "color": "Frost",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bryn-frost.jpg",
+      "code": "BRN1430",
+      "part": "196520",
+      "grade": "II"
+     },
+     {
+      "color": "Snow",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bryn-snow.jpg",
+      "code": "BRN1429",
+      "part": "196519",
+      "grade": "II"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "clary": {
+    "id": "clary",
+    "cover": "Clary",
+    "brand": null,
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-clary-beige.jpg",
+    "swatch_colors": [
+     {
+      "color": "Beige",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-clary-beige.jpg",
+      "code": "CL-2-12",
+      "part": "173080",
+      "grade": "III"
+     },
+     {
+      "color": "Charcoal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-clary-charcoal.jpg",
+      "code": "CL-2-22",
+      "part": "173083",
+      "grade": "III"
+     },
+     {
+      "color": "Cream",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-clary-cream.jpg",
+      "code": "CL-2-10",
+      "part": "173079",
+      "grade": "III"
+     },
+     {
+      "color": "Gray",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-clary-gray.jpg"
+     },
+     {
+      "color": "Indigo",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-clary-indigo.jpg",
+      "code": "CL-2-92",
+      "part": "173085",
+      "grade": "III"
+     },
+     {
+      "color": "Plum",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-clary-plum.jpg"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "dolly": {
+    "id": "dolly",
+    "cover": "Dolly",
+    "brand": null,
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-dolly-alpaca.jpg",
+    "swatch_colors": [
+     {
+      "color": "Alpaca",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-dolly-alpaca.jpg",
+      "code": "DL-2-12",
+      "part": "191484",
+      "grade": "II"
+     },
+     {
+      "color": "Angora",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-dolly-angora.jpg",
+      "code": "DL-2-10",
+      "part": "191483",
+      "grade": "II"
+     },
+     {
+      "color": "Camel",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-dolly-camel.jpg",
+      "code": "DL-2-14",
+      "part": "191485",
+      "grade": "II"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "freya": {
+    "id": "freya",
+    "cover": "Freya",
+    "brand": "Crypton®",
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-freya-brown.jpg",
+    "swatch_colors": [
+     {
+      "color": "Brown",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-freya-brown.jpg",
+      "code": "FYA2216",
+      "part": "191600",
+      "grade": "II"
+     },
+     {
+      "color": "Indigo",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-freya-indigo.jpg",
+      "code": "FYA2292",
+      "part": "191604",
+      "grade": "II"
+     },
+     {
+      "color": "Sage",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-freya-sage.jpg",
+      "code": "FYA2296",
+      "part": "191602",
+      "grade": "II"
+     },
+     {
+      "color": "Snow",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-freya-snow.jpg",
+      "code": "FYA8100",
+      "part": "191599",
+      "grade": "II"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "gowan": {
+    "id": "gowan",
+    "cover": "Gowan",
+    "brand": "InsideOut",
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-gowan-pewter.jpg",
+    "swatch_colors": [
+     {
+      "color": "Pewter",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-gowan-pewter.jpg"
+     },
+     {
+      "color": "Shadow",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-gowan-shadow.jpg",
+      "code": "GWN1801",
+      "part": "173098",
+      "grade": "III"
+     },
+     {
+      "color": "Twine",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-gowan-twine.jpg"
+     },
+     {
+      "color": "Uniform",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-gowan-uniform.jpg",
+      "code": "GWN1800",
+      "part": "173097",
+      "grade": "III"
+     },
+     {
+      "color": "Vanilla",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-gowan-vanilla.jpg",
+      "code": "GWN1804",
+      "part": "173101",
+      "grade": "III"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "haze": {
+    "id": "haze",
+    "cover": "Haze",
+    "brand": null,
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-haze-beige.jpg",
+    "swatch_colors": [
+     {
+      "color": "Beige",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-haze-beige.jpg",
+      "code": "HA-2-12",
+      "part": "179022",
+      "grade": "II"
+     },
+     {
+      "color": "Charcoal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-haze-charcoal.jpg",
+      "code": "HA-2-22",
+      "part": "179024",
+      "grade": "II"
+     },
+     {
+      "color": "Sage",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-haze-sage.jpg",
+      "code": "HA-2-96",
+      "part": "179021",
+      "grade": "II"
+     },
+     {
+      "color": "Smoke",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-haze-smoke.jpg",
+      "code": "HA-2-87",
+      "part": "179020",
+      "grade": "II"
+     }
+    ],
+    "excl_sim": true,
+    "excl_sleeper": true
+   },
+   "iris": {
+    "id": "iris",
+    "cover": "Iris",
+    "brand": "Crypton®",
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-iris-cotton.jpg",
+    "swatch_colors": [
+     {
+      "color": "Cotton",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-iris-cotton.jpg",
+      "code": "IRS1404",
+      "part": "194719",
+      "grade": "III"
+     },
+     {
+      "color": "Fossil",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-iris-fossil.jpg",
+      "code": "IRS1407",
+      "part": "194722",
+      "grade": "III"
+     },
+     {
+      "color": "Sangria",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-iris-sangria.jpg",
+      "code": "IRS1406",
+      "part": "194721",
+      "grade": "III"
+     },
+     {
+      "color": "Swatch Celadon",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-iris-swatch-celadon.jpg"
+     },
+     {
+      "color": "Yellowstone",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-iris-yellowstone.jpg",
+      "code": "IRS1433",
+      "part": "196523",
+      "grade": "III"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "justify": {
+    "id": "justify",
+    "cover": "Justify",
+    "brand": "InsideOut",
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-justify-adobe.jpg",
+    "swatch_colors": [
+     {
+      "color": "Adobe",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-justify-adobe.jpg"
+     },
+     {
+      "color": "Cactus",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-justify-cactus.jpg"
+     },
+     {
+      "color": "Pearl",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-justify-pearl.jpg"
+     },
+     {
+      "color": "Pewter",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-justify-pewter.jpg"
+     },
+     {
+      "color": "Uniform",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-justify-uniform.jpg"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "layla": {
+    "id": "layla",
+    "cover": "Layla",
+    "brand": null,
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-layla-moss.jpg",
+    "swatch_colors": [
+     {
+      "color": "Moss",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-layla-moss.jpg",
+      "code": "LYL1478",
+      "part": "196582",
+      "grade": "II"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "lumen": {
+    "id": "lumen",
+    "cover": "Lumen",
+    "brand": null,
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-lumen-eclipse.jpg",
+    "swatch_colors": [
+     {
+      "color": "Eclipse",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-lumen-eclipse.jpg",
+      "code": "LU-2-99",
+      "part": "179026",
+      "grade": "II"
+     },
+     {
+      "color": "Gold",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-lumen-gold.jpg",
+      "code": "LU-2-02",
+      "part": "179238",
+      "grade": "II"
+     },
+     {
+      "color": "Olive",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-lumen-olive.jpg",
+      "code": "LU-2-98",
+      "part": "179025",
+      "grade": "II"
+     },
+     {
+      "color": "Silver",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-lumen-silver.jpg"
+     }
+    ],
+    "excl_sim": true,
+    "excl_sleeper": true
+   },
+   "mika": {
+    "id": "mika",
+    "cover": "Mika",
+    "brand": null,
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mika-natural.jpg",
+    "swatch_colors": [
+     {
+      "color": "Natural",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mika-natural.jpg",
+      "code": "MKA1479",
+      "part": "196583",
+      "grade": "II"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "monk": {
+    "id": "monk",
+    "cover": "Monk",
+    "brand": "Crypton®",
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-monk-eclipse.jpg",
+    "swatch_colors": [
+     {
+      "color": "Eclipse",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-monk-eclipse.jpg",
+      "code": "MON1801",
+      "part": "173095",
+      "grade": "II"
+     },
+     {
+      "color": "Hemp",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-monk-hemp.jpg",
+      "code": "MON1800",
+      "part": "173094",
+      "grade": "II"
+     },
+     {
+      "color": "Specle",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-monk-specle.jpg"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "piper": {
+    "id": "piper",
+    "cover": "Piper",
+    "brand": null,
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-piper-denim.jpg",
+    "swatch_colors": [
+     {
+      "color": "Denim",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-piper-denim.jpg",
+      "code": "PP-2-92",
+      "part": "196546",
+      "grade": "II"
+     },
+     {
+      "color": "Mineral",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-piper-mineral.jpg",
+      "code": "PP-2-84",
+      "part": "191525",
+      "grade": "II"
+     },
+     {
+      "color": "Otter",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-piper-otter.jpg",
+      "code": "PP-2-90",
+      "part": "196545",
+      "grade": "II"
+     },
+     {
+      "color": "Sangria",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-piper-sangria.jpg",
+      "code": "PP-2-86",
+      "part": "191524",
+      "grade": "II"
+     }
+    ],
+    "excl_sim": true,
+    "excl_sleeper": true
+   },
+   "prescott": {
+    "id": "prescott",
+    "cover": "Prescott",
+    "brand": null,
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-prescott-beige.jpg",
+    "swatch_colors": [
+     {
+      "color": "Beige",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-prescott-beige.jpg"
+     },
+     {
+      "color": "Charcoal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-prescott-charcoal.jpg",
+      "code": "PR-2-22",
+      "part": "179019",
+      "grade": "III"
+     },
+     {
+      "color": "Cream",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-prescott-cream.jpg",
+      "code": "PR-2-10",
+      "part": "179017",
+      "grade": "III"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "sebastian": {
+    "id": "sebastian",
+    "cover": "Sebastian",
+    "brand": null,
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-sebastian-brindle.jpg",
+    "swatch_colors": [
+     {
+      "color": "Brindle",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-sebastian-brindle.jpg",
+      "code": "SBT1484",
+      "part": "196588",
+      "grade": "II"
+     },
+     {
+      "color": "Oyster",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-sebastian-oyster.jpg",
+      "code": "SBT1483",
+      "part": "196587",
+      "grade": "II"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "sonata": {
+    "id": "sonata",
+    "cover": "Sonata",
+    "brand": null,
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-sonata-charcoal.jpg",
+    "swatch_colors": [
+     {
+      "color": "Charcoal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-sonata-charcoal.jpg",
+      "code": "S-2-22",
+      "part": "166720",
+      "grade": "II"
+     },
+     {
+      "color": "Gray",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-sonata-gray.jpg",
+      "code": "S-2-20",
+      "part": "166719",
+      "grade": "II"
+     },
+     {
+      "color": "Indigo",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-sonata-indigo.jpg",
+      "code": "S-2-92",
+      "part": "173088",
+      "grade": "II"
+     },
+     {
+      "color": "Moss",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-sonata-moss.jpg"
+     },
+     {
+      "color": "Sand",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-sonata-sand.jpg",
+      "code": "S-2-14",
+      "part": "166718",
+      "grade": "II"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "theo": {
+    "id": "theo",
+    "cover": "Theo",
+    "brand": null,
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-theo-aqua.jpg",
+    "swatch_colors": [
+     {
+      "color": "Aqua",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-theo-aqua.jpg",
+      "code": "THO1487",
+      "part": "196591",
+      "grade": "II"
+     },
+     {
+      "color": "Mocha",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-theo-mocha.jpg",
+      "code": "THO1485",
+      "part": "196589",
+      "grade": "II"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "wren": {
+    "id": "wren",
+    "cover": "Wren",
+    "brand": "Crypton®",
+    "grade": "II",
+    "bucket": "grade:fabric_ii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-wren-custard.jpg",
+    "swatch_colors": [
+     {
+      "color": "Custard",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-wren-custard.jpg"
+     },
+     {
+      "color": "Fawn",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-wren-fawn.jpg",
+      "code": "WRE1414",
+      "part": "194730",
+      "grade": "II"
+     },
+     {
+      "color": "Midnight",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-wren-midnight.jpg"
+     },
+     {
+      "color": "Navy",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-wren-navy.jpg"
+     },
+     {
+      "color": "Sangria",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-wren-sangria.jpg"
+     },
+     {
+      "color": "Spice",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-wren-spice.jpg",
+      "code": "WRE1415",
+      "part": "194731",
+      "grade": "II"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   }
+  },
+  "grade:fabric_i": {
+   "archer": {
+    "id": "archer",
+    "cover": "Archer",
+    "brand": "Crypton®",
+    "grade": "I",
+    "bucket": "grade:fabric_i",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-archer-eucalyptus.jpg",
+    "swatch_colors": [
+     {
+      "color": "Eucalyptus",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-archer-eucalyptus.jpg",
+      "code": "ARC1411",
+      "part": "194727",
+      "grade": "I"
+     },
+     {
+      "color": "Linen",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-archer-linen.jpg",
+      "code": "ARC1410",
+      "part": "194726",
+      "grade": "I"
+     },
+     {
+      "color": "Sable",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-archer-sable.jpg",
+      "code": "ARC1409",
+      "part": "194725",
+      "grade": "I"
+     },
+     {
+      "color": "Sand",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-archer-sand.jpg",
+      "code": "ARC1408",
+      "part": "194723",
+      "grade": "I"
+     },
+     {
+      "color": "Swatch Lirch",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-archer-swatch-lirch.jpg"
+     },
+     {
+      "color": "Swatch Midnight",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-archer-swatch-midnight.jpg"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "aura": {
+    "id": "aura",
+    "cover": "Aura",
+    "brand": null,
+    "grade": "I",
+    "bucket": "grade:fabric_i",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-aura-espresso.jpg",
+    "swatch_colors": [
+     {
+      "color": "Espresso",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-aura-espresso.jpg",
+      "code": "ARA0838",
+      "part": "157202",
+      "grade": "I"
+     },
+     {
+      "color": "Natural",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-aura-natural.jpg",
+      "code": "ARA0836",
+      "part": "157200",
+      "grade": "I"
+     },
+     {
+      "color": "Pewter",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-aura-pewter.jpg",
+      "code": "ARA0839",
+      "part": "157203",
+      "grade": "I"
+     },
+     {
+      "color": "Taupe",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-aura-taupe.jpg",
+      "code": "ARA0837",
+      "part": "157201",
+      "grade": "I"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "babble": {
+    "id": "babble",
+    "cover": "Babble",
+    "brand": null,
+    "grade": "I",
+    "bucket": "grade:fabric_i",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-babble-beige.jpg",
+    "swatch_colors": [
+     {
+      "color": "Beige",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-babble-beige.jpg",
+      "code": "BB-1-12",
+      "part": "173232",
+      "grade": "I"
+     },
+     {
+      "color": "Brown",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-babble-brown.jpg",
+      "code": "BB-1-16",
+      "part": "173231",
+      "grade": "I"
+     },
+     {
+      "color": "Charcoal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-babble-charcoal.jpg",
+      "code": "BB-1-22",
+      "part": "173229",
+      "grade": "I"
+     },
+     {
+      "color": "Cream",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-babble-cream.jpg",
+      "code": "BB-1-10",
+      "part": "173233",
+      "grade": "I"
+     },
+     {
+      "color": "Crimson",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-babble-crimson.jpg",
+      "code": "BB-1-90",
+      "part": "173228",
+      "grade": "I"
+     },
+     {
+      "color": "Gray",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-babble-gray.jpg",
+      "code": "BB-1-20",
+      "part": "173230",
+      "grade": "I"
+     },
+     {
+      "color": "Indigo",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-babble-indigo.jpg",
+      "code": "BB-1-92",
+      "part": "173226",
+      "grade": "I"
+     },
+     {
+      "color": "Tangerine",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-babble-tangerine.jpg",
+      "code": "BB-1-93",
+      "part": "173227",
+      "grade": "I"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "beacon": {
+    "id": "beacon",
+    "cover": "Beacon",
+    "brand": null,
+    "grade": "I",
+    "bucket": "grade:fabric_i",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-beacon-charcoal.jpg",
+    "swatch_colors": [
+     {
+      "color": "Charcoal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-beacon-charcoal.jpg",
+      "code": "BN-1-22",
+      "part": "186396",
+      "grade": "I"
+     },
+     {
+      "color": "Cream",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-beacon-cream.jpg",
+      "code": "BN-1-10",
+      "part": "186400",
+      "grade": "I"
+     },
+     {
+      "color": "Desert",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-beacon-desert.jpg",
+      "code": "BN-1-93",
+      "part": "198387",
+      "grade": "I"
+     },
+     {
+      "color": "Gray",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-beacon-gray.jpg",
+      "code": "BN-1-20",
+      "part": "186397",
+      "grade": "I"
+     },
+     {
+      "color": "Indigo",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-beacon-indigo.jpg",
+      "code": "BN-1-92",
+      "part": "186399",
+      "grade": "I"
+     },
+     {
+      "color": "Mink",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-beacon-mink.jpg",
+      "code": "BN-1-95",
+      "part": "198389",
+      "grade": "I"
+     },
+     {
+      "color": "Sage",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-beacon-sage.jpg",
+      "code": "BN-1-94",
+      "part": "198388",
+      "grade": "I"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "boris": {
+    "id": "boris",
+    "cover": "Boris",
+    "brand": null,
+    "grade": "I",
+    "bucket": "grade:fabric_i",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-boris-carbon.jpg",
+    "swatch_colors": [
+     {
+      "color": "Carbon",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-boris-carbon.jpg",
+      "code": "BRS1453",
+      "part": "196554",
+      "grade": "I"
+     },
+     {
+      "color": "Charcoal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-boris-charcoal.jpg"
+     },
+     {
+      "color": "Earth",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-boris-earth.jpg",
+      "code": "BRS1452",
+      "part": "196553",
+      "grade": "I"
+     },
+     {
+      "color": "Oyster",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-boris-oyster.jpg",
+      "code": "BRS1449",
+      "part": "196550",
+      "grade": "III"
+     },
+     {
+      "color": "Pumice",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-boris-pumice.jpg",
+      "code": "BRS1450",
+      "part": "196551",
+      "grade": "I"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "camden": {
+    "id": "camden",
+    "cover": "Camden",
+    "brand": "Crypton®",
+    "grade": "I",
+    "bucket": "grade:fabric_i",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-camden-coffee.jpg",
+    "swatch_colors": [
+     {
+      "color": "Coffee",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-camden-coffee.jpg",
+      "code": "CMD1879",
+      "part": "206374",
+      "grade": "I"
+     },
+     {
+      "color": "Cream",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-camden-cream.jpg",
+      "code": "CMD1876",
+      "part": "206368",
+      "grade": "I"
+     },
+     {
+      "color": "Hemp",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-camden-hemp.jpg",
+      "code": "CMD1878",
+      "part": "206373",
+      "grade": "I"
+     },
+     {
+      "color": "Linen",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-camden-linen.jpg",
+      "code": "CMD1877",
+      "part": "206372",
+      "grade": "I"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "canyon": {
+    "id": "canyon",
+    "cover": "Canyon",
+    "brand": null,
+    "grade": "I",
+    "bucket": "grade:fabric_i",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-canyon-aloe.jpg",
+    "swatch_colors": [
+     {
+      "color": "Aloe",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-canyon-aloe.jpg",
+      "code": "CNY1812",
+      "part": "210413",
+      "grade": "I"
+     },
+     {
+      "color": "Coffee",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-canyon-coffee.jpg",
+      "code": "CNY1810",
+      "part": "210411",
+      "grade": "I"
+     },
+     {
+      "color": "Linen",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-canyon-linen.jpg",
+      "code": "CNY1808",
+      "part": "210409",
+      "grade": "I"
+     },
+     {
+      "color": "Mineral",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-canyon-mineral.jpg",
+      "code": "CNY1813",
+      "part": "210414",
+      "grade": "I"
+     },
+     {
+      "color": "Sequoia",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-canyon-sequoia.jpg",
+      "code": "CNY1811",
+      "part": "210412",
+      "grade": "I"
+     },
+     {
+      "color": "Wheat",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-canyon-wheat.jpg",
+      "code": "CNY1809",
+      "part": "210410",
+      "grade": "I"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "celeste": {
+    "id": "celeste",
+    "cover": "Celeste",
+    "brand": null,
+    "grade": "I",
+    "bucket": "grade:fabric_i",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-celeste-pearl.jpg",
+    "swatch_colors": [
+     {
+      "color": "Pearl",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-celeste-pearl.jpg",
+      "code": "CES6326",
+      "part": "165432",
+      "grade": "I"
+     },
+     {
+      "color": "Pewter",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-celeste-pewter.jpg"
+     },
+     {
+      "color": "Pumice",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-celeste-pumice.jpg",
+      "code": "CES6341",
+      "part": "165434",
+      "grade": "I"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "clover": {
+    "id": "clover",
+    "cover": "Clover",
+    "brand": null,
+    "grade": "I",
+    "bucket": "grade:fabric_i",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-clover-beige.jpg",
+    "swatch_colors": [
+     {
+      "color": "Beige",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-clover-beige.jpg"
+     },
+     {
+      "color": "Charcoal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-clover-charcoal.jpg"
+     },
+     {
+      "color": "Espresso",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-clover-espresso.jpg"
+     },
+     {
+      "color": "Gray",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-clover-gray.jpg"
+     },
+     {
+      "color": "Indigo",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-clover-indigo.jpg"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "dakota": {
+    "id": "dakota",
+    "cover": "Dakota",
+    "brand": null,
+    "grade": "I",
+    "bucket": "grade:fabric_i",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-dakota-beige.jpg",
+    "swatch_colors": [
+     {
+      "color": "Beige",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-dakota-beige.jpg",
+      "code": "DK-1-12",
+      "part": "173216",
+      "grade": "II"
+     },
+     {
+      "color": "Blush",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-dakota-blush.jpg",
+      "code": "DK-1-30",
+      "part": "173212",
+      "grade": "II"
+     },
+     {
+      "color": "Brown",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-dakota-brown.jpg",
+      "code": "DK-1-16",
+      "part": "173215",
+      "grade": "II"
+     },
+     {
+      "color": "Charcoal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-dakota-charcoal.jpg"
+     },
+     {
+      "color": "Cream",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-dakota-cream.jpg",
+      "code": "DK-1-10",
+      "part": "173217",
+      "grade": "II"
+     },
+     {
+      "color": "Gray",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-dakota-gray.jpg"
+     },
+     {
+      "color": "Indigo",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-dakota-indigo.jpg"
+     },
+     {
+      "color": "Terracotta",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-dakota-terracotta.jpg",
+      "code": "DK-1-72",
+      "part": "173211",
+      "grade": "II"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "felder": {
+    "id": "felder",
+    "cover": "Felder",
+    "brand": null,
+    "grade": "I",
+    "bucket": "grade:fabric_i",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-felder-charcoal.jpg",
+    "swatch_colors": [
+     {
+      "color": "Charcoal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-felder-charcoal.jpg"
+     },
+     {
+      "color": "Cream",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-felder-cream.jpg",
+      "code": "FD-1-10",
+      "part": "173209",
+      "grade": "II"
+     },
+     {
+      "color": "Indigo",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-felder-indigo.jpg",
+      "code": "FD-1-92",
+      "part": "173206",
+      "grade": "II"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "hand-woven": {
+    "id": "hand-woven",
+    "cover": "Hand Woven",
+    "brand": null,
+    "grade": "I",
+    "bucket": "grade:fabric_i",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-hand-woven-beige.jpg",
+    "swatch_colors": [
+     {
+      "color": "Beige",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-hand-woven-beige.jpg",
+      "code": "HWV1803",
+      "part": "190023",
+      "grade": "I"
+     },
+     {
+      "color": "Black",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-hand-woven-black.jpg",
+      "code": "HWV1802",
+      "part": "190022",
+      "grade": "I"
+     },
+     {
+      "color": "Espresso",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-hand-woven-espresso.jpg",
+      "code": "HWV1801",
+      "part": "190021",
+      "grade": "I"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "hanson": {
+    "id": "hanson",
+    "cover": "Hanson",
+    "brand": null,
+    "grade": "I",
+    "bucket": "grade:fabric_i",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-hanson-beige.jpg",
+    "swatch_colors": [
+     {
+      "color": "Beige",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-hanson-beige.jpg",
+      "code": "HS-1-12",
+      "part": "173239",
+      "grade": "I"
+     },
+     {
+      "color": "Charcoal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-hanson-charcoal.jpg",
+      "code": "HS-1-22",
+      "part": "173236",
+      "grade": "I"
+     },
+     {
+      "color": "Cream",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-hanson-cream.jpg",
+      "code": "HS-1-10",
+      "part": "173240",
+      "grade": "I"
+     },
+     {
+      "color": "Gray",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-hanson-gray.jpg",
+      "code": "HS-1-20",
+      "part": "173237",
+      "grade": "I"
+     },
+     {
+      "color": "Indigo",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-hanson-indigo.jpg",
+      "code": "HS-1-92",
+      "part": "173234",
+      "grade": "I"
+     },
+     {
+      "color": "Moss",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-hanson-moss.jpg",
+      "code": "HS-1-97",
+      "part": "173235",
+      "grade": "I"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "juno": {
+    "id": "juno",
+    "cover": "Juno",
+    "brand": "Crypton®",
+    "grade": "I",
+    "bucket": "grade:fabric_i",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-juno-fawn.jpg",
+    "swatch_colors": [
+     {
+      "color": "Fawn",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-juno-fawn.jpg",
+      "code": "JUN1869",
+      "part": "200729",
+      "grade": "I"
+     },
+     {
+      "color": "Mocha",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-juno-mocha.jpg",
+      "code": "JUN1872",
+      "part": "206192",
+      "grade": "I"
+     },
+     {
+      "color": "Oat",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-juno-oat.jpg",
+      "code": "JUN1866",
+      "part": "200726",
+      "grade": "I"
+     },
+     {
+      "color": "Pecan",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-juno-pecan.jpg",
+      "code": "JUN1867",
+      "part": "200727",
+      "grade": "I"
+     },
+     {
+      "color": "Sage",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-juno-sage.jpg",
+      "code": "JUN1868",
+      "part": "200728",
+      "grade": "I"
+     },
+     {
+      "color": "Smoke Blue",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-juno-smoke-blue.jpg",
+      "code": "JUN1871",
+      "part": "200731",
+      "grade": "I"
+     },
+     {
+      "color": "Terracotta",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-juno-terracotta.jpg",
+      "code": "JUN1870",
+      "part": "200730",
+      "grade": "I"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "pax": {
+    "id": "pax",
+    "cover": "Pax",
+    "brand": null,
+    "grade": "I",
+    "bucket": "grade:fabric_i",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-pax-pewter.jpg",
+    "swatch_colors": [
+     {
+      "color": "Pewter",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-pax-pewter.jpg",
+      "code": "PAX0847",
+      "part": "157211",
+      "grade": "I"
+     },
+     {
+      "color": "Smoke",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-pax-smoke.jpg",
+      "code": "PAX0846",
+      "part": "157210",
+      "grade": "I"
+     },
+     {
+      "color": "Taupe",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-pax-taupe.jpg",
+      "code": "PAX0849",
+      "part": "157213",
+      "grade": "I"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "quinn": {
+    "id": "quinn",
+    "cover": "Quinn",
+    "brand": null,
+    "grade": "I",
+    "bucket": "grade:fabric_i",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-quinn-ash.jpg",
+    "swatch_colors": [
+     {
+      "color": "Ash",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-quinn-ash.jpg",
+      "code": "QIN1420",
+      "part": "194736",
+      "grade": "I"
+     },
+     {
+      "color": "Café",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-quinn-caf.jpg",
+      "code": "QIN1459",
+      "part": "196563",
+      "grade": "I"
+     },
+     {
+      "color": "Cream",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-quinn-cream.jpg",
+      "code": "QIN1460",
+      "part": "196564",
+      "grade": "I"
+     },
+     {
+      "color": "Espresso",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-quinn-espresso.jpg",
+      "code": "QIN1419",
+      "part": "194735",
+      "grade": "I"
+     },
+     {
+      "color": "Pebble",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-quinn-pebble.jpg",
+      "code": "QIN1427",
+      "part": "194739",
+      "grade": "I"
+     },
+     {
+      "color": "Spice",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-quinn-spice.jpg",
+      "code": "QIN1461",
+      "part": "196565",
+      "grade": "I"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "terran": {
+    "id": "terran",
+    "cover": "Terran",
+    "brand": null,
+    "grade": "I",
+    "bucket": "grade:fabric_i",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-terran-chambray.jpg",
+    "swatch_colors": [
+     {
+      "color": "Chambray",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-terran-chambray.jpg",
+      "code": "TEN1457",
+      "part": "196560",
+      "grade": "I"
+     },
+     {
+      "color": "Oat",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-terran-oat.jpg",
+      "code": "TEN1454",
+      "part": "196555",
+      "grade": "I"
+     },
+     {
+      "color": "Onyx",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-terran-onyx.jpg",
+      "code": "TEN1456",
+      "part": "196557",
+      "grade": "I"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "tonic": {
+    "id": "tonic",
+    "cover": "Tonic",
+    "brand": null,
+    "grade": "I",
+    "bucket": "grade:fabric_i",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-tonic-cream.jpg",
+    "swatch_colors": [
+     {
+      "color": "Cream",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-tonic-cream.jpg",
+      "code": "T-1-10",
+      "part": "166760",
+      "grade": "I"
+     },
+     {
+      "color": "Espresso",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-tonic-espresso.jpg"
+     },
+     {
+      "color": "Gray",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-tonic-gray.jpg",
+      "code": "T-1-20",
+      "part": "166713",
+      "grade": "I"
+     },
+     {
+      "color": "Indigo",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-tonic-indigo.jpg",
+      "code": "T-1-92",
+      "part": "166709",
+      "grade": "I"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "vee-life": {
+    "id": "vee-life",
+    "cover": "Vee Life",
+    "brand": null,
+    "grade": "I",
+    "bucket": "grade:fabric_i",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-vee-life-cappuccino.jpg",
+    "swatch_colors": [
+     {
+      "color": "Cappuccino",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-vee-life-cappuccino.jpg"
+     },
+     {
+      "color": "Champagne",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-vee-life-champagne.jpg"
+     },
+     {
+      "color": "Charcoal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-vee-life-charcoal.jpg",
+      "code": "VEE0020",
+      "part": "170648",
+      "grade": "I"
+     },
+     {
+      "color": "Licorice",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-vee-life-licorice.jpg",
+      "code": "VEE6480",
+      "part": "173093",
+      "grade": "I"
+     },
+     {
+      "color": "Mink",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-vee-life-mink.jpg"
+     },
+     {
+      "color": "Red",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-vee-life-red.jpg"
+     },
+     {
+      "color": "Stone",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-vee-life-stone.jpg"
+     }
+    ],
+    "excl_sim": true,
+    "excl_sleeper": false
+   },
+   "vintage-belgian": {
+    "id": "vintage-belgian",
+    "cover": "Vintage Belgian",
+    "brand": null,
+    "grade": "I",
+    "bucket": "grade:fabric_i",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-vintage-belgian-beige.jpg",
+    "swatch_colors": [
+     {
+      "color": "Beige",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-vintage-belgian-beige.jpg",
+      "code": "VB-1-12",
+      "part": "149775",
+      "grade": "I"
+     },
+     {
+      "color": "Brown",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-vintage-belgian-brown.jpg"
+     },
+     {
+      "color": "Charcoal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-vintage-belgian-charcoal.jpg",
+      "code": "VB-1-22",
+      "part": "149935",
+      "grade": "I"
+     },
+     {
+      "color": "Cream",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-vintage-belgian-cream.jpg",
+      "code": "VB-1-10",
+      "part": "151595",
+      "grade": "I"
+     },
+     {
+      "color": "Espresso",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-vintage-belgian-espresso.jpg"
+     },
+     {
+      "color": "Grey",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-vintage-belgian-grey.jpg"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   }
+  },
+  "grade:fabric_v": {
+   "berber": {
+    "id": "berber",
+    "cover": "Berber",
+    "brand": null,
+    "grade": "V",
+    "bucket": "grade:fabric_v",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-berber-beige.jpg",
+    "swatch_colors": [
+     {
+      "color": "Beige",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-berber-beige.jpg",
+      "code": "BE-5-12",
+      "part": "179012",
+      "grade": "V"
+     },
+     {
+      "color": "Charcoal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-berber-charcoal.jpg",
+      "code": "BE-5-22",
+      "part": "179016",
+      "grade": "V"
+     },
+     {
+      "color": "Gray",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-berber-gray.jpg"
+     },
+     {
+      "color": "Oxblood",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-berber-oxblood.jpg"
+     },
+     {
+      "color": "Sage",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-berber-sage.jpg"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "boss-tweede-ii": {
+    "id": "boss-tweede-ii",
+    "cover": "Boss Tweede II",
+    "brand": "Sunbrella®",
+    "grade": "V",
+    "bucket": "grade:fabric_v",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-boss-tweede-ii-indigo.jpg",
+    "swatch_colors": [
+     {
+      "color": "Indigo",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-boss-tweede-ii-indigo.jpg",
+      "code": "BOS10116",
+      "part": "165254",
+      "grade": "V"
+     },
+     {
+      "color": "Mink",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-boss-tweede-ii-mink.jpg",
+      "code": "BOS10127",
+      "part": "165259",
+      "grade": "V"
+     },
+     {
+      "color": "Pebble",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-boss-tweede-ii-pebble.jpg",
+      "code": "BOS10139",
+      "part": "165240",
+      "grade": "V"
+     },
+     {
+      "color": "Stone",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-boss-tweede-ii-stone.jpg",
+      "code": "BOS10163",
+      "part": "165160",
+      "grade": "V"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "grappa": {
+    "id": "grappa",
+    "cover": "Grappa",
+    "brand": null,
+    "grade": "V",
+    "bucket": "grade:fabric_v",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-grappa-cream.jpg",
+    "swatch_colors": [
+     {
+      "color": "Cream",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-grappa-cream.jpg",
+      "code": "GP-5-10",
+      "part": "173245",
+      "grade": "V"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "jettie": {
+    "id": "jettie",
+    "cover": "Jettie",
+    "brand": null,
+    "grade": "V",
+    "bucket": "grade:fabric_v",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-jettie-beige.jpg",
+    "swatch_colors": [
+     {
+      "color": "Beige",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-jettie-beige.jpg",
+      "code": "JE-5-12",
+      "part": "179030",
+      "grade": "V"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "jolie": {
+    "id": "jolie",
+    "cover": "Jolie",
+    "brand": null,
+    "grade": "V",
+    "bucket": "grade:fabric_v",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-jolie-mocha.jpg",
+    "swatch_colors": [
+     {
+      "color": "Mocha",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-jolie-mocha.jpg",
+      "code": "JLO1806",
+      "part": "206583",
+      "grade": "V"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "kai": {
+    "id": "kai",
+    "cover": "Kai",
+    "brand": null,
+    "grade": "V",
+    "bucket": "grade:fabric_v",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-kai-chambray.jpg",
+    "swatch_colors": [
+     {
+      "color": "Chambray",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-kai-chambray.jpg",
+      "code": "KAI1834",
+      "part": "198382",
+      "grade": "V"
+     },
+     {
+      "color": "Clay",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-kai-clay.jpg",
+      "code": "KAI1833",
+      "part": "198381",
+      "grade": "V"
+     },
+     {
+      "color": "Oat",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-kai-oat.jpg",
+      "code": "KAI1832",
+      "part": "198380",
+      "grade": "V"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "loft": {
+    "id": "loft",
+    "cover": "Loft",
+    "brand": "Sunbrella®",
+    "grade": "V",
+    "bucket": "grade:fabric_v",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-loft-flax.jpg",
+    "swatch_colors": [
+     {
+      "color": "Flax",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-loft-flax.jpg",
+      "code": "LOF10174",
+      "part": "165247",
+      "grade": "V"
+     },
+     {
+      "color": "Gray",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-loft-gray.jpg",
+      "code": "LOF10165",
+      "part": "165162",
+      "grade": "V"
+     },
+     {
+      "color": "Indigo",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-loft-indigo.jpg",
+      "code": "LOF10196",
+      "part": "165255",
+      "grade": "V"
+     },
+     {
+      "color": "Pebble",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-loft-pebble.jpg"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "loome": {
+    "id": "loome",
+    "cover": "Loome",
+    "brand": null,
+    "grade": "V",
+    "bucket": "grade:fabric_v",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-loome-golden-flax.jpg",
+    "swatch_colors": [
+     {
+      "color": "Golden Flax",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-loome-golden-flax.jpg",
+      "code": "LOM1803",
+      "part": "209812",
+      "grade": "V"
+     },
+     {
+      "color": "Lager",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-loome-lager.jpg",
+      "code": "LOM1802",
+      "part": "209811",
+      "grade": "V"
+     },
+     {
+      "color": "Mocha",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-loome-mocha.jpg",
+      "code": "LOM1800",
+      "part": "208650",
+      "grade": "V"
+     },
+     {
+      "color": "Olive",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-loome-olive.jpg",
+      "code": "LOM1805",
+      "part": "209813",
+      "grade": "V"
+     },
+     {
+      "color": "Sand",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-loome-sand.jpg",
+      "code": "LOM1801",
+      "part": "209810",
+      "grade": "V"
+     },
+     {
+      "color": "Slate",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-loome-slate.jpg",
+      "code": "LOM1807",
+      "part": "209815",
+      "grade": "V"
+     },
+     {
+      "color": "Terracotta",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-loome-terracotta.jpg",
+      "code": "LOM1806",
+      "part": "209814",
+      "grade": "V"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "marva": {
+    "id": "marva",
+    "cover": "Marva",
+    "brand": "InsideOut",
+    "grade": "V",
+    "bucket": "grade:fabric_v",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-marva-coconut.jpg",
+    "swatch_colors": [
+     {
+      "color": "Coconut",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-marva-coconut.jpg",
+      "code": "MVA1800",
+      "part": "173102",
+      "grade": "V"
+     },
+     {
+      "color": "Dune",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-marva-dune.jpg",
+      "code": "MVA1801",
+      "part": "173103",
+      "grade": "V"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "mesa": {
+    "id": "mesa",
+    "cover": "Mesa",
+    "brand": null,
+    "grade": "V",
+    "bucket": "grade:fabric_v",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mesa-fossil.jpg",
+    "swatch_colors": [
+     {
+      "color": "Fossil",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mesa-fossil.jpg",
+      "code": "MSA1805",
+      "part": "206582",
+      "grade": "V"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "pashmina": {
+    "id": "pashmina",
+    "cover": "Pashmina",
+    "brand": "Sunbrella®",
+    "grade": "V",
+    "bucket": "grade:fabric_v",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-pashmina-alpaca.jpg",
+    "swatch_colors": [
+     {
+      "color": "Alpaca",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-pashmina-alpaca.jpg",
+      "code": "PSM1805",
+      "part": "173134",
+      "grade": "V"
+     },
+     {
+      "color": "Cloud",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-pashmina-cloud.jpg",
+      "code": "PSM1806",
+      "part": "173135",
+      "grade": "V"
+     },
+     {
+      "color": "Flannel",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-pashmina-flannel.jpg",
+      "code": "PSM1803",
+      "part": "173132",
+      "grade": "V"
+     },
+     {
+      "color": "Indigo",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-pashmina-indigo.jpg",
+      "code": "PSM1800",
+      "part": "173241",
+      "grade": "V"
+     },
+     {
+      "color": "Teal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-pashmina-teal.jpg",
+      "code": "PSM1801",
+      "part": "173242",
+      "grade": "V"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "pique": {
+    "id": "pique",
+    "cover": "Pique",
+    "brand": "Sunbrella®",
+    "grade": "V",
+    "bucket": "grade:fabric_v",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-pique-gravel.jpg",
+    "swatch_colors": [
+     {
+      "color": "Gravel",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-pique-gravel.jpg",
+      "code": "PIQ10162",
+      "part": "165273",
+      "grade": "V"
+     },
+     {
+      "color": "Salt",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-pique-salt.jpg",
+      "code": "PIQ10180",
+      "part": "165272",
+      "grade": "V"
+     },
+     {
+      "color": "Sand",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-pique-sand.jpg",
+      "code": "PIQ10187",
+      "part": "165275",
+      "grade": "V"
+     },
+     {
+      "color": "Shale",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-pique-shale.jpg",
+      "code": "PIQ10185",
+      "part": "165274",
+      "grade": "V"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "reed": {
+    "id": "reed",
+    "cover": "Reed",
+    "brand": null,
+    "grade": "V",
+    "bucket": "grade:fabric_v",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-reed-charcoal.jpg",
+    "swatch_colors": [
+     {
+      "color": "Charcoal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-reed-charcoal.jpg",
+      "code": "RE-5-22",
+      "part": "173157",
+      "grade": "V"
+     },
+     {
+      "color": "Cream",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-reed-cream.jpg"
+     },
+     {
+      "color": "Crimson",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-reed-crimson.jpg",
+      "code": "RE-5-90",
+      "part": "173159",
+      "grade": "V"
+     },
+     {
+      "color": "Denim",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-reed-denim.jpg",
+      "code": "RE-5-57",
+      "part": "173163",
+      "grade": "V"
+     },
+     {
+      "color": "Espresso",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-reed-espresso.jpg"
+     },
+     {
+      "color": "Lemon",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-reed-lemon.jpg"
+     },
+     {
+      "color": "Opal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-reed-opal.jpg"
+     },
+     {
+      "color": "Pine",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-reed-pine.jpg",
+      "code": "RE-5-56",
+      "part": "173162",
+      "grade": "V"
+     },
+     {
+      "color": "Plum",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-reed-plum.jpg",
+      "code": "RE-5-32",
+      "part": "173164",
+      "grade": "V"
+     }
+    ],
+    "excl_sim": true,
+    "excl_sleeper": true
+   },
+   "suri": {
+    "id": "suri",
+    "cover": "Suri",
+    "brand": null,
+    "grade": "V",
+    "bucket": "grade:fabric_v",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-suri-beige.jpg",
+    "swatch_colors": [
+     {
+      "color": "Beige",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-suri-beige.jpg",
+      "code": "SU-5-12",
+      "part": "173175",
+      "grade": "V"
+     },
+     {
+      "color": "Charcoal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-suri-charcoal.jpg",
+      "code": "SU-5-22",
+      "part": "173177",
+      "grade": "V"
+     },
+     {
+      "color": "Cream",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-suri-cream.jpg",
+      "code": "SU-5-10",
+      "part": "173174",
+      "grade": "V"
+     },
+     {
+      "color": "Eclipse",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-suri-eclipse.jpg",
+      "code": "SU-5-99",
+      "part": "173178",
+      "grade": "V"
+     },
+     {
+      "color": "Gray",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-suri-gray.jpg",
+      "code": "SU-5-20",
+      "part": "173176",
+      "grade": "V"
+     }
+    ],
+    "excl_sim": true,
+    "excl_sleeper": true
+   },
+   "toray-ultrasuede": {
+    "id": "toray-ultrasuede",
+    "cover": "Toray Ultrasuede",
+    "brand": null,
+    "grade": "V",
+    "bucket": "grade:fabric_v",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-almond.jpg",
+    "swatch_colors": [
+     {
+      "color": "Almond",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-almond.jpg"
+     },
+     {
+      "color": "Amethyst",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-amethyst.jpg",
+      "code": "ULT9391",
+      "grade": "V"
+     },
+     {
+      "color": "Ash",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-ash.jpg",
+      "code": "ULT5536",
+      "part": "161018",
+      "grade": "V"
+     },
+     {
+      "color": "Aztec",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-aztec.jpg",
+      "code": "ULT3891",
+      "grade": "V"
+     },
+     {
+      "color": "Baltic",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-baltic.jpg",
+      "code": "ULT2539",
+      "grade": "V"
+     },
+     {
+      "color": "Basil",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-basil.jpg",
+      "code": "ULT4673",
+      "grade": "V"
+     },
+     {
+      "color": "Beige",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-beige.jpg",
+      "code": "ULT3581",
+      "part": "10931",
+      "grade": "V"
+     },
+     {
+      "color": "Berry Rose",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-berry-rose.jpg",
+      "code": "ULT6681",
+      "grade": "V"
+     },
+     {
+      "color": "Bisque",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-bisque.jpg",
+      "code": "ULT3583",
+      "grade": "V"
+     },
+     {
+      "color": "Black Onyx",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-black-onyx.jpg",
+      "code": "ULT5709",
+      "grade": "V"
+     },
+     {
+      "color": "Blue",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-blue.jpg"
+     },
+     {
+      "color": "Blue Daisy",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-blue-daisy.jpg",
+      "code": "ULT5710",
+      "grade": "V"
+     },
+     {
+      "color": "Brittany",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-brittany.jpg",
+      "code": "ULT2755",
+      "grade": "V"
+     },
+     {
+      "color": "Brown",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-brown.jpg"
+     },
+     {
+      "color": "Cadet Grey",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-cadet-grey.jpg",
+      "code": "ULT5515",
+      "part": "135982",
+      "grade": "V"
+     },
+     {
+      "color": "Celadon",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-celadon.jpg",
+      "code": "ULT4659",
+      "part": "161013",
+      "grade": "V"
+     },
+     {
+      "color": "Cement",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-cement.jpg",
+      "code": "ULT3502",
+      "part": "161011",
+      "grade": "V"
+     },
+     {
+      "color": "Cerulean",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-cerulean.jpg",
+      "code": "ULT2895",
+      "grade": "V"
+     },
+     {
+      "color": "Chamois",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-chamois.jpg",
+      "code": "ULT3280",
+      "grade": "V"
+     },
+     {
+      "color": "Charcoal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-charcoal.jpg",
+      "code": "ULT5788",
+      "grade": "V"
+     },
+     {
+      "color": "Chartreuse",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-chartreuse.jpg",
+      "code": "ULT5354",
+      "grade": "V"
+     },
+     {
+      "color": "Citron",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-citron.jpg",
+      "code": "ULT4577",
+      "grade": "V"
+     },
+     {
+      "color": "Clove",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-clove.jpg",
+      "code": "ULT3605",
+      "grade": "V"
+     },
+     {
+      "color": "Cream",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-cream.jpg"
+     },
+     {
+      "color": "Crystal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-crystal.jpg",
+      "code": "ULT3604",
+      "grade": "V"
+     },
+     {
+      "color": "Dark Navy",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-dark-navy.jpg",
+      "code": "ULT2920",
+      "grade": "V"
+     },
+     {
+      "color": "Deep Lilac",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-deep-lilac.jpg",
+      "code": "ULT9503",
+      "grade": "V"
+     },
+     {
+      "color": "Desert Camel",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-desert-camel.jpg",
+      "code": "ULT3888",
+      "grade": "V"
+     },
+     {
+      "color": "Doeskin",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-doeskin.jpg",
+      "code": "ULT3916",
+      "grade": "V"
+     },
+     {
+      "color": "Elephant",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-elephant.jpg",
+      "code": "ULT3367",
+      "grade": "V"
+     },
+     {
+      "color": "Emerald",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-emerald.jpg",
+      "code": "ULT4675",
+      "grade": "V"
+     },
+     {
+      "color": "Espresso",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-espresso.jpg"
+     },
+     {
+      "color": "Eucalyptus",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-eucalyptus.jpg",
+      "code": "ULT4397",
+      "grade": "V"
+     },
+     {
+      "color": "Fawn",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-fawn.jpg",
+      "code": "ULT3282",
+      "grade": "V"
+     },
+     {
+      "color": "Fog",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-fog.jpg",
+      "code": "ULT5969",
+      "grade": "V"
+     },
+     {
+      "color": "French Grey",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-french-grey.jpg",
+      "code": "ULT5970",
+      "grade": "V"
+     },
+     {
+      "color": "Ginger",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-ginger.jpg",
+      "code": "ULT5206",
+      "grade": "V"
+     },
+     {
+      "color": "Graphite",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-graphite.jpg",
+      "code": "ULT5789",
+      "grade": "V"
+     },
+     {
+      "color": "Gray",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-gray.jpg",
+      "code": "ULT5566",
+      "part": "11365",
+      "grade": "V"
+     },
+     {
+      "color": "Grey",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-grey.jpg"
+     },
+     {
+      "color": "Grey (2)",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-grey-2.jpg"
+     },
+     {
+      "color": "Hide",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-hide.jpg",
+      "code": "ULT3588",
+      "grade": "V"
+     },
+     {
+      "color": "Horizon",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-horizon.jpg",
+      "code": "ULT2756",
+      "grade": "V"
+     },
+     {
+      "color": "Ice Blue",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-ice-blue.jpg",
+      "code": "ULT2918",
+      "grade": "V"
+     },
+     {
+      "color": "Indigo",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-indigo.jpg",
+      "code": "ULT2330",
+      "grade": "V"
+     },
+     {
+      "color": "Lake",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-lake.jpg",
+      "code": "ULT2894",
+      "grade": "V"
+     },
+     {
+      "color": "Laurel",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-laurel.jpg",
+      "code": "ULT4671",
+      "grade": "V"
+     },
+     {
+      "color": "Lilac",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-lilac.jpg",
+      "code": "ULT9496",
+      "grade": "V"
+     },
+     {
+      "color": "Lime",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-lime.jpg",
+      "code": "ULT4488",
+      "grade": "V"
+     },
+     {
+      "color": "Lotus Green",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-lotus-green.jpg",
+      "code": "ULT4691",
+      "grade": "V"
+     },
+     {
+      "color": "Malibu",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-malibu.jpg",
+      "code": "ULT2754",
+      "grade": "V"
+     },
+     {
+      "color": "Marigold",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-marigold.jpg",
+      "code": "ULT5355",
+      "grade": "V"
+     },
+     {
+      "color": "Mica",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-mica.jpg",
+      "code": "ULT3697",
+      "grade": "V"
+     },
+     {
+      "color": "Mink",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-mink.jpg",
+      "code": "ULT3496",
+      "part": "161007",
+      "grade": "V"
+     },
+     {
+      "color": "Moonstone",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-moonstone.jpg",
+      "code": "ULT2679",
+      "grade": "V"
+     },
+     {
+      "color": "Moss",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-moss.jpg",
+      "code": "ULT4341",
+      "grade": "V"
+     },
+     {
+      "color": "Mulberry",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-mulberry.jpg",
+      "code": "ULT1240",
+      "grade": "V"
+     },
+     {
+      "color": "Natural Tan",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-natural-tan.jpg",
+      "code": "ULT3602",
+      "grade": "V"
+     },
+     {
+      "color": "Nectarine",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-nectarine.jpg",
+      "code": "ULT8321",
+      "grade": "V"
+     },
+     {
+      "color": "Opalene",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-opalene.jpg",
+      "code": "ULT4147",
+      "grade": "V"
+     },
+     {
+      "color": "Orange",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-orange.jpg",
+      "code": "ULT8223",
+      "grade": "V"
+     },
+     {
+      "color": "Orchid",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-orchid.jpg",
+      "code": "ULT9480",
+      "grade": "V"
+     },
+     {
+      "color": "Parchment",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-parchment.jpg",
+      "code": "ULT3603",
+      "grade": "V"
+     },
+     {
+      "color": "Pebble",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-pebble.jpg",
+      "code": "ULT3914",
+      "grade": "V"
+     },
+     {
+      "color": "Pine",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-pine.jpg",
+      "code": "ULT4672",
+      "grade": "V"
+     },
+     {
+      "color": "Platinum",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-platinum.jpg",
+      "code": "ULT5810",
+      "grade": "V"
+     },
+     {
+      "color": "Plum",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-plum.jpg",
+      "code": "ULT9494",
+      "grade": "V"
+     },
+     {
+      "color": "Putty",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-putty.jpg",
+      "code": "ULT3497",
+      "part": "161008",
+      "grade": "V"
+     },
+     {
+      "color": "Real Teal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-real-teal.jpg",
+      "code": "ULT7142",
+      "grade": "V"
+     },
+     {
+      "color": "Red",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-red.jpg",
+      "code": "ULT1367",
+      "grade": "V"
+     },
+     {
+      "color": "Regal Blue",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-regal-blue.jpg",
+      "code": "ULT2530",
+      "grade": "V"
+     },
+     {
+      "color": "Robin's Egg",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-robin-s-egg.jpg",
+      "code": "ULT7397",
+      "grade": "V"
+     },
+     {
+      "color": "Rose",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-rose.jpg",
+      "code": "ULT6672",
+      "grade": "V"
+     },
+     {
+      "color": "Rose Quartz",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-rose-quartz.jpg",
+      "code": "ULT6680",
+      "grade": "V"
+     },
+     {
+      "color": "Rosewood",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-rosewood.jpg",
+      "code": "ULT6673",
+      "grade": "V"
+     },
+     {
+      "color": "Sage",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-sage.jpg",
+      "code": "ULT4396",
+      "grade": "V"
+     },
+     {
+      "color": "Sand",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-sand.jpg",
+      "code": "ULT3584",
+      "grade": "V"
+     },
+     {
+      "color": "Sandstone",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-sandstone.jpg",
+      "code": "ULT3279",
+      "grade": "V"
+     },
+     {
+      "color": "Shetland",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-shetland.jpg",
+      "code": "ULT4342",
+      "grade": "V"
+     },
+     {
+      "color": "South Beach",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-south-beach.jpg",
+      "code": "ULT7389",
+      "grade": "V"
+     },
+     {
+      "color": "Spice",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-spice.jpg",
+      "code": "ULT3093",
+      "grade": "V"
+     },
+     {
+      "color": "Steel Blue",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-steel-blue.jpg",
+      "code": "ULT2329",
+      "grade": "V"
+     },
+     {
+      "color": "Stone",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-stone.jpg",
+      "code": "ULT3366",
+      "grade": "V"
+     },
+     {
+      "color": "Sunflower",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-sunflower.jpg",
+      "code": "ULT5366",
+      "grade": "V"
+     },
+     {
+      "color": "Sunshine",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-sunshine.jpg",
+      "code": "ULT5283",
+      "grade": "V"
+     },
+     {
+      "color": "Tapioca",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-tapioca.jpg",
+      "code": "ULT3910",
+      "grade": "V"
+     },
+     {
+      "color": "Taupe",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-taupe.jpg",
+      "code": "ULT3271",
+      "grade": "V"
+     },
+     {
+      "color": "Terra",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-terra.jpg",
+      "code": "ULT3586",
+      "grade": "V"
+     },
+     {
+      "color": "Terracotta",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-terracotta.jpg",
+      "code": "ULT8253",
+      "grade": "V"
+     },
+     {
+      "color": "Tomato",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-tomato.jpg",
+      "code": "ULT1334",
+      "grade": "V"
+     },
+     {
+      "color": "True Blue",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-true-blue.jpg",
+      "code": "ULT2328",
+      "grade": "V"
+     },
+     {
+      "color": "Wine 'n Roses",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-wine-n-roses.jpg",
+      "code": "ULT6496",
+      "grade": "V"
+     },
+     {
+      "color": "Wood",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toray-ultrasuede-wood.jpg",
+      "code": "ULT3498",
+      "part": "161009",
+      "grade": "V"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "trek-mosaic": {
+    "id": "trek-mosaic",
+    "cover": "Trek Mosaic",
+    "brand": null,
+    "grade": "V",
+    "bucket": "grade:fabric_v",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-trek-mosaic-chestnut.jpg",
+    "swatch_colors": [
+     {
+      "color": "Chestnut",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-trek-mosaic-chestnut.jpg",
+      "code": "TRM1800",
+      "part": "210389",
+      "grade": "V"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "vibe": {
+    "id": "vibe",
+    "cover": "Vibe",
+    "brand": null,
+    "grade": "V",
+    "bucket": "grade:fabric_v",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-vibe-champagne.jpg",
+    "swatch_colors": [
+     {
+      "color": "Champagne",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-vibe-champagne.jpg",
+      "code": "VBE1475",
+      "part": "196579",
+      "grade": "V"
+     }
+    ],
+    "excl_sim": true,
+    "excl_sleeper": false
+   },
+   "willow": {
+    "id": "willow",
+    "cover": "Willow",
+    "brand": null,
+    "grade": "V",
+    "bucket": "grade:fabric_v",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-willow-charcoal.jpg",
+    "swatch_colors": [
+     {
+      "color": "Charcoal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-willow-charcoal.jpg",
+      "code": "WL-5-22",
+      "part": "191632",
+      "grade": "V"
+     },
+     {
+      "color": "Cream",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-willow-cream.jpg",
+      "code": "WL-5-10",
+      "part": "191628",
+      "grade": "V"
+     },
+     {
+      "color": "Oatmeal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-willow-oatmeal.jpg",
+      "code": "WL-5-13",
+      "part": "191630",
+      "grade": "V"
+     },
+     {
+      "color": "Sand",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-willow-sand.jpg",
+      "code": "WL-5-14",
+      "part": "191631",
+      "grade": "V"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   }
+  },
+  "grade:fabric_iii": {
+   "bodie": {
+    "id": "bodie",
+    "cover": "Bodie",
+    "brand": null,
+    "grade": "III",
+    "bucket": "grade:fabric_iii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bodie-charcoal.jpg",
+    "swatch_colors": [
+     {
+      "color": "Charcoal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bodie-charcoal.jpg",
+      "code": "BD-3-22",
+      "part": "191506",
+      "grade": "III"
+     },
+     {
+      "color": "Mineral",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bodie-mineral.jpg",
+      "code": "BD-3-84",
+      "part": "191508",
+      "grade": "III"
+     },
+     {
+      "color": "Oatmeal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bodie-oatmeal.jpg",
+      "code": "BD-3-73",
+      "part": "196535",
+      "grade": "III"
+     },
+     {
+      "color": "Spice",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bodie-spice.jpg",
+      "code": "BD-3-08",
+      "part": "191505",
+      "grade": "III"
+     },
+     {
+      "color": "Terracotta",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bodie-terracotta.jpg",
+      "code": "BD-3-72",
+      "part": "191507",
+      "grade": "III"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "brae": {
+    "id": "brae",
+    "cover": "Brae",
+    "brand": null,
+    "grade": "III",
+    "bucket": "grade:fabric_iii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-brae-cinnamon.jpg",
+    "swatch_colors": [
+     {
+      "color": "Cinnamon",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-brae-cinnamon.jpg",
+      "code": "BAE1802",
+      "part": "206579",
+      "grade": "III"
+     },
+     {
+      "color": "Linen",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-brae-linen.jpg",
+      "code": "BAE1800",
+      "part": "206577",
+      "grade": "III"
+     },
+     {
+      "color": "Oatmeal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-brae-oatmeal.jpg",
+      "code": "BAE1801",
+      "part": "206578",
+      "grade": "III"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "enigma": {
+    "id": "enigma",
+    "cover": "Enigma",
+    "brand": null,
+    "grade": "III",
+    "bucket": "grade:fabric_iii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-enigma-caf.jpg",
+    "swatch_colors": [
+     {
+      "color": "Café",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-enigma-caf.jpg",
+      "code": "ENM1466",
+      "part": "196570",
+      "grade": "III"
+     },
+     {
+      "color": "Espresso",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-enigma-espresso.jpg",
+      "code": "ENM1467",
+      "part": "196571",
+      "grade": "III"
+     },
+     {
+      "color": "Oatmeal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-enigma-oatmeal.jpg",
+      "code": "ENM1468",
+      "part": "196572",
+      "grade": "III"
+     },
+     {
+      "color": "Paprika",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-enigma-paprika.jpg",
+      "code": "EMM1470",
+      "part": "196574",
+      "grade": "III"
+     }
+    ],
+    "excl_sim": true,
+    "excl_sleeper": false
+   },
+   "fiona": {
+    "id": "fiona",
+    "cover": "Fiona",
+    "brand": null,
+    "grade": "III",
+    "bucket": "grade:fabric_iii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-fiona-canal.jpg",
+    "swatch_colors": [
+     {
+      "color": "Canal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-fiona-canal.jpg",
+      "code": "FNA1493",
+      "part": "196597",
+      "grade": "III"
+     },
+     {
+      "color": "Waterfall",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-fiona-waterfall.jpg",
+      "code": "FNA1495",
+      "part": "196599",
+      "grade": "III"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "hollis": {
+    "id": "hollis",
+    "cover": "Hollis",
+    "brand": null,
+    "grade": "III",
+    "bucket": "grade:fabric_iii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-hollis-eucalyptus.jpg",
+    "swatch_colors": [
+     {
+      "color": "Eucalyptus",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-hollis-eucalyptus.jpg",
+      "code": "HLI1497",
+      "part": "196601",
+      "grade": "III"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "jenson": {
+    "id": "jenson",
+    "cover": "Jenson",
+    "brand": "Crypton®",
+    "grade": "III",
+    "bucket": "grade:fabric_iii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-jenson-artichoke.jpg",
+    "swatch_colors": [
+     {
+      "color": "Artichoke",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-jenson-artichoke.jpg",
+      "code": "JNS1802",
+      "part": "191510",
+      "grade": "III"
+     },
+     {
+      "color": "Clay",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-jenson-clay.jpg",
+      "code": "JNS1437",
+      "part": "196532",
+      "grade": "III"
+     },
+     {
+      "color": "Denim",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-jenson-denim.jpg",
+      "code": "JNS1803",
+      "part": "191511",
+      "grade": "III"
+     },
+     {
+      "color": "Gray",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-jenson-gray.jpg",
+      "code": "JNS1805",
+      "part": "191513",
+      "grade": "III"
+     },
+     {
+      "color": "Mink",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-jenson-mink.jpg",
+      "code": "JNS1434",
+      "part": "196525",
+      "grade": "III"
+     },
+     {
+      "color": "Sangria",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-jenson-sangria.jpg",
+      "code": "JNS1801",
+      "part": "191509",
+      "grade": "III"
+     },
+     {
+      "color": "Swatch Linen",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-jenson-swatch-linen.jpg"
+     }
+    ],
+    "excl_sim": true,
+    "excl_sleeper": false
+   },
+   "linea": {
+    "id": "linea",
+    "cover": "Linea",
+    "brand": null,
+    "grade": "III",
+    "bucket": "grade:fabric_iii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-linea-eucalyptus.jpg",
+    "swatch_colors": [
+     {
+      "color": "Eucalyptus",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-linea-eucalyptus.jpg",
+      "code": "LN-3-83",
+      "part": "191514",
+      "grade": "III"
+     },
+     {
+      "color": "Gray",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-linea-gray.jpg",
+      "code": "LN-3-20",
+      "part": "191515",
+      "grade": "III"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "marise": {
+    "id": "marise",
+    "cover": "Marise",
+    "brand": null,
+    "grade": "III",
+    "bucket": "grade:fabric_iii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-marise-brick.jpg",
+    "swatch_colors": [
+     {
+      "color": "Brick",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-marise-brick.jpg",
+      "code": "MAR1445",
+      "part": "196542",
+      "grade": "III"
+     },
+     {
+      "color": "Earth",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-marise-earth.jpg",
+      "code": "MAR1443",
+      "part": "196540",
+      "grade": "III"
+     },
+     {
+      "color": "Mustard",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-marise-mustard.jpg",
+      "code": "MAR1444",
+      "part": "196541",
+      "grade": "III"
+     },
+     {
+      "color": "Parchment",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-marise-parchment.jpg",
+      "code": "MAR1440",
+      "part": "196537",
+      "grade": "III"
+     },
+     {
+      "color": "Snow",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-marise-snow.jpg",
+      "code": "MAR1441",
+      "part": "196538",
+      "grade": "III"
+     },
+     {
+      "color": "Tan",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-marise-tan.jpg",
+      "code": "MAR1446",
+      "part": "196543",
+      "grade": "III"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "pierce": {
+    "id": "pierce",
+    "cover": "Pierce",
+    "brand": null,
+    "grade": "III",
+    "bucket": "grade:fabric_iii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-pierce-ash.jpg",
+    "swatch_colors": [
+     {
+      "color": "Ash",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-pierce-ash.jpg",
+      "code": "PRC1802",
+      "part": "190013",
+      "grade": "III"
+     },
+     {
+      "color": "Sand",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-pierce-sand.jpg",
+      "code": "PRC1801",
+      "part": "190014",
+      "grade": "III"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "rava": {
+    "id": "rava",
+    "cover": "Rava",
+    "brand": "Crypton®",
+    "grade": "III",
+    "bucket": "grade:fabric_iii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-rava-25-new-cover-expresso-texture.jpg",
+    "swatch_colors": [
+     {
+      "color": "25 New Cover Expresso Texture",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-rava-25-new-cover-expresso-texture.jpg"
+     },
+     {
+      "color": "Desert",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-rava-desert.jpg",
+      "code": "RAV1801",
+      "part": "210611",
+      "grade": "III"
+     },
+     {
+      "color": "Espresso",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-rava-espresso.jpg",
+      "code": "RAV1800",
+      "part": "210610",
+      "grade": "III"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "saber": {
+    "id": "saber",
+    "cover": "Saber",
+    "brand": null,
+    "grade": "III",
+    "bucket": "grade:fabric_iii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-saber-mineral.jpg",
+    "swatch_colors": [
+     {
+      "color": "Mineral",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-saber-mineral.jpg"
+     },
+     {
+      "color": "Parchment",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-saber-parchment.jpg",
+      "code": "SBR1802",
+      "part": "191568",
+      "grade": "III"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "thatch": {
+    "id": "thatch",
+    "cover": "Thatch",
+    "brand": "Crypton®",
+    "grade": "III",
+    "bucket": "grade:fabric_iii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-thatch-25-new-covers-toffe.jpg",
+    "swatch_colors": [
+     {
+      "color": "25 New Covers Toffe",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-thatch-25-new-covers-toffe.jpg"
+     },
+     {
+      "color": "Cinderwood",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-thatch-cinderwood.jpg",
+      "code": "THT1804",
+      "part": "210616",
+      "grade": "III"
+     },
+     {
+      "color": "Cream",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-thatch-cream.jpg",
+      "code": "THT1800",
+      "part": "210612",
+      "grade": "III"
+     },
+     {
+      "color": "Honeycomb",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-thatch-honeycomb.jpg",
+      "code": "THT1802",
+      "part": "210614",
+      "grade": "III"
+     },
+     {
+      "color": "Sage",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-thatch-sage.jpg",
+      "code": "THT1803",
+      "part": "210615",
+      "grade": "III"
+     },
+     {
+      "color": "Toffee",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-thatch-toffee.jpg",
+      "code": "THT1801",
+      "part": "210613",
+      "grade": "III"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "toki": {
+    "id": "toki",
+    "cover": "Toki",
+    "brand": null,
+    "grade": "III",
+    "bucket": "grade:fabric_iii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toki-sky.jpg",
+    "swatch_colors": [
+     {
+      "color": "Sky",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toki-sky.jpg",
+      "code": "TK1448",
+      "part": "196549",
+      "grade": "III"
+     },
+     {
+      "color": "Steele",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-toki-steele.jpg",
+      "code": "TKI1447",
+      "part": "196548",
+      "grade": "III"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "zion": {
+    "id": "zion",
+    "cover": "Zion",
+    "brand": null,
+    "grade": "III",
+    "bucket": "grade:fabric_iii",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-zion-clay.jpg",
+    "swatch_colors": [
+     {
+      "color": "Clay",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-zion-clay.jpg",
+      "code": "ZIN1491",
+      "part": "196595",
+      "grade": "III"
+     },
+     {
+      "color": "Mineral",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-zion-mineral.jpg",
+      "code": "ZIN1490",
+      "part": "196594",
+      "grade": "III"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   }
+  },
+  "grade:leather_g": {
+   "lea-axel": {
+    "id": "lea-axel",
+    "cover": "Axel",
+    "brand": null,
+    "grade": "G",
+    "bucket": "grade:leather_g",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-axel-earl-grey.jpg",
+    "swatch_colors": [
+     {
+      "color": "Earl Grey",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-axel-earl-grey.jpg",
+      "code": "AXE1802",
+      "part": "191476",
+      "grade": "G"
+     },
+     {
+      "color": "French Press",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-axel-french-press.jpg",
+      "code": "AXE1801",
+      "part": "191475",
+      "grade": "G"
+     },
+     {
+      "color": "India Ink",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-axel-india-ink.jpg",
+      "code": "AXE1803",
+      "part": "191477",
+      "grade": "G"
+     },
+     {
+      "color": "Onyx",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-axel-onyx.jpg",
+      "code": "AXE1804",
+      "part": "191478",
+      "grade": "G"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "lea-elmosoft": {
+    "id": "lea-elmosoft",
+    "cover": "Elmosoft",
+    "brand": null,
+    "grade": "G",
+    "bucket": "grade:leather_g",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-absinthe.jpg",
+    "swatch_colors": [
+     {
+      "color": "Absinthe",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-absinthe.jpg"
+     },
+     {
+      "color": "Almond",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-almond.jpg",
+      "code": "ES33077",
+      "part": "180098",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Apricot",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-apricot.jpg",
+      "code": "ES44012",
+      "part": "163519",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Autumn Leaf",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-autumn-leaf.jpg",
+      "code": "ES54021",
+      "part": "180097",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Black Hills",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-black-hills.jpg",
+      "code": "ES99999",
+      "part": "11419",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Blue",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-blue.jpg",
+      "code": "ES77158",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Blueberry",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-blueberry.jpg",
+      "code": "ES77127",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Bright White",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-bright-white.jpg",
+      "code": "ES00109",
+      "part": "163359",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Brown Red",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-brown-red.jpg",
+      "code": "ES35126",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Cafe",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-cafe.jpg",
+      "code": "ES93099",
+      "part": "163499",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Caribbean",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-caribbean.jpg",
+      "code": "ES17027",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Cedar Wood",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-cedar-wood.jpg"
+     },
+     {
+      "color": "Cheddar",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-cheddar.jpg",
+      "code": "ES54033",
+      "part": "180100",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Cinnabar",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-cinnabar.jpg",
+      "code": "ES45035",
+      "part": "180101",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Clay",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-clay.jpg"
+     },
+     {
+      "color": "Coffee",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-coffee.jpg",
+      "code": "ES93068",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Cognac",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-cognac.jpg",
+      "code": "ES33001",
+      "part": "115955",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Cotton",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-cotton.jpg",
+      "code": "ES00118",
+      "part": "163537",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Croissant",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-croissant.jpg"
+     },
+     {
+      "color": "Dark Blue",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-dark-blue.jpg",
+      "code": "ES97038",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Desert Sand",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-desert-sand.jpg",
+      "code": "ES22030",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Dim Gray",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-dim-gray.jpg",
+      "code": "ES11033",
+      "part": "163535",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Dusty Jade",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-dusty-jade.jpg"
+     },
+     {
+      "color": "Elmoleather",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-elmoleather.jpg"
+     },
+     {
+      "color": "Espresso",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-espresso.jpg",
+      "code": "ES93129",
+      "part": "116495",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Everest",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-everest.jpg",
+      "code": "ES00100",
+      "part": "11376",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Florida Orange",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-florida-orange.jpg",
+      "code": "ES45065",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Fog",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-fog.jpg",
+      "code": "ES01085",
+      "part": "163538",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Forget Me Not",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-forget-me-not.jpg"
+     },
+     {
+      "color": "Gargoyle",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-gargoyle.jpg"
+     },
+     {
+      "color": "Ginger Spice",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-ginger-spice.jpg"
+     },
+     {
+      "color": "Grey",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-grey.jpg"
+     },
+     {
+      "color": "Grey Seal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-grey-seal.jpg"
+     },
+     {
+      "color": "Gunmetal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-gunmetal.jpg",
+      "code": "ES91102",
+      "part": "163511",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Harvest",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-harvest.jpg",
+      "code": "ES43054",
+      "part": "163506",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Hunter Green",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-hunter-green.jpg",
+      "code": "ES98015",
+      "part": "163514",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "India Ink",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-india-ink.jpg",
+      "code": "ES71017",
+      "part": "11414",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Linden Green",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-linden-green.jpg"
+     },
+     {
+      "color": "Linen",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-linen.jpg",
+      "code": "ES01021",
+      "part": "163533",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Lipstick Red",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-lipstick-red.jpg"
+     },
+     {
+      "color": "Marble",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-marble.jpg",
+      "code": "ES13072",
+      "part": "163522",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Maroon",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-maroon.jpg"
+     },
+     {
+      "color": "Nantucket Red",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-nantucket-red.jpg",
+      "code": "ES55002",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Olive",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-olive.jpg",
+      "code": "ES98047",
+      "part": "163515",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Orchid",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-orchid.jpg"
+     },
+     {
+      "color": "Otter",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-otter.jpg",
+      "code": "ES93109",
+      "part": "180096",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Peru",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-peru.jpg",
+      "code": "ES22024",
+      "part": "163529",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Purple Gumdrop",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-purple-gumdrop.jpg"
+     },
+     {
+      "color": "Purple Hull",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-purple-hull.jpg"
+     },
+     {
+      "color": "Putty",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-putty.jpg",
+      "code": "ES13087",
+      "part": "163516",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Red",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-red.jpg"
+     },
+     {
+      "color": "Riviera",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-riviera.jpg"
+     },
+     {
+      "color": "Saddle",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-saddle.jpg",
+      "code": "ES33004",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Sage",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-sage.jpg"
+     },
+     {
+      "color": "Seacreast",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-seacreast.jpg",
+      "code": "ES08055",
+      "part": "180092",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Seattle Mist",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-seattle-mist.jpg",
+      "code": "ES01061",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Shrimp",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-shrimp.jpg"
+     },
+     {
+      "color": "Silver",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-silver.jpg",
+      "code": "ES11073",
+      "part": "163510",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Slate",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-slate.jpg",
+      "code": "ES13048",
+      "part": "163536",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Spiced Coral",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-spiced-coral.jpg"
+     },
+     {
+      "color": "Stone Chapel",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-stone-chapel.jpg",
+      "code": "ES01037",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Tahitian Pearl",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-tahitian-pearl.jpg",
+      "code": "ES11049",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Tan",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-tan.jpg",
+      "code": "ES54035",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Tarmac",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-tarmac.jpg",
+      "code": "ES98087",
+      "part": "180093",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Teal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-teal.jpg"
+     },
+     {
+      "color": "Vanilla",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-vanilla.jpg",
+      "code": "ES02122",
+      "part": "180095",
+      "grade": "LTHR G"
+     },
+     {
+      "color": "Verdant Green",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-elmosoft-verdant-green.jpg"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "lea-mojave": {
+    "id": "lea-mojave",
+    "cover": "Mojave",
+    "brand": null,
+    "grade": "G",
+    "bucket": "grade:leather_g",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mojave-coffee.jpg",
+    "swatch_colors": [
+     {
+      "color": "Coffee",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mojave-coffee.jpg"
+     },
+     {
+      "color": "Espresso",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mojave-espresso.jpg"
+     },
+     {
+      "color": "Iron",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mojave-iron.jpg",
+      "code": "MJV1803",
+      "part": "189965",
+      "grade": "G"
+     },
+     {
+      "color": "Navy",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mojave-navy.jpg"
+     },
+     {
+      "color": "Spice",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mojave-spice.jpg",
+      "code": "MJV1801",
+      "part": "188847",
+      "grade": "G"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   }
+  },
+  "grade:leather_d_f": {
+   "lea-bali": {
+    "id": "lea-bali",
+    "cover": "Bali",
+    "brand": null,
+    "grade": "D",
+    "bucket": "grade:leather_d_f",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bali-brandy-heavy-protection.jpg",
+    "swatch_colors": [
+     {
+      "color": "Brandy Heavy Protection",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bali-brandy-heavy-protection.jpg"
+     },
+     {
+      "color": "Butterscotch",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bali-butterscotch.jpg",
+      "code": "BAI8012",
+      "part": "162065",
+      "grade": "D"
+     },
+     {
+      "color": "Cloud",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bali-cloud.jpg",
+      "code": "BAI7008",
+      "part": "161024",
+      "grade": "D"
+     },
+     {
+      "color": "Cream",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bali-cream.jpg",
+      "code": "BAI8009",
+      "part": "162062",
+      "grade": "D"
+     },
+     {
+      "color": "Gravel",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bali-gravel.jpg",
+      "code": "BAI8007",
+      "part": "162060",
+      "grade": "D"
+     },
+     {
+      "color": "Mocha",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bali-mocha.jpg"
+     },
+     {
+      "color": "Ocean",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bali-ocean.jpg",
+      "code": "BAI8008",
+      "part": "162061",
+      "grade": "D"
+     },
+     {
+      "color": "Onyx",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bali-onyx.jpg",
+      "code": "BAI7005",
+      "part": "161002",
+      "grade": "D"
+     },
+     {
+      "color": "Storm",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bali-storm.jpg"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "lea-bison": {
+    "id": "lea-bison",
+    "cover": "Bison",
+    "brand": null,
+    "grade": "F",
+    "bucket": "grade:leather_d_f",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bison-ash.jpg",
+    "swatch_colors": [
+     {
+      "color": "Ash",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bison-ash.jpg",
+      "code": "BIS2002",
+      "part": "160808",
+      "grade": "F"
+     },
+     {
+      "color": "Aubergine",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bison-aubergine.jpg"
+     },
+     {
+      "color": "Black",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bison-black.jpg",
+      "code": "BIS0001",
+      "part": "162068",
+      "grade": "F"
+     },
+     {
+      "color": "Brown",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bison-brown.jpg",
+      "code": "BIS0005",
+      "part": "162067",
+      "grade": "F"
+     },
+     {
+      "color": "Butterscotch",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bison-butterscotch.jpg",
+      "code": "BIS2011",
+      "part": "162070",
+      "grade": "F"
+     },
+     {
+      "color": "Champagne",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bison-champagne.jpg",
+      "code": "BIS1808",
+      "part": "173315",
+      "grade": "F"
+     },
+     {
+      "color": "Charcoal",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bison-charcoal.jpg",
+      "code": "BIS2003",
+      "part": "160809",
+      "grade": "F"
+     },
+     {
+      "color": "Deep Blue",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bison-deep-blue.jpg",
+      "code": "BIS2006",
+      "part": "160812",
+      "grade": "F"
+     },
+     {
+      "color": "Evergreen",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bison-evergreen.jpg"
+     },
+     {
+      "color": "Mustard",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bison-mustard.jpg",
+      "code": "BIS1805",
+      "part": "173312",
+      "grade": "F"
+     },
+     {
+      "color": "Olive",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bison-olive.jpg",
+      "code": "BIS1806",
+      "part": "173313",
+      "grade": "F"
+     },
+     {
+      "color": "Peacock",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bison-peacock.jpg",
+      "code": "BIS1802",
+      "part": "173309",
+      "grade": "F"
+     },
+     {
+      "color": "Rouge",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bison-rouge.jpg"
+     },
+     {
+      "color": "Taupe",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bison-taupe.jpg",
+      "code": "BIS1807",
+      "part": "173314",
+      "grade": "F"
+     },
+     {
+      "color": "Tobacco",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bison-tobacco.jpg",
+      "code": "BIS2004",
+      "part": "160810",
+      "grade": "F"
+     },
+     {
+      "color": "White",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-bison-white.jpg",
+      "code": "BIS0030",
+      "part": "162066",
+      "grade": "F"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "lea-capri": {
+    "id": "lea-capri",
+    "cover": "Capri",
+    "brand": null,
+    "grade": "D",
+    "bucket": "grade:leather_d_f",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-capri-branch.jpg",
+    "swatch_colors": [
+     {
+      "color": "Branch",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-capri-branch.jpg",
+      "code": "CRI5221",
+      "part": "175786",
+      "grade": "D"
+     },
+     {
+      "color": "Butterscotch",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-capri-butterscotch.jpg",
+      "code": "CRI5224",
+      "part": "162056",
+      "grade": "D"
+     },
+     {
+      "color": "Onyx",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-capri-onyx.jpg",
+      "code": "CRI5219",
+      "part": "162051",
+      "grade": "D"
+     },
+     {
+      "color": "Sand Dollar",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-capri-sand-dollar.jpg",
+      "code": "CRI5216",
+      "part": "162048",
+      "grade": "D"
+     },
+     {
+      "color": "Shadow",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-capri-shadow.jpg",
+      "code": "CRI5218",
+      "part": "162050",
+      "grade": "D"
+     },
+     {
+      "color": "Shoreline",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-capri-shoreline.jpg"
+     },
+     {
+      "color": "Thundercloud",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-capri-thundercloud.jpg"
+     },
+     {
+      "color": "White",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-capri-white.jpg",
+      "code": "CRI5215",
+      "part": "162047",
+      "grade": "D"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "lea-dolce": {
+    "id": "lea-dolce",
+    "cover": "Dolce",
+    "brand": null,
+    "grade": "F",
+    "bucket": "grade:leather_d_f",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-dolce-black.jpg",
+    "swatch_colors": [
+     {
+      "color": "Black",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-dolce-black.jpg"
+     },
+     {
+      "color": "Cognac",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-dolce-cognac.jpg",
+      "code": "DOL6214",
+      "part": "162036",
+      "grade": "F"
+     },
+     {
+      "color": "Cream",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-dolce-cream.jpg",
+      "code": "DOL6218",
+      "part": "162040",
+      "grade": "F"
+     },
+     {
+      "color": "Gray",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-dolce-gray.jpg",
+      "code": "DOL6211",
+      "part": "162033",
+      "grade": "F"
+     },
+     {
+      "color": "Navy",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-dolce-navy.jpg",
+      "code": "DOL6216",
+      "part": "162038",
+      "grade": "F"
+     },
+     {
+      "color": "Pewter",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-dolce-pewter.jpg",
+      "code": "DOL6212",
+      "part": "162034",
+      "grade": "F"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "lea-umbria": {
+    "id": "lea-umbria",
+    "cover": "Umbria",
+    "brand": null,
+    "grade": "F",
+    "bucket": "grade:leather_d_f",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-umbria-butterscotch.jpg",
+    "swatch_colors": [
+     {
+      "color": "Butterscotch",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-umbria-butterscotch.jpg",
+      "code": "UMB1803",
+      "part": "213867",
+      "grade": "F"
+     },
+     {
+      "color": "Desert",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-umbria-desert.jpg",
+      "code": "UMB1801",
+      "part": "208648",
+      "grade": "F"
+     },
+     {
+      "color": "Ivory",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-umbria-ivory.jpg",
+      "code": "UMB1802",
+      "part": "208649",
+      "grade": "F"
+     },
+     {
+      "color": "Moss",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-umbria-moss.jpg",
+      "code": "UMB1800",
+      "part": "208647",
+      "grade": "F"
+     },
+     {
+      "color": "S'more",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-umbria-s-more.jpg",
+      "code": "UMB1805",
+      "part": "213869",
+      "grade": "F"
+     },
+     {
+      "color": "Seamist",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-umbria-seamist.jpg",
+      "code": "UMB1804",
+      "part": "213868",
+      "grade": "F"
+     },
+     {
+      "color": "Wheat",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-umbria-wheat.jpg",
+      "code": "UMB1806",
+      "part": "213783",
+      "grade": "F"
+     },
+     {
+      "color": "Whiskey",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-umbria-whiskey.jpg",
+      "code": "UMB1807",
+      "part": "213784",
+      "grade": "F"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   }
+  },
+  "grade:leather_j": {
+   "lea-cottswald": {
+    "id": "lea-cottswald",
+    "cover": "Cottswald",
+    "brand": null,
+    "grade": "J",
+    "bucket": "grade:leather_j",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-cottswald-leather-gray.jpg",
+    "swatch_colors": [
+     {
+      "color": "Leather Gray",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-cottswald-leather-gray.jpg"
+     },
+     {
+      "color": "Leather Jade",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-cottswald-leather-jade.jpg"
+     },
+     {
+      "color": "Pebble Taupe",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-cottswald-pebble-taupe.jpg",
+      "code": "COT1801",
+      "part": "183986",
+      "grade": "J"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "lea-ellis": {
+    "id": "lea-ellis",
+    "cover": "Ellis",
+    "brand": null,
+    "grade": "J",
+    "bucket": "grade:leather_j",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-ellis-chocolate.jpg",
+    "swatch_colors": [
+     {
+      "color": "Chocolate",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-ellis-chocolate.jpg",
+      "code": "ELS1804",
+      "part": "183992",
+      "grade": "J"
+     },
+     {
+      "color": "Cypress",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-ellis-cypress.jpg",
+      "code": "ELS1805",
+      "part": "183993",
+      "grade": "J"
+     },
+     {
+      "color": "Gravel",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-ellis-gravel.jpg",
+      "code": "ELS1801",
+      "part": "183989",
+      "grade": "J"
+     },
+     {
+      "color": "Gray",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-ellis-gray.jpg"
+     },
+     {
+      "color": "Horizon",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-ellis-horizon.jpg",
+      "code": "ELS1802",
+      "part": "183990",
+      "grade": "J"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "lea-haven-heritage": {
+    "id": "lea-haven-heritage",
+    "cover": "Haven Heritage",
+    "brand": null,
+    "grade": "J",
+    "bucket": "grade:leather_j",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-haven-heritage-butterscotch.jpg",
+    "swatch_colors": [
+     {
+      "color": "Butterscotch",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-haven-heritage-butterscotch.jpg",
+      "code": "HAV6012",
+      "part": "115033",
+      "grade": "J"
+     },
+     {
+      "color": "Champagne",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-haven-heritage-champagne.jpg",
+      "code": "HAV6013",
+      "part": "119935",
+      "grade": "J"
+     },
+     {
+      "color": "Molasses",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-haven-heritage-molasses.jpg",
+      "code": "HAV6006",
+      "part": "77729",
+      "grade": "J"
+     },
+     {
+      "color": "Smoke",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-haven-heritage-smoke.jpg",
+      "code": "HAV6007",
+      "part": "77730",
+      "grade": "J"
+     },
+     {
+      "color": "Tuffle",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-haven-heritage-tuffle.jpg"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   },
+   "lea-mont-blanc": {
+    "id": "lea-mont-blanc",
+    "cover": "Mont Blanc",
+    "brand": null,
+    "grade": "J",
+    "bucket": "grade:leather_j",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-adriactic.jpg",
+    "swatch_colors": [
+     {
+      "color": "Adriactic",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-adriactic.jpg"
+     },
+     {
+      "color": "Caramel",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-caramel.jpg",
+      "code": "FLG1812",
+      "part": "170845",
+      "grade": "J"
+     },
+     {
+      "color": "Cigar",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-cigar.jpg",
+      "code": "FLG1802",
+      "part": "170835",
+      "grade": "J"
+     },
+     {
+      "color": "Clamshell",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-clamshell.jpg",
+      "code": "FLG1631",
+      "part": "160990",
+      "grade": "J"
+     },
+     {
+      "color": "Cognac",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-cognac.jpg",
+      "code": "FLG1803",
+      "part": "170836",
+      "grade": "J"
+     },
+     {
+      "color": "Evergreen",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-evergreen.jpg",
+      "code": "FLG1815",
+      "part": "170848",
+      "grade": "J"
+     },
+     {
+      "color": "Fern",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-fern.jpg",
+      "code": "FLG1816",
+      "part": "170849",
+      "grade": "J"
+     },
+     {
+      "color": "Garnet",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-garnet.jpg",
+      "code": "FLG1804",
+      "part": "170837",
+      "grade": "J"
+     },
+     {
+      "color": "Granite",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-granite.jpg",
+      "code": "FLG1805",
+      "part": "170838",
+      "grade": "J"
+     },
+     {
+      "color": "Java",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-java.jpg",
+      "code": "FLG1600",
+      "part": "13650",
+      "grade": "J"
+     },
+     {
+      "color": "Lager",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-lager.jpg",
+      "code": "FLG1806",
+      "part": "170839",
+      "grade": "J"
+     },
+     {
+      "color": "Leather Stack Group",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-leather-stack-group.jpg"
+     },
+     {
+      "color": "Limestone",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-limestone.jpg"
+     },
+     {
+      "color": "Marina",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-marina.jpg"
+     },
+     {
+      "color": "Marina1",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-marina1.jpg"
+     },
+     {
+      "color": "Mountain Spring",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-mountain-spring.jpg"
+     },
+     {
+      "color": "Portobello",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-portobello.jpg",
+      "code": "FLG1630",
+      "part": "160989",
+      "grade": "J"
+     },
+     {
+      "color": "S'more",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-s-more.jpg",
+      "code": "FLG1628",
+      "part": "102574",
+      "grade": "J"
+     },
+     {
+      "color": "Smoke",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-smoke.jpg",
+      "code": "FLG1820",
+      "part": "170873",
+      "grade": "J"
+     },
+     {
+      "color": "Sugar Cookie",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-sugar-cookie.jpg",
+      "code": "FLG1616",
+      "part": "77741",
+      "grade": "J"
+     },
+     {
+      "color": "Winter Pine",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-mont-blanc-winter-pine.jpg",
+      "code": "FLG1821",
+      "part": "170875",
+      "grade": "J"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   }
+  },
+  "grade:leather_c": {
+   "lea-titan": {
+    "id": "lea-titan",
+    "cover": "Titan",
+    "brand": null,
+    "grade": "C",
+    "bucket": "grade:leather_c",
+    "kind": "named",
+    "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-titan-champagne.jpg",
+    "swatch_colors": [
+     {
+      "color": "Champagne",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-titan-champagne.jpg",
+      "code": "TIT1800",
+      "part": "200670",
+      "grade": "C"
+     },
+     {
+      "color": "Sand",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-titan-sand.jpg",
+      "code": "TIT1803",
+      "part": "209478",
+      "grade": "C"
+     },
+     {
+      "color": "Slate",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-titan-slate.jpg",
+      "code": "TIT1805",
+      "part": "209480",
+      "grade": "C"
+     },
+     {
+      "color": "Spice",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-titan-spice.jpg",
+      "code": "TIT1801",
+      "part": "200671",
+      "grade": "C"
+     },
+     {
+      "color": "Truffle",
+      "swatch": "https://cdn.jsdelivr.net/gh/trig-modern/trig-catalog-data@main/swatches/al-titan-truffle.jpg",
+      "code": "TIT1802",
+      "part": "200672",
+      "grade": "C"
+     }
+    ],
+    "excl_sim": false,
+    "excl_sleeper": false
+   }
+  }
+ },
+ "confirm": {
+  "grade:fabric_i": {
+   "id": "grade-fabric_i",
+   "cover": null,
+   "brand": null,
+   "grade": "I",
+   "bucket": "grade:fabric_i",
+   "kind": "grade_confirm",
+   "label": "Fabric I",
+   "confirm": "Confirm cover with Trig"
+  },
+  "grade:fabric_ii": {
+   "id": "grade-fabric_ii",
+   "cover": null,
+   "brand": null,
+   "grade": "II",
+   "bucket": "grade:fabric_ii",
+   "kind": "grade_confirm",
+   "label": "Fabric II",
+   "confirm": "Confirm cover with Trig"
+  },
+  "grade:fabric_iii": {
+   "id": "grade-fabric_iii",
+   "cover": null,
+   "brand": null,
+   "grade": "III",
+   "bucket": "grade:fabric_iii",
+   "kind": "grade_confirm",
+   "label": "Fabric III",
+   "confirm": "Confirm cover with Trig"
+  },
+  "grade:fabric_v": {
+   "id": "grade-fabric_v",
+   "cover": null,
+   "brand": null,
+   "grade": "V / Microfiber",
+   "bucket": "grade:fabric_v",
+   "kind": "grade_confirm",
+   "label": "Fabric V / Microfiber",
+   "confirm": "Confirm cover with Trig"
+  },
+  "grade:leather_c": {
+   "id": "grade-leather_c",
+   "cover": null,
+   "brand": null,
+   "grade": "C",
+   "bucket": "grade:leather_c",
+   "kind": "grade_confirm",
+   "label": "Leather C",
+   "confirm": "Confirm cover with Trig"
+  },
+  "grade:leather_d_f": {
+   "id": "grade-leather_d_f",
+   "cover": null,
+   "brand": null,
+   "grade": "D/F",
+   "bucket": "grade:leather_d_f",
+   "kind": "grade_confirm",
+   "label": "Leather D/F",
+   "confirm": "Confirm cover with Trig"
+  },
+  "grade:leather_g": {
+   "id": "grade-leather_g",
+   "cover": null,
+   "brand": null,
+   "grade": "G",
+   "bucket": "grade:leather_g",
+   "kind": "grade_confirm",
+   "label": "Leather G",
+   "confirm": "Confirm cover with Trig"
+  },
+  "grade:leather_h": {
+   "id": "grade-leather_h",
+   "cover": null,
+   "brand": null,
+   "grade": "H",
+   "bucket": "grade:leather_h",
+   "kind": "grade_confirm",
+   "label": "Leather H",
+   "confirm": "Confirm cover with Trig"
+  },
+  "grade:leather_j": {
+   "id": "grade-leather_j",
+   "cover": null,
+   "brand": null,
+   "grade": "J",
+   "bucket": "grade:leather_j",
+   "kind": "grade_confirm",
+   "label": "Leather J",
+   "confirm": "Confirm cover with Trig"
+  }
+ },
+ "confirm_named": {
+  "grade:leather_h": {
+   "id": "leather-h",
+   "cover": null,
+   "brand": null,
+   "grade": "H",
+   "bucket": "grade:leather_h",
+   "kind": "grade_confirm",
+   "label": "Leather Grade H",
+   "confirm": "Confirm cover with Trig"
+  }
+ }
+}
