@@ -43200,7 +43200,11 @@
    "warranty": "No published manufacturer warranty (one-of-a-kind artisan piece); coverage to be confirmed with the maker.",
    "designer": null,
    "cfg": null,
-   "gallery": null,
+   "gallery": [
+    "https://cdn.shopify.com/s/files/1/0992/5905/6439/files/original_b5b10647-9937-48c6-911e-5209e06ea78f.png?v=1779597776",
+    "https://cdn.shopify.com/s/files/1/0992/5905/6439/files/original_7368d8cb-d9d1-43d4-8c5e-24f945e984e7.png?v=1779597777",
+    "https://cdn.shopify.com/s/files/1/0992/5905/6439/files/original_cb428509-324e-4c4c-add7-bfc814ed718e.png?v=1779597777"
+   ],
    "rug_swatches": null,
    "config_example_sku": null,
    "config_note": null,
