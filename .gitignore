@@ -4,3 +4,20 @@
 # chain (build_catalog.py -> inject_covers.py -> build_swatches.py) if missing.
 _coverbuild/catalog_with_covers.json
 _coverbuild/__pycache__/
+
+# Gap-fill: transient Shopify staged-upload response blobs (expiring signed GCS
+# params — never commit). The reusable manifests/products JSON ARE committed.
+_gapfill/_tmp_staged_*.json
+_gapfill/__pycache__/
+
+# Gap-fill: optimized product-image staging dirs (local uploader input only —
+# never commit product photos to the feed repo; images live on Shopify CDN /
+# vendor CDN). Manifests + products + images-list JSON ARE committed.
+_gapfill/koncept_opt/
+_gapfill/*_opt/
+
+# Gap-fill: raw scraped vendor product-detail HTML (local parse input only — heavy,
+# never commit). The built records + selection TSV + verified URL lists ARE committed.
+_gapfill/fourhands_raw/b5/pdp/
+_gapfill/fourhands_raw/b5/*.b64
+_gapfill/fourhands_raw/b5/sk_part_*
