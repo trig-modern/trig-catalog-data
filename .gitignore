@@ -1,3 +1,7 @@
+# Timestamped safety backups of catalog.json — created before every edit.
+# Local-only rollback points; never belong in the feed repo.
+catalog_pre-*.json
+
 # Local build intermediate — the pre-slim fat catalog (with per-product covers[]).
 # Kept on disk as the re-run input for _coverbuild/slim_covers.py, but NEVER
 # committed: it's the 21MB blob we de-normalized away. Regenerate via the build
